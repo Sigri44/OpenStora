@@ -62,7 +62,7 @@ e.g.:
 </li>
 <li> Verbatim MediaShare (1TB/2TB/mini)
 </li>
-<li> <a href="/wiki/index.php?title=Raidsonic_IcyBox_IB-NAS6210" title="Raidsonic IcyBox IB-NAS6210">Raidsonic IcyBox IB-NAS6210</a> (Same as Stora, but double RAM, 1 drivebay)
+<li> <a href="/wiki/index_Raidsonic_IcyBox_IB-NAS6210" title="Raidsonic IcyBox IB-NAS6210">Raidsonic IcyBox IB-NAS6210</a> (Same as Stora, but double RAM, 1 drivebay)
 </li>
 <li> Medion Lifecloud 2-bay NAS
 </li>
@@ -78,16 +78,16 @@ e.g.:
 <li><b>Do I need an internet connection to use the Stora?</b>
 </li>
 </ul>
-<p>1) If you want <a href="/wiki/index.php?title=Easy_Root_Access" title="Easy Root Access">Easy Root Access</a> you need to register the first user account online before you can SSH in (telnet or tftp methods below can be used without registration)<br />
-2) If you ever need to do <a href="/wiki/index.php?title=Stora_Recovery" title="Stora Recovery">Stora Recovery</a><br />
+<p>1) If you want <a href="/wiki/index_Easy_Root_Access" title="Easy Root Access">Easy Root Access</a> you need to register the first user account online before you can SSH in (telnet or tftp methods below can be used without registration)<br />
+2) If you ever need to do <a href="/wiki/index_Stora_Recovery" title="Stora Recovery">Stora Recovery</a><br />
 and obviously 3) if you use any of the Stora's optional online services (Flickr etc. integration)!<br />
-Basically: No, in normal use the Stora is capable of authenticating you on its own, even though by default it redirects you through mystora.com. To fix this see <a href="/wiki/index.php?title=Disable_mystora.com_redirection" title="Disable mystora.com redirection">Disable mystora.com redirection</a>. Then you will be able login to the web interface without internet access or if the web site is down. 
+Basically: No, in normal use the Stora is capable of authenticating you on its own, even though by default it redirects you through mystora.com. To fix this see <a href="/wiki/index_Disable_mystora.com_redirection" title="Disable mystora.com redirection">Disable mystora.com redirection</a>. Then you will be able login to the web interface without internet access or if the web site is down. 
 </p>
 <ul>
 <li> <b>Can I have more than 3 users (5 users with newer firmware)? What's the user limit?</b><br />
 </li>
 </ul>
-<p>Yes, you need <a href="/wiki/index.php?title=Easy_Root_Access" title="Easy Root Access">Easy Root Access</a>, then read <a href="/wiki/index.php?title=Changing_User_Limit" title="Changing User Limit">Changing User Limit</a>. There is then no hard limit (128MB RAM is more likely to become an issue than the 1Ghz CPU). You can also add users via the command line with the normal RedHat linux tools (Users added this way will not appear in web interface). 
+<p>Yes, you need <a href="/wiki/index_Easy_Root_Access" title="Easy Root Access">Easy Root Access</a>, then read <a href="/wiki/index_Changing_User_Limit" title="Changing User Limit">Changing User Limit</a>. There is then no hard limit (128MB RAM is more likely to become an issue than the 1Ghz CPU). You can also add users via the command line with the normal RedHat linux tools (Users added this way will not appear in web interface). 
 </p>
 <ul>
 <li><b>Are there any limitations which can't be solved/worked around?</b><br />
@@ -107,13 +107,13 @@ Basically: No, in normal use the Stora is capable of authenticating you on its o
 </ul>
 <p>Hard drive(s) are very easy to change, both physically (just slide off front panel and pull lever) and because Stora doesn't use hard drive for its OS (256MB flashram). Almost any SATA 3.5" drive should work including 4k advanced sector 2TB+ drives. Usually it's just a case of swapping the drive and rebooting, then formatting the new drive (web frontend or with root commands). By default only /home and /tmp are mounted to the hard drive, but take care if you have linked any system directories.<br />
 RAM is not upgradeable. There is 128MB on board.<br />
-You can <a href="/wiki/index.php?title=Adding_an_Internal_USB_Hub" title="Adding an Internal USB Hub"> add an internal USB Hub</a> for more USB devices.<br />
+You can <a href="/wiki/index_Adding_an_Internal_USB_Hub" title="Adding an Internal USB Hub"> add an internal USB Hub</a> for more USB devices.<br />
 </p>
 <ul>
 <li> <b>RAID0/JBOD support, other disk configurations</b>?<br />
 </li>
 </ul>
-<p>By default the Stora will create a RAID1 mirror (even if you only insert 1 drive; it creates a degraded mirror, waits for another drive of equal or greater capacity). JBOD support was added in firmware 2.x. It's also possible via root access to <a rel="nofollow" class="external text" href="http://www.openstora.com/forum/viewtopic.php?f=1&amp;t=181">create a RAID0 array</a>  or just <a rel="nofollow" class="external text" href="http://www.openstora.com/forum/viewtopic.php?f=1&amp;t=399">mount the drives separately</a>. There are some bugs you may need to fix though, e.g. <a href="/wiki/index.php?title=Fixing_spindown_not_working_on_JBOD_setup" title="Fixing spindown not working on JBOD setup">Fixing spindown not working on JBOD setup</a>. Be sure to backup all your data in /home before changing drive configuration.
+<p>By default the Stora will create a RAID1 mirror (even if you only insert 1 drive; it creates a degraded mirror, waits for another drive of equal or greater capacity). JBOD support was added in firmware 2.x. It's also possible via root access to <a rel="nofollow" class="external text" href="http://www.openstora.com/forum/viewtopic.php?f=1&amp;t=181">create a RAID0 array</a>  or just <a rel="nofollow" class="external text" href="http://www.openstora.com/forum/viewtopic.php?f=1&amp;t=399">mount the drives separately</a>. There are some bugs you may need to fix though, e.g. <a href="/wiki/index_Fixing_spindown_not_working_on_JBOD_setup" title="Fixing spindown not working on JBOD setup">Fixing spindown not working on JBOD setup</a>. Be sure to backup all your data in /home before changing drive configuration.
 </p>
 <ul>
 <li><b>Is it safe to update my firmware after applying hacks from this wiki?</b>
@@ -131,7 +131,7 @@ You can <a href="/wiki/index.php?title=Adding_an_Internal_USB_Hub" title="Adding
 <li><b>Help, I've messed up and my Stora won't boot / I can't login!</b>
 </li>
 </ul>
-<p>You may not have bricked it, read <a href="/wiki/index.php?title=Stora_Recovery" title="Stora Recovery">Stora Recovery</a> procedure. When using root access, remember this: If you think you've done something seriously wrong, do not reboot! Try to back out the change, if unsure ask on the forum. The nature of a NAS (no display, no local access) means some errors that would be easily fixable on a normal PC will require a complete system reinstall.
+<p>You may not have bricked it, read <a href="/wiki/index_Stora_Recovery" title="Stora Recovery">Stora Recovery</a> procedure. When using root access, remember this: If you think you've done something seriously wrong, do not reboot! Try to back out the change, if unsure ask on the forum. The nature of a NAS (no display, no local access) means some errors that would be easily fixable on a normal PC will require a complete system reinstall.
 </p>
 <ul>
 <li><b>Can I ask for help?</b>
@@ -159,192 +159,192 @@ You can <a href="/wiki/index.php?title=Adding_an_Internal_USB_Hub" title="Adding
 <p>Having root access to your device is essential if you want to do anything beyond the provided WebUI:
 </p>
 <ul>
-<li> <a href="/wiki/index.php?title=Easy_Root_Access" title="Easy Root Access">Easy Root Access</a> (recommended for most users - no hardware tricks involved, but must register the first user account online!)
+<li> <a href="/wiki/index_Easy_Root_Access" title="Easy Root Access">Easy Root Access</a> (recommended for most users - no hardware tricks involved, but must register the first user account online!)
 </li>
 </ul>
 <p>The following methods are much more difficult, so only recommended for advanced users or where no internet connection possible.
 </p>
 <ul>
-<li> <a href="/wiki/index.php?title=Root_Access_Via_Serial_Console" title="Root Access Via Serial Console">Root Access Via Serial Console</a>
+<li> <a href="/wiki/index_Root_Access_Via_Serial_Console" title="Root Access Via Serial Console">Root Access Via Serial Console</a>
 </li>
-<li> <a href="/wiki/index.php?title=Root_Access_Via_TFTP" title="Root Access Via TFTP">Root Access Via TFTP</a>
+<li> <a href="/wiki/index_Root_Access_Via_TFTP" title="Root Access Via TFTP">Root Access Via TFTP</a>
 </li>
-<li> <a href="/wiki/index.php?title=Root_Access_via_TelnetEnabled" title="Root Access via TelnetEnabled">Root Access via TelnetEnabled</a>
+<li> <a href="/wiki/index_Root_Access_via_TelnetEnabled" title="Root Access via TelnetEnabled">Root Access via TelnetEnabled</a>
 </li>
 </ul>
 <h2><span class="mw-headline" id="Configuration">Configuration</span></h2>
 <ul>
-<li><a href="/wiki/index.php?title=Getting_Started" title="Getting Started">Getting Started</a> - the first steps for most users
+<li><a href="/wiki/index_Getting_Started" title="Getting Started">Getting Started</a> - the first steps for most users
 </li>
-<li><a href="/wiki/index.php?title=Disabling_updates_and_external_access" title="Disabling updates and external access">Disabling updates and external access</a>
+<li><a href="/wiki/index_Disabling_updates_and_external_access" title="Disabling updates and external access">Disabling updates and external access</a>
 </li>
-<li><a href="/wiki/index.php?title=Enabling_secure_FTP" title="Enabling secure FTP">Enabling secure FTP</a>
+<li><a href="/wiki/index_Enabling_secure_FTP" title="Enabling secure FTP">Enabling secure FTP</a>
 </li>
-<li><a href="/wiki/index.php?title=Enabling_the_Root_Account" title="Enabling the Root Account">Enabling the Root Account</a>
+<li><a href="/wiki/index_Enabling_the_Root_Account" title="Enabling the Root Account">Enabling the Root Account</a>
 </li>
-<li><a href="/wiki/index.php?title=Create_administrative_Web_user_from_shell_command_line" title="Create administrative Web user from shell command line">Create administrative Web user from shell command line</a>
+<li><a href="/wiki/index_Create_administrative_Web_user_from_shell_command_line" title="Create administrative Web user from shell command line">Create administrative Web user from shell command line</a>
 </li>
-<li><a href="/wiki/index.php?title=Create_a_Share_with_Guest_Access" title="Create a Share with Guest Access">Create a Share with Guest Access</a>
+<li><a href="/wiki/index_Create_a_Share_with_Guest_Access" title="Create a Share with Guest Access">Create a Share with Guest Access</a>
 </li>
-<li><a href="/wiki/index.php?title=Disabling_UPnP" title="Disabling UPnP">Disabling UPnP</a>
+<li><a href="/wiki/index_Disabling_UPnP" title="Disabling UPnP">Disabling UPnP</a>
 </li>
-<li><a href="/wiki/index.php?title=Modify_Stora_Firewall" title="Modify Stora Firewall">Modify Stora Firewall</a>
+<li><a href="/wiki/index_Modify_Stora_Firewall" title="Modify Stora Firewall">Modify Stora Firewall</a>
 </li>
-<li><a href="/wiki/index.php?title=Disable_mystora.com_redirection" title="Disable mystora.com redirection">Disable mystora.com redirection</a>
+<li><a href="/wiki/index_Disable_mystora.com_redirection" title="Disable mystora.com redirection">Disable mystora.com redirection</a>
 </li>
-<li><a href="/wiki/index.php?title=Enable_system_logging" title="Enable system logging">Enable system logging</a>
+<li><a href="/wiki/index_Enable_system_logging" title="Enable system logging">Enable system logging</a>
 </li>
-<li><a href="/wiki/index.php?title=Disabling_Access_Patrol" title="Disabling Access Patrol" class="mw-redirect">Disabling Access Patrol</a>
+<li><a href="/wiki/index_Disabling_Access_Patrol" title="Disabling Access Patrol" class="mw-redirect">Disabling Access Patrol</a>
 </li>
-<li><a href="/wiki/index.php?title=Modifying_spin-down_settings" title="Modifying spin-down settings">Modifying spin-down settings</a>
+<li><a href="/wiki/index_Modifying_spin-down_settings" title="Modifying spin-down settings">Modifying spin-down settings</a>
 </li>
-<li><a href="/wiki/index.php?title=Changing_User_Limit" title="Changing User Limit">Changing User Limit</a>
+<li><a href="/wiki/index_Changing_User_Limit" title="Changing User Limit">Changing User Limit</a>
 </li>
-<li><a href="/wiki/index.php?title=Changing_hostname" title="Changing hostname">Changing hostname</a>
+<li><a href="/wiki/index_Changing_hostname" title="Changing hostname">Changing hostname</a>
 </li>
-<li><a href="/wiki/index.php?title=Fixing_smartmontools" title="Fixing smartmontools">Fixing smartmontools</a>
+<li><a href="/wiki/index_Fixing_smartmontools" title="Fixing smartmontools">Fixing smartmontools</a>
 </li>
-<li><a href="/wiki/index.php?title=Fixing_spindown_not_working_on_JBOD_setup" title="Fixing spindown not working on JBOD setup">Fixing spindown not working on JBOD setup</a>
+<li><a href="/wiki/index_Fixing_spindown_not_working_on_JBOD_setup" title="Fixing spindown not working on JBOD setup">Fixing spindown not working on JBOD setup</a>
 </li>
-<li><a href="/wiki/index.php?title=Fixing_FamilyLibrary_share_on_Mac_(AppleTalk)" title="Fixing FamilyLibrary share on Mac (AppleTalk)">Fixing FamilyLibrary share on Mac (AppleTalk)</a>
+<li><a href="/wiki/index_Fixing_FamilyLibrary_share_on_Mac_(AppleTalk)" title="Fixing FamilyLibrary share on Mac (AppleTalk)">Fixing FamilyLibrary share on Mac (AppleTalk)</a>
 </li>
-<li><a href="/wiki/index.php?title=Manual_firmware_update_and_info" title="Manual firmware update and info">Manual firmware update and info</a>
+<li><a href="/wiki/index_Manual_firmware_update_and_info" title="Manual firmware update and info">Manual firmware update and info</a>
 </li>
-<li><a href="/wiki/index.php?title=USB_Serial_Adapter" title="USB Serial Adapter">USB Serial Adapter</a>
+<li><a href="/wiki/index_USB_Serial_Adapter" title="USB Serial Adapter">USB Serial Adapter</a>
 </li>
-<li><a href="/wiki/index.php?title=Installing_Mediatomb" title="Installing Mediatomb">Installing Mediatomb</a>
+<li><a href="/wiki/index_Installing_Mediatomb" title="Installing Mediatomb">Installing Mediatomb</a>
 </li>
-<li><a href="/wiki/index.php?title=RSyncBackup" title="RSyncBackup">RSyncBackup</a>
+<li><a href="/wiki/index_RSyncBackup" title="RSyncBackup">RSyncBackup</a>
 </li>
-<li><a href="/wiki/index.php?title=Power_scheduling_(advanced/non_WebUI)" title="Power scheduling (advanced/non WebUI)">Power scheduling (advanced/non WebUI)</a>  (includes instructions for automatically restarting after a power failure)
+<li><a href="/wiki/index_Power_scheduling_(advanced/non_WebUI)" title="Power scheduling (advanced/non WebUI)">Power scheduling (advanced/non WebUI)</a>  (includes instructions for automatically restarting after a power failure)
 </li>
-<li><a href="/wiki/index.php?title=Services_overview" title="Services overview">Services overview</a>
+<li><a href="/wiki/index_Services_overview" title="Services overview">Services overview</a>
 </li>
-<li><a href="/wiki/index.php?title=Make_your_Stora_responsive_even_while_its_downloading" title="Make your Stora responsive even while its downloading">Make your Stora responsive even while its downloading</a>
+<li><a href="/wiki/index_Make_your_Stora_responsive_even_while_its_downloading" title="Make your Stora responsive even while its downloading">Make your Stora responsive even while its downloading</a>
 </li>
-<li><a href="/wiki/index.php?title=Configuring_SSMTP_for_Gmail" title="Configuring SSMTP for Gmail">Configuring SSMTP for Gmail</a>
+<li><a href="/wiki/index_Configuring_SSMTP_for_Gmail" title="Configuring SSMTP for Gmail">Configuring SSMTP for Gmail</a>
 </li>
-<li><a href="/wiki/index.php?title=Mount_Stora_as_NFS_on_Linux" title="Mount Stora as NFS on Linux">Mount Stora as NFS on Linux</a>
+<li><a href="/wiki/index_Mount_Stora_as_NFS_on_Linux" title="Mount Stora as NFS on Linux">Mount Stora as NFS on Linux</a>
 </li>
-<li><a href="/wiki/index.php?title=Configuring_3TB_HD" title="Configuring 3TB HD">Configuring 3TB HD</a>
+<li><a href="/wiki/index_Configuring_3TB_HD" title="Configuring 3TB HD">Configuring 3TB HD</a>
 </li>
 </ul>
 <h2><span class="mw-headline" id="Recovery">Recovery</span></h2>
 <ul>
-<li><a href="/wiki/index.php?title=Stora_Recovery" title="Stora Recovery">Stora Recovery</a> (firmware reinstall procedure, 'unbricking')
+<li><a href="/wiki/index_Stora_Recovery" title="Stora Recovery">Stora Recovery</a> (firmware reinstall procedure, 'unbricking')
 </li>
-<li><a href="/wiki/index.php?title=Seagate_GoFlex_Home_Recovery" title="Seagate GoFlex Home Recovery">Seagate GoFlex Home Recovery</a> (firmware reinstall procedure, 'unbricking')
+<li><a href="/wiki/index_Seagate_GoFlex_Home_Recovery" title="Seagate GoFlex Home Recovery">Seagate GoFlex Home Recovery</a> (firmware reinstall procedure, 'unbricking')
 </li>
-<li><a href="/wiki/index.php?title=Harddrive_Recovery" title="Harddrive Recovery">Harddrive Recovery</a>
+<li><a href="/wiki/index_Harddrive_Recovery" title="Harddrive Recovery">Harddrive Recovery</a>
 </li>
-<li><a href="/wiki/index.php?title=Harddrive_Recovery_/_Transfer_to_New_Drive_in_Stora" title="Harddrive Recovery / Transfer to New Drive in Stora">Harddrive Recovery / Transfer to New Drive in Stora</a>
+<li><a href="/wiki/index_Harddrive_Recovery_/_Transfer_to_New_Drive_in_Stora" title="Harddrive Recovery / Transfer to New Drive in Stora">Harddrive Recovery / Transfer to New Drive in Stora</a>
 </li>
 </ul>
 <h2><span class="mw-headline" id="Software_addons_for_the_original_Stora_firmware_.28stock_firmware.29">Software addons for the original Stora firmware (stock firmware)</span></h2>
 <ul>
-<li><a href="/wiki/index.php?title=Sshd_substitution" title="Sshd substitution">sshd substitution</a>
+<li><a href="/wiki/index_Sshd_substitution" title="Sshd substitution">sshd substitution</a>
 </li>
-<li><a href="/wiki/index.php?title=Transmission_torrent_client" title="Transmission torrent client">Transmission torrent client</a>
+<li><a href="/wiki/index_Transmission_torrent_client" title="Transmission torrent client">Transmission torrent client</a>
 </li>
-<li><a href="/wiki/index.php?title=Unrar_for_Stora" title="Unrar for Stora">Unrar for Stora</a>
+<li><a href="/wiki/index_Unrar_for_Stora" title="Unrar for Stora">Unrar for Stora</a>
 </li>
-<li><a href="/wiki/index.php?title=AMule_for_Stora" title="AMule for Stora">aMule for Stora</a>
+<li><a href="/wiki/index_AMule_for_Stora" title="AMule for Stora">aMule for Stora</a>
 </li>
-<li><a href="/wiki/index.php?title=PlowShare_for_Stora" title="PlowShare for Stora">PlowShare for Stora</a>
+<li><a href="/wiki/index_PlowShare_for_Stora" title="PlowShare for Stora">PlowShare for Stora</a>
 </li>
-<li><a href="/wiki/index.php?title=PyLoad" title="PyLoad">pyLoad</a>
+<li><a href="/wiki/index_PyLoad" title="PyLoad">pyLoad</a>
 </li>
-<li><a href="/wiki/index.php?title=Installing_a_package_manager" title="Installing a package manager">Installing a package manager</a>
+<li><a href="/wiki/index_Installing_a_package_manager" title="Installing a package manager">Installing a package manager</a>
 </li>
-<li><a href="/wiki/index.php?title=Installing_Screen_(Manager_shell_sessions)" title="Installing Screen (Manager shell sessions)">Installing Screen (Manager shell sessions)</a>
+<li><a href="/wiki/index_Installing_Screen_(Manager_shell_sessions)" title="Installing Screen (Manager shell sessions)">Installing Screen (Manager shell sessions)</a>
 </li>
-<li><a href="/wiki/index.php?title=Kernel_mode_NFS" title="Kernel mode NFS">Kernel mode NFS</a>
+<li><a href="/wiki/index_Kernel_mode_NFS" title="Kernel mode NFS">Kernel mode NFS</a>
 </li>
-<li><a href="/wiki/index.php?title=Installing_userland_NFS_(UNFSD)" title="Installing userland NFS (UNFSD)">Installing userland NFS (UNFSD)</a>
+<li><a href="/wiki/index_Installing_userland_NFS_(UNFSD)" title="Installing userland NFS (UNFSD)">Installing userland NFS (UNFSD)</a>
 </li>
-<li><a href="/wiki/index.php?title=Installing_a_Proxy_Server" title="Installing a Proxy Server" class="mw-redirect">Installing a Proxy Server</a>
+<li><a href="/wiki/index_Installing_a_Proxy_Server" title="Installing a Proxy Server" class="mw-redirect">Installing a Proxy Server</a>
 </li>
-<li><a href="/wiki/index.php?title=Installing_iSCSI_Enterprise_Target" title="Installing iSCSI Enterprise Target">Installing iSCSI Enterprise Target</a>
+<li><a href="/wiki/index_Installing_iSCSI_Enterprise_Target" title="Installing iSCSI Enterprise Target">Installing iSCSI Enterprise Target</a>
 </li>
-<li><a href="/wiki/index.php?title=Installing_Squeezebox_Server" title="Installing Squeezebox Server">Installing Squeezebox Server</a>
+<li><a href="/wiki/index_Installing_Squeezebox_Server" title="Installing Squeezebox Server">Installing Squeezebox Server</a>
 </li>
-<li><a href="/wiki/index.php?title=Installing_inadyn" title="Installing inadyn">Installing inadyn</a>
+<li><a href="/wiki/index_Installing_inadyn" title="Installing inadyn">Installing inadyn</a>
 </li>
-<li><a href="/wiki/index.php?title=All-In-One_Installer_Script" title="All-In-One Installer Script">All-In-One Installer Script</a>
+<li><a href="/wiki/index_All-In-One_Installer_Script" title="All-In-One Installer Script">All-In-One Installer Script</a>
 </li>
-<li><a href="/wiki/index.php?title=MiniDLNA_for_Stora" title="MiniDLNA for Stora">miniDLNA for Stora</a>
+<li><a href="/wiki/index_MiniDLNA_for_Stora" title="MiniDLNA for Stora">miniDLNA for Stora</a>
 </li>
 </ul>
 <dl>
 <dd><ul>
-<li> <a href="/wiki/index.php?title=MiniDLNA_for_Stora/Updating" title="MiniDLNA for Stora/Updating">Updating miniDLNA </a>
+<li> <a href="/wiki/index_MiniDLNA_for_Stora/Updating" title="MiniDLNA for Stora/Updating">Updating miniDLNA </a>
 </li>
-<li> <a href="/wiki/index.php?title=MiniDLNA_for_Stora/Media_Formats" title="MiniDLNA for Stora/Media Formats">Troubleshooting media formats </a>
+<li> <a href="/wiki/index_MiniDLNA_for_Stora/Media_Formats" title="MiniDLNA for Stora/Media Formats">Troubleshooting media formats </a>
 </li>
 </ul>
 </dd>
 </dl>
 <ul>
-<li><a href="/wiki/index.php?title=Hamachi_for_Stora" title="Hamachi for Stora">Hamachi for Stora</a>
+<li><a href="/wiki/index_Hamachi_for_Stora" title="Hamachi for Stora">Hamachi for Stora</a>
 </li>
-<li><a href="/wiki/index.php?title=Installing_Sick_Beard" title="Installing Sick Beard">Installing Sick Beard</a>
+<li><a href="/wiki/index_Installing_Sick_Beard" title="Installing Sick Beard">Installing Sick Beard</a>
 </li>
-<li><a href="/wiki/index.php?title=Installing_Couch_Potato" title="Installing Couch Potato">Installing Couch Potato</a>
+<li><a href="/wiki/index_Installing_Couch_Potato" title="Installing Couch Potato">Installing Couch Potato</a>
 </li>
-<li><a href="/wiki/index.php?title=Extract-xiso" title="Extract-xiso">Extract-xiso</a>
+<li><a href="/wiki/index_Extract-xiso" title="Extract-xiso">Extract-xiso</a>
 </li>
-<li><a href="/wiki/index.php?title=Stora_as_OpenVPN_server" title="Stora as OpenVPN server">Stora as OpenVPN server</a>
+<li><a href="/wiki/index_Stora_as_OpenVPN_server" title="Stora as OpenVPN server">Stora as OpenVPN server</a>
 </li>
 </ul>
 <h2><span class="mw-headline" id="Projects">Projects</span></h2>
 <ul>
-<li> <a href="/wiki/index.php?title=How_to_install_Debian_Linux_on_NETGEAR_Stora" title="How to install Debian Linux on NETGEAR Stora">How to install Debian Linux on NETGEAR Stora</a>
+<li> <a href="/wiki/index_How_to_install_Debian_Linux_on_NETGEAR_Stora" title="How to install Debian Linux on NETGEAR Stora">How to install Debian Linux on NETGEAR Stora</a>
 </li>
-<li> <a href="/wiki/index.php?title=How_to_install_your_custom_firmware" title="How to install your custom firmware">How to install your custom firmware</a>
+<li> <a href="/wiki/index_How_to_install_your_custom_firmware" title="How to install your custom firmware">How to install your custom firmware</a>
 </li>
-<li> <a href="/wiki/index.php?title=EasyHackStoraLiveCd" title="EasyHackStoraLiveCd">EasyHackStoraLiveCd</a>
+<li> <a href="/wiki/index_EasyHackStoraLiveCd" title="EasyHackStoraLiveCd">EasyHackStoraLiveCd</a>
 </li>
-<li> <a href="/wiki/index.php?title=Emdebian_Alternative_firmware" title="Emdebian Alternative firmware">Emdebian Alternative firmware</a>
+<li> <a href="/wiki/index_Emdebian_Alternative_firmware" title="Emdebian Alternative firmware">Emdebian Alternative firmware</a>
 </li>
-<li> <a href="/wiki/index.php?title=Using_A_Serial_Connection" title="Using A Serial Connection">Using A Serial Connection</a>
+<li> <a href="/wiki/index_Using_A_Serial_Connection" title="Using A Serial Connection">Using A Serial Connection</a>
 </li>
-<li> <a href="/wiki/index.php?title=Adding_an_Internal_USB_Hub" title="Adding an Internal USB Hub">Adding an Internal USB Hub</a>
+<li> <a href="/wiki/index_Adding_an_Internal_USB_Hub" title="Adding an Internal USB Hub">Adding an Internal USB Hub</a>
 </li>
 </ul>
 <p><br />
 </p>
 <h2><span class="mw-headline" id="Software_addons_for_other_custom_firmwares_.28aka_emDebian.2C_etc....29">Software addons for other custom firmwares (aka emDebian, etc...)</span></h2>
 <ul>
-<li><a href="/wiki/index.php?title=Installing_MiniDLNA" title="Installing MiniDLNA">Installing MiniDLNA</a>
+<li><a href="/wiki/index_Installing_MiniDLNA" title="Installing MiniDLNA">Installing MiniDLNA</a>
 </li>
-<li><a href="/wiki/index.php?title=Installing_Webmin" title="Installing Webmin">Installing Webmin</a>
+<li><a href="/wiki/index_Installing_Webmin" title="Installing Webmin">Installing Webmin</a>
 </li>
-<li><a href="/wiki/index.php?title=Prevent_unclean_filesystems_from_blocking_the_boot_process" title="Prevent unclean filesystems from blocking the boot process">Prevent unclean filesystems from blocking the boot process</a>
+<li><a href="/wiki/index_Prevent_unclean_filesystems_from_blocking_the_boot_process" title="Prevent unclean filesystems from blocking the boot process">Prevent unclean filesystems from blocking the boot process</a>
 </li>
-<li><a href="/wiki/index.php?title=Use_the_stora_as_a_printserver" title="Use the stora as a printserver">Use the stora as a printserver</a>
+<li><a href="/wiki/index_Use_the_stora_as_a_printserver" title="Use the stora as a printserver">Use the stora as a printserver</a>
 </li>
-<li><a href="/wiki/index.php?title=Use_the_stora_as_a_soundproxy" title="Use the stora as a soundproxy">Use the stora as a soundproxy</a>
+<li><a href="/wiki/index_Use_the_stora_as_a_soundproxy" title="Use the stora as a soundproxy">Use the stora as a soundproxy</a>
 </li>
-<li><a href="/wiki/index.php?title=Compile_the_kernel" title="Compile the kernel">Compile the kernel</a>
+<li><a href="/wiki/index_Compile_the_kernel" title="Compile the kernel">Compile the kernel</a>
 </li>
 </ul>
 <h2><span class="mw-headline" id="Technical_Information">Technical Information</span></h2>
 <ul>
-<li> <a href="/wiki/index.php?title=Jtag_Pinout" title="Jtag Pinout">Jtag Pinout</a>
+<li> <a href="/wiki/index_Jtag_Pinout" title="Jtag Pinout">Jtag Pinout</a>
 </li>
-<li> <a href="/wiki/index.php?title=Parts_List" title="Parts List">Parts List</a>
+<li> <a href="/wiki/index_Parts_List" title="Parts List">Parts List</a>
 </li>
-<li> <a href="/wiki/index.php?title=Boot_sequence_information" title="Boot sequence information">Boot sequence information</a>
+<li> <a href="/wiki/index_Boot_sequence_information" title="Boot sequence information">Boot sequence information</a>
 </li>
-<li> <a href="/wiki/index.php?title=PCB_Photos" title="PCB Photos">PCB Photos</a>
+<li> <a href="/wiki/index_PCB_Photos" title="PCB Photos">PCB Photos</a>
 </li>
-<li> <a href="/wiki/index.php?title=Test_Points" title="Test Points">Test Points</a> on Stora PCB
+<li> <a href="/wiki/index_Test_Points" title="Test Points">Test Points</a> on Stora PCB
 </li>
-<li> <a href="/wiki/index.php?title=Source_Code" title="Source Code">Source Code</a>
+<li> <a href="/wiki/index_Source_Code" title="Source Code">Source Code</a>
 </li>
-<li> <a href="/wiki/index.php?title=Development_HOWTOS" title="Development HOWTOS">Development HOWTOS</a>
+<li> <a href="/wiki/index_Development_HOWTOS" title="Development HOWTOS">Development HOWTOS</a>
 </li>
-<li> <a href="/wiki/index.php?title=To_Do_Index" title="To Do Index">To Do Index</a>
+<li> <a href="/wiki/index_To_Do_Index" title="To Do Index">To Do Index</a>
 </li>
 </ul>
 <p><br />
@@ -414,7 +414,7 @@ Expensive parser function count: 0/100
 <!-- Saved in parser cache with key hardwar6_wiki:pcache:idhash:1-0!*!0!!en!*!* and timestamp 20171226123611
  -->
 </div>								<div class="printfooter">
-				Retrieved from "<a href="http://www.openstora.com/wiki/index.php?title=Main_Page&amp;oldid=1108">http://www.openstora.com/wiki/index.php?title=Main_Page&amp;oldid=1108</a>"				</div>
+				Retrieved from "<a href=/wiki/index_Main_Page&amp;oldid=1108">/wiki/index_Main_Page&amp;oldid=1108</a>"				</div>
 												<div id='catlinks' class='catlinks catlinks-allhidden'></div>												<div class="visualClear"></div>
 							</div>
 		</div>
@@ -424,14 +424,14 @@ Expensive parser function count: 0/100
 				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
 	<h3 id="p-personal-label">Personal tools</h3>
 	<ul>
-<li id="pt-login"><a href="/wiki/index.php?title=Special:UserLogin&amp;returnto=Main+Page" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
+<li id="pt-login"><a href="/wiki/index_Special:UserLogin&amp;returnto=Main+Page" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
 </div>
 				<div id="left-navigation">
 					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
 	<h3 id="p-namespaces-label">Namespaces</h3>
 	<ul>
-					<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/index.php?title=Main_Page"  title="View the content page [c]" accesskey="c">Page</a></span></li>
-					<li  id="ca-talk"><span><a href="/wiki/index.php?title=Talk:Main_Page"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+					<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/index_Main_Page"  title="View the content page [c]" accesskey="c">Page</a></span></li>
+					<li  id="ca-talk"><span><a href="/wiki/index_Talk:Main_Page"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
 			</ul>
 </div>
 <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
@@ -448,9 +448,9 @@ Expensive parser function count: 0/100
 					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
 	<h3 id="p-views-label">Views</h3>
 	<ul>
-					<li id="ca-view" class="selected"><span><a href="/wiki/index.php?title=Main_Page" >Read</a></span></li>
-					<li id="ca-viewsource"><span><a href="/wiki/index.php?title=Main_Page&amp;action=edit"  title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></span></li>
-					<li id="ca-history" class="collapsible"><span><a href="/wiki/index.php?title=Main_Page&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+					<li id="ca-view" class="selected"><span><a href="/wiki/index_Main_Page" >Read</a></span></li>
+					<li id="ca-viewsource"><span><a href="/wiki/index_Main_Page&amp;action=edit"  title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/wiki/index_Main_Page&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
 			</ul>
 </div>
 <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
@@ -485,9 +485,9 @@ Expensive parser function count: 0/100
 	<h3 id='p-Wiki-label'>Wiki</h3>
 	<div class="body">
 		<ul>
-			<li id="n-Main-Page"><a href="/wiki/index.php?title=Main_Page">Main Page</a></li>
-			<li id="n-Recent-changes"><a href="http://www.openstora.com/wiki/index.php?title=Special:Recentchanges" rel="nofollow">Recent changes</a></li>
-			<li id="n-Help"><a href="/wiki/index.php?title=Help">Help</a></li>
+			<li id="n-Main-Page"><a href="/wiki/index_Main_Page">Main Page</a></li>
+			<li id="n-Recent-changes"><a href=/wiki/index_Special:Recentchanges" rel="nofollow">Recent changes</a></li>
+			<li id="n-Help"><a href="/wiki/index_Help">Help</a></li>
 		</ul>
 	</div>
 </div>
@@ -495,12 +495,12 @@ Expensive parser function count: 0/100
 	<h3 id='p-tb-label'>Tools</h3>
 	<div class="body">
 		<ul>
-			<li id="t-whatlinkshere"><a href="/wiki/index.php?title=Special:WhatLinksHere/Main_Page" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
-			<li id="t-recentchangeslinked"><a href="/wiki/index.php?title=Special:RecentChangesLinked/Main_Page" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
-			<li id="t-specialpages"><a href="/wiki/index.php?title=Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
-			<li id="t-print"><a href="/wiki/index.php?title=Main_Page&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
-			<li id="t-permalink"><a href="/wiki/index.php?title=Main_Page&amp;oldid=1108" title="Permanent link to this revision of the page">Permanent link</a></li>
-			<li id="t-info"><a href="/wiki/index.php?title=Main_Page&amp;action=info">Page information</a></li>
+			<li id="t-whatlinkshere"><a href="/wiki/index_Special:WhatLinksHere/Main_Page" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/index_Special:RecentChangesLinked/Main_Page" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-specialpages"><a href="/wiki/index_Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-print"><a href="/wiki/index_Main_Page&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+			<li id="t-permalink"><a href="/wiki/index_Main_Page&amp;oldid=1108" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/wiki/index_Main_Page&amp;action=info">Page information</a></li>
 		</ul>
 	</div>
 </div>
@@ -512,9 +512,9 @@ Expensive parser function count: 0/100
 											<li id="footer-info-viewcount">This page has been accessed 800,471 times.</li>
 									</ul>
 							<ul id="footer-places">
-											<li id="footer-places-privacy"><a href="/wiki/index.php?title=OpenStora:Privacy_policy" title="OpenStora:Privacy policy">Privacy policy</a></li>
-											<li id="footer-places-about"><a href="/wiki/index.php?title=OpenStora:About" title="OpenStora:About">About OpenStora</a></li>
-											<li id="footer-places-disclaimer"><a href="/wiki/index.php?title=OpenStora:General_disclaimer" title="OpenStora:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-privacy"><a href="/wiki/index_OpenStora:Privacy_policy" title="OpenStora:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/index_OpenStora:About" title="OpenStora:About">About OpenStora</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/index_OpenStora:General_disclaimer" title="OpenStora:General disclaimer">Disclaimers</a></li>
 									</ul>
 										<ul id="footer-icons" class="noprint">
 					<li id="footer-poweredbyico">

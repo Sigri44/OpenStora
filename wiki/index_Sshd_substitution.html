@@ -53,10 +53,10 @@ mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.
 </div>
 
 <h2><span class="mw-headline" id="SSHd_substitution">SSHd substitution</span></h2>
-<p>Original Stora firmware has a special ssh daemon, which disables normal user logins (and has possible backdoors). There is a <a href="/wiki/index.php?title=Easy_Root_Access" title="Easy Root Access">trick</a> to login as a standard user, but it is better to install a standard trusted ssh daemon, follow this instructions if you want to do it.
+<p>Original Stora firmware has a special ssh daemon, which disables normal user logins (and has possible backdoors). There is a <a href="/wiki/index_Easy_Root_Access" title="Easy Root Access">trick</a> to login as a standard user, but it is better to install a standard trusted ssh daemon, follow this instructions if you want to do it.
 </p><p><b>WARNING</b>: follow this instructions very carefully, missing a step or doing something wrong could disable SSH access, requiring a Recovery Boot to fix it! Absolutely DO NOT REBOOT or LOGOFF from the active SSH session until you confirm you can open and login to a new session after the substitution!
 </p><p><b>WARNING - MAKE SURE YOU'Re SECURE!</b>: Enabling a "normal" ssh daemon opens up the possibility for remote login attacks. By default the Stora requests the port forwarding of port 22 (ssh port) from your router to itself, hence the Stora opens internet facing SSH access. With the default SSH deamon only users including the product key can actually login (very hard to guess or brute force the product key) but by replacing the ssh deamon to allow yourself to login, you in turn allow potential attackers to attempt to login by guessing / brute forcing your admin username / password which may not be very secure. 
-</p><p>It is highly recommended that remote SSH access is disabled before you replace the SSH deamon. This can be achieved by either disabling uPNP on your router, by disabling the Stora's upnp-igd service (see <a rel="nofollow" class="external free" href="http://www.openstora.com/wiki/index.php?title=Disabling_UPnP">http://www.openstora.com/wiki/index.php?title=Disabling_UPnP</a>) or finally just by disabling port 22 forwarding to the Stora by changing the line in /etc/upnp-igd.conf 
+</p><p>It is highly recommended that remote SSH access is disabled before you replace the SSH deamon. This can be achieved by either disabling uPNP on your router, by disabling the Stora's upnp-igd service (see <a rel="nofollow" class="external free" href="/wiki/index_Disabling_UPnP">/wiki/index_Disabling_UPnP</a>) or finally just by disabling port 22 forwarding to the Stora by changing the line in /etc/upnp-igd.conf 
 </p><p>from: "PORTS=22,80,443"<br />
 to: "PORTS=80,443"
 </p><p>and then restarting the upnp-igd service "service upnp-igd restart"
@@ -116,11 +116,11 @@ to: "PORTS=80,443"
 <p><br />
 Enjoy your Stora!
 </p><p><b>Download link:</b> <a rel="nofollow" class="external text" href="http://www.openstora.com/files/displayimage.php?album=6&amp;pid=20#top_display_media">here</a> 
-</p><p>--<a href="/wiki/index.php?title=User:Pippone&amp;action=edit&amp;redlink=1" class="new" title="User:Pippone (page does not exist)">Pippone</a> 09:39, 3 May 2010 (UTC)
+</p><p>--<a href="/wiki/index_User:Pippone&amp;action=edit&amp;redlink=1" class="new" title="User:Pippone (page does not exist)">Pippone</a> 09:39, 3 May 2010 (UTC)
 </p>
 <h3><span class="mw-headline" id="Substitute_using_Optware_binary_.28harder_way.29">Substitute using Optware binary (harder way)</span></h3>
 <p><b>Please note that this method is HIGHLY discouraged, having the sshd residing on your hard drives and symlinked to the flash memory will prevent you from logging into your Stora if your hard drives fail for some reason!</b>
-</p><p>This method requires a little more work but will keep the binary up to date as new releases are merged into the repository. To subsitute the daemon this way, you will first need to <a rel="nofollow" class="external text" href="http://www.openstora.com/wiki/index.php?title=Installing_a_package_manager">| install the package manager</a>. Bear in mind that all the paths given here assume that you've followed all the instructions given in the aforementioned wiki article.
+</p><p>This method requires a little more work but will keep the binary up to date as new releases are merged into the repository. To subsitute the daemon this way, you will first need to <a rel="nofollow" class="external text" href="/wiki/index_Installing_a_package_manager">| install the package manager</a>. Bear in mind that all the paths given here assume that you've followed all the instructions given in the aforementioned wiki article.
 </p>
 <ul>
 <li> Next, we need to download and install the new ssh daemon:
@@ -178,7 +178,7 @@ Enjoy your Stora!
 &gt; sudo ln -s /home/opt/etc/ssh /etc/ssh
 </pre>
 <p>That's it! Enjoy!
-</p><p>--<a href="/wiki/index.php?title=User:Ham&amp;action=edit&amp;redlink=1" class="new" title="User:Ham (page does not exist)">Ham</a>
+</p><p>--<a href="/wiki/index_User:Ham&amp;action=edit&amp;redlink=1" class="new" title="User:Ham (page does not exist)">Ham</a>
 </p><p><b>Forum thread to post feedback:</b> <a rel="nofollow" class="external text" href="http://www.openstora.com/phpBB3/viewtopic.php?f=1&amp;t=84">here</a>
 </p>
 <!-- 
@@ -196,7 +196,7 @@ Expensive parser function count: 0/100
 <!-- Saved in parser cache with key hardwar6_wiki:pcache:idhash:15-0!*!0!!en!*!* and timestamp 20171221112815
  -->
 </div>								<div class="printfooter">
-				Retrieved from "<a href="http://www.openstora.com/wiki/index.php?title=Sshd_substitution&amp;oldid=1103">http://www.openstora.com/wiki/index.php?title=Sshd_substitution&amp;oldid=1103</a>"				</div>
+				Retrieved from "<a href=/wiki/index_Sshd_substitution&amp;oldid=1103">/wiki/index_Sshd_substitution&amp;oldid=1103</a>"				</div>
 												<div id='catlinks' class='catlinks catlinks-allhidden'></div>												<div class="visualClear"></div>
 							</div>
 		</div>
@@ -206,14 +206,14 @@ Expensive parser function count: 0/100
 				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
 	<h3 id="p-personal-label">Personal tools</h3>
 	<ul>
-<li id="pt-login"><a href="/wiki/index.php?title=Special:UserLogin&amp;returnto=Sshd+substitution" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
+<li id="pt-login"><a href="/wiki/index_Special:UserLogin&amp;returnto=Sshd+substitution" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
 </div>
 				<div id="left-navigation">
 					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
 	<h3 id="p-namespaces-label">Namespaces</h3>
 	<ul>
-					<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/index.php?title=Sshd_substitution"  title="View the content page [c]" accesskey="c">Page</a></span></li>
-					<li  id="ca-talk" class="new"><span><a href="/wiki/index.php?title=Talk:Sshd_substitution&amp;action=edit&amp;redlink=1"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+					<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/index_Sshd_substitution"  title="View the content page [c]" accesskey="c">Page</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="/wiki/index_Talk:Sshd_substitution&amp;action=edit&amp;redlink=1"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
 			</ul>
 </div>
 <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
@@ -230,9 +230,9 @@ Expensive parser function count: 0/100
 					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
 	<h3 id="p-views-label">Views</h3>
 	<ul>
-					<li id="ca-view" class="selected"><span><a href="/wiki/index.php?title=Sshd_substitution" >Read</a></span></li>
-					<li id="ca-viewsource"><span><a href="/wiki/index.php?title=Sshd_substitution&amp;action=edit"  title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></span></li>
-					<li id="ca-history" class="collapsible"><span><a href="/wiki/index.php?title=Sshd_substitution&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+					<li id="ca-view" class="selected"><span><a href="/wiki/index_Sshd_substitution" >Read</a></span></li>
+					<li id="ca-viewsource"><span><a href="/wiki/index_Sshd_substitution&amp;action=edit"  title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/wiki/index_Sshd_substitution&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
 			</ul>
 </div>
 <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
@@ -267,9 +267,9 @@ Expensive parser function count: 0/100
 	<h3 id='p-Wiki-label'>Wiki</h3>
 	<div class="body">
 		<ul>
-			<li id="n-Main-Page"><a href="/wiki/index.php?title=Main_Page">Main Page</a></li>
-			<li id="n-Recent-changes"><a href="http://www.openstora.com/wiki/index.php?title=Special:Recentchanges" rel="nofollow">Recent changes</a></li>
-			<li id="n-Help"><a href="/wiki/index.php?title=Help">Help</a></li>
+			<li id="n-Main-Page"><a href="/wiki/index_Main_Page">Main Page</a></li>
+			<li id="n-Recent-changes"><a href=/wiki/index_Special:Recentchanges" rel="nofollow">Recent changes</a></li>
+			<li id="n-Help"><a href="/wiki/index_Help">Help</a></li>
 		</ul>
 	</div>
 </div>
@@ -277,12 +277,12 @@ Expensive parser function count: 0/100
 	<h3 id='p-tb-label'>Tools</h3>
 	<div class="body">
 		<ul>
-			<li id="t-whatlinkshere"><a href="/wiki/index.php?title=Special:WhatLinksHere/Sshd_substitution" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
-			<li id="t-recentchangeslinked"><a href="/wiki/index.php?title=Special:RecentChangesLinked/Sshd_substitution" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
-			<li id="t-specialpages"><a href="/wiki/index.php?title=Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
-			<li id="t-print"><a href="/wiki/index.php?title=Sshd_substitution&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
-			<li id="t-permalink"><a href="/wiki/index.php?title=Sshd_substitution&amp;oldid=1103" title="Permanent link to this revision of the page">Permanent link</a></li>
-			<li id="t-info"><a href="/wiki/index.php?title=Sshd_substitution&amp;action=info">Page information</a></li>
+			<li id="t-whatlinkshere"><a href="/wiki/index_Special:WhatLinksHere/Sshd_substitution" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/index_Special:RecentChangesLinked/Sshd_substitution" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-specialpages"><a href="/wiki/index_Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-print"><a href="/wiki/index_Sshd_substitution&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+			<li id="t-permalink"><a href="/wiki/index_Sshd_substitution&amp;oldid=1103" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/wiki/index_Sshd_substitution&amp;action=info">Page information</a></li>
 		</ul>
 	</div>
 </div>
@@ -294,9 +294,9 @@ Expensive parser function count: 0/100
 											<li id="footer-info-viewcount">This page has been accessed 53,728 times.</li>
 									</ul>
 							<ul id="footer-places">
-											<li id="footer-places-privacy"><a href="/wiki/index.php?title=OpenStora:Privacy_policy" title="OpenStora:Privacy policy">Privacy policy</a></li>
-											<li id="footer-places-about"><a href="/wiki/index.php?title=OpenStora:About" title="OpenStora:About">About OpenStora</a></li>
-											<li id="footer-places-disclaimer"><a href="/wiki/index.php?title=OpenStora:General_disclaimer" title="OpenStora:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-privacy"><a href="/wiki/index_OpenStora:Privacy_policy" title="OpenStora:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/index_OpenStora:About" title="OpenStora:About">About OpenStora</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/index_OpenStora:General_disclaimer" title="OpenStora:General disclaimer">Disclaimers</a></li>
 									</ul>
 										<ul id="footer-icons" class="noprint">
 					<li id="footer-poweredbyico">

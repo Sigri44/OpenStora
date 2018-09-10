@@ -57,15 +57,15 @@ mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.
 <ul>
 <li> Unpack and connect your Stora, log in to WebUI with your web browser, and register your first user account online. You can decline the premium subscription option&#160;;)
 </li>
-<li> Apply any firmware updates (check <a href="/wiki/index.php?title=Manual_firmware_update_and_info" title="Manual firmware update and info">Manual firmware update and info</a> first to make sure current firmware version is known safe for hacking  - we recommend v2.x which appears as hbs-5032 or hbs-5033, because that version (and probably later ones too) gives you the <a href="/wiki/index.php?title=Stora_Recovery" title="Stora Recovery">Stora Recovery</a> option if you mess up!). Reboot the Stora and log back in.
+<li> Apply any firmware updates (check <a href="/wiki/index_Manual_firmware_update_and_info" title="Manual firmware update and info">Manual firmware update and info</a> first to make sure current firmware version is known safe for hacking  - we recommend v2.x which appears as hbs-5032 or hbs-5033, because that version (and probably later ones too) gives you the <a href="/wiki/index_Stora_Recovery" title="Stora Recovery">Stora Recovery</a> option if you mess up!). Reboot the Stora and log back in.
 </li>
 <li> Go through the WebUI and set everything up as you want it - more options have been added in newer firmware. Don't worry about anything you can't set in there, we'll get to that later.
 </li>
-<li> Now it's time for <a href="/wiki/index.php?title=Easy_Root_Access" title="Easy Root Access">Easy Root Access</a>
+<li> Now it's time for <a href="/wiki/index_Easy_Root_Access" title="Easy Root Access">Easy Root Access</a>
 </li>
 </ul>
 <h2><span class="mw-headline" id="Preparing_to_install_software_and_checking_free_space">Preparing to install software and checking free space</span></h2>
-<p>You're going to need to edit lots of config (plain text) files when setting up your Stora. If you're used to graphical text editors like Notepad then you will find Nano (not installed by default) much easier to use than than vi (included on the Stora). Read <a href="/wiki/index.php?title=Installing_a_package_manager" title="Installing a package manager">Installing a package manager</a>, but <b>skip the part about moving /opt to your hard disk</b> for now.
+<p>You're going to need to edit lots of config (plain text) files when setting up your Stora. If you're used to graphical text editors like Notepad then you will find Nano (not installed by default) much easier to use than than vi (included on the Stora). Read <a href="/wiki/index_Installing_a_package_manager" title="Installing a package manager">Installing a package manager</a>, but <b>skip the part about moving /opt to your hard disk</b> for now.
 </p>
 <ul>
 <li>Install optware - IPKG is a package manager (a bit like Synaptic on Ubuntu) which makes installation of lots of other software on the Stora easy
@@ -75,7 +75,7 @@ mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.
 <li>fix your PATH - this will save lots of typing later; you can then type most commands without having to enter the full path every time.
 </li>
 </ul>
-<p>The above points are all explained under <a href="/wiki/index.php?title=Installing_a_package_manager" title="Installing a package manager">Installing a package manager</a>, but I repeat DO NOT link /opt to your hard disk yet because you'll be in trouble if/when you change hard disk setup. and it's not needed for most users.
+<p>The above points are all explained under <a href="/wiki/index_Installing_a_package_manager" title="Installing a package manager">Installing a package manager</a>, but I repeat DO NOT link /opt to your hard disk yet because you'll be in trouble if/when you change hard disk setup. and it's not needed for most users.
 </p>
 <pre>df -t rootfs -h
 </pre>
@@ -84,24 +84,24 @@ It's a good idea to keep an eye on this - completely filling it could brick your
 </p>
 <h2><span class="mw-headline" id="Netgear_bugs.2Fworkarounds">Netgear bugs/workarounds</span></h2>
 <ul>
-<li> Your hard drive(s) might last longer and you'll get fewer long waits if you raise the timeout, see <a href="/wiki/index.php?title=Modifying_spin-down_settings" title="Modifying spin-down settings">Modifying_spin-down_settings</a>. What's best depends on your network usage , I like 120 (minutes = 2 hours).
+<li> Your hard drive(s) might last longer and you'll get fewer long waits if you raise the timeout, see <a href="/wiki/index_Modifying_spin-down_settings" title="Modifying spin-down settings">Modifying_spin-down_settings</a>. What's best depends on your network usage , I like 120 (minutes = 2 hours).
 </li>
 <li> If you get "unable to load resource module" errors opening the Web UI, try changing the language and then back again (if English, change to French or something then back to English).
 </li>
 <li> The Stora doesn't have WOL (Wake-on-Lan) or automatic power on, so what happens after a power failure? It stays off. It does least have a clock and battery so one thing you can do is to enable Power On events in the web interface (there is no need to set an Off event, unless you want to). It isn't ideal but least your Stora won't stay off for more than 12/24 hours... be sure to select and save your region (even if your region is the default one, press Submit on it) or they won't work! (another annoying Netgear bug).
 </li>
-<li><a href="/wiki/index.php?title=Disable_mystora.com_redirection" title="Disable mystora.com redirection">Disable mystora.com redirection</a> - a good idea to make sure you can access your Stora's WebUI even if your net connection is down (not really needed on firmware 2.3)
+<li><a href="/wiki/index_Disable_mystora.com_redirection" title="Disable mystora.com redirection">Disable mystora.com redirection</a> - a good idea to make sure you can access your Stora's WebUI even if your net connection is down (not really needed on firmware 2.3)
 </li>
 </ul>
-<p>You can see Netgear's firmware changelogs and Known Issues under <a href="/wiki/index.php?title=Manual_firmware_update_and_info" title="Manual firmware update and info">Manual firmware update and info</a>
+<p>You can see Netgear's firmware changelogs and Known Issues under <a href="/wiki/index_Manual_firmware_update_and_info" title="Manual firmware update and info">Manual firmware update and info</a>
 </p>
 <h2><span class="mw-headline" id="Improving_security_-_Making_your_Stora_your_own">Improving security - Making your Stora your own</span></h2>
 <ul>
-<li> <a href="/wiki/index.php?title=Sshd_substitution" title="Sshd substitution">sshd substitution</a> to make login easier (and remove backdoors?). Follow the "easy way"!
+<li> <a href="/wiki/index_Sshd_substitution" title="Sshd substitution">sshd substitution</a> to make login easier (and remove backdoors?). Follow the "easy way"!
 </li>
-<li> <a href="/wiki/index.php?title=Disabling_updates_and_external_access" title="Disabling updates and external access">Disabling updates and external access</a> to improve security and reliability
+<li> <a href="/wiki/index_Disabling_updates_and_external_access" title="Disabling updates and external access">Disabling updates and external access</a> to improve security and reliability
 </li>
-<li> <a href="/wiki/index.php?title=Disable_the_Access_Patrol_service" title="Disable the Access Patrol service">Disable the Access Patrol service</a> allows you to remove various limitations, this also covers fixing the DNS servers.
+<li> <a href="/wiki/index_Disable_the_Access_Patrol_service" title="Disable the Access Patrol service">Disable the Access Patrol service</a> allows you to remove various limitations, this also covers fixing the DNS servers.
 </li>
 </ul>
 <p><br />
@@ -111,7 +111,7 @@ It's a good idea to keep an eye on this - completely filling it could brick your
 </p><p><br />
 </p>
 <h2><span class="mw-headline" id="Set_up_user_accounts">Set up user accounts</span></h2>
-<p>You can do this through the WebUI (read <a href="/wiki/index.php?title=Changing_User_Limit" title="Changing User Limit">Changing User Limit</a>), or with the console (all 3 of these command are needed for the account to work):
+<p>You can do this through the WebUI (read <a href="/wiki/index_Changing_User_Limit" title="Changing User Limit">Changing User Limit</a>), or with the console (all 3 of these command are needed for the account to work):
 </p>
 <pre>adduser &lt;username&gt;
 passwd &lt;username&gt;
@@ -128,18 +128,18 @@ It is important that you understand linux file permissions otherwise you will li
 <p>Where you go from here depends what you want the Stora to do, some popular things are:
 </p>
 <ul>
-<li><a href="/wiki/index.php?title=Kernel_mode_NFS" title="Kernel mode NFS">Kernel mode NFS</a> (better file serving protocol than SMB for Linux systems and some HTPCs)
+<li><a href="/wiki/index_Kernel_mode_NFS" title="Kernel mode NFS">Kernel mode NFS</a> (better file serving protocol than SMB for Linux systems and some HTPCs)
 </li>
-<li><a href="/wiki/index.php?title=Privoxy_web_proxy_server" title="Privoxy web proxy server">Privoxy web proxy server</a> (powerful tool for filtering websites)
+<li><a href="/wiki/index_Privoxy_web_proxy_server" title="Privoxy web proxy server">Privoxy web proxy server</a> (powerful tool for filtering websites)
 </li>
-<li><a href="/wiki/index.php?title=Transmission_torrent_client" title="Transmission torrent client">Transmission torrent client</a>  (use your Stora to handle torrents 24/7)
+<li><a href="/wiki/index_Transmission_torrent_client" title="Transmission torrent client">Transmission torrent client</a>  (use your Stora to handle torrents 24/7)
 </li>
 </ul>
 <p>See the wiki main page for many other common solutions.
-Use "df" to check free space on your flashram, don't fill this!<br /> If you need to install lots of packages you should move some dirs e.g. /opt to your hard drive, this is explained on <a href="/wiki/index.php?title=Installing_a_package_manager" title="Installing a package manager">Installing a package manager</a>
+Use "df" to check free space on your flashram, don't fill this!<br /> If you need to install lots of packages you should move some dirs e.g. /opt to your hard drive, this is explained on <a href="/wiki/index_Installing_a_package_manager" title="Installing a package manager">Installing a package manager</a>
 </p><p><br />
 If anyone has any other important suggestions for new users please add here!<br />
---<a href="/wiki/index.php?title=User:Smiff&amp;action=edit&amp;redlink=1" class="new" title="User:Smiff (page does not exist)">Smiff</a>
+--<a href="/wiki/index_User:Smiff&amp;action=edit&amp;redlink=1" class="new" title="User:Smiff (page does not exist)">Smiff</a>
 </p>
 <!-- 
 NewPP limit report
@@ -156,7 +156,7 @@ Expensive parser function count: 0/100
 <!-- Saved in parser cache with key hardwar6_wiki:pcache:idhash:70-0!*!0!!en!*!* and timestamp 20171225093915
  -->
 </div>								<div class="printfooter">
-				Retrieved from "<a href="http://www.openstora.com/wiki/index.php?title=Getting_Started&amp;oldid=582">http://www.openstora.com/wiki/index.php?title=Getting_Started&amp;oldid=582</a>"				</div>
+				Retrieved from "<a href=/wiki/index_Getting_Started&amp;oldid=582">/wiki/index_Getting_Started&amp;oldid=582</a>"				</div>
 												<div id='catlinks' class='catlinks catlinks-allhidden'></div>												<div class="visualClear"></div>
 							</div>
 		</div>
@@ -166,14 +166,14 @@ Expensive parser function count: 0/100
 				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
 	<h3 id="p-personal-label">Personal tools</h3>
 	<ul>
-<li id="pt-login"><a href="/wiki/index.php?title=Special:UserLogin&amp;returnto=Getting+Started" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
+<li id="pt-login"><a href="/wiki/index_Special:UserLogin&amp;returnto=Getting+Started" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
 </div>
 				<div id="left-navigation">
 					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
 	<h3 id="p-namespaces-label">Namespaces</h3>
 	<ul>
-					<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/index.php?title=Getting_Started"  title="View the content page [c]" accesskey="c">Page</a></span></li>
-					<li  id="ca-talk" class="new"><span><a href="/wiki/index.php?title=Talk:Getting_Started&amp;action=edit&amp;redlink=1"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+					<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/index_Getting_Started"  title="View the content page [c]" accesskey="c">Page</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="/wiki/index_Talk:Getting_Started&amp;action=edit&amp;redlink=1"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
 			</ul>
 </div>
 <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
@@ -190,9 +190,9 @@ Expensive parser function count: 0/100
 					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
 	<h3 id="p-views-label">Views</h3>
 	<ul>
-					<li id="ca-view" class="selected"><span><a href="/wiki/index.php?title=Getting_Started" >Read</a></span></li>
-					<li id="ca-viewsource"><span><a href="/wiki/index.php?title=Getting_Started&amp;action=edit"  title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></span></li>
-					<li id="ca-history" class="collapsible"><span><a href="/wiki/index.php?title=Getting_Started&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+					<li id="ca-view" class="selected"><span><a href="/wiki/index_Getting_Started" >Read</a></span></li>
+					<li id="ca-viewsource"><span><a href="/wiki/index_Getting_Started&amp;action=edit"  title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/wiki/index_Getting_Started&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
 			</ul>
 </div>
 <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
@@ -227,9 +227,9 @@ Expensive parser function count: 0/100
 	<h3 id='p-Wiki-label'>Wiki</h3>
 	<div class="body">
 		<ul>
-			<li id="n-Main-Page"><a href="/wiki/index.php?title=Main_Page">Main Page</a></li>
-			<li id="n-Recent-changes"><a href="http://www.openstora.com/wiki/index.php?title=Special:Recentchanges" rel="nofollow">Recent changes</a></li>
-			<li id="n-Help"><a href="/wiki/index.php?title=Help">Help</a></li>
+			<li id="n-Main-Page"><a href="/wiki/index_Main_Page">Main Page</a></li>
+			<li id="n-Recent-changes"><a href=/wiki/index_Special:Recentchanges" rel="nofollow">Recent changes</a></li>
+			<li id="n-Help"><a href="/wiki/index_Help">Help</a></li>
 		</ul>
 	</div>
 </div>
@@ -237,12 +237,12 @@ Expensive parser function count: 0/100
 	<h3 id='p-tb-label'>Tools</h3>
 	<div class="body">
 		<ul>
-			<li id="t-whatlinkshere"><a href="/wiki/index.php?title=Special:WhatLinksHere/Getting_Started" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
-			<li id="t-recentchangeslinked"><a href="/wiki/index.php?title=Special:RecentChangesLinked/Getting_Started" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
-			<li id="t-specialpages"><a href="/wiki/index.php?title=Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
-			<li id="t-print"><a href="/wiki/index.php?title=Getting_Started&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
-			<li id="t-permalink"><a href="/wiki/index.php?title=Getting_Started&amp;oldid=582" title="Permanent link to this revision of the page">Permanent link</a></li>
-			<li id="t-info"><a href="/wiki/index.php?title=Getting_Started&amp;action=info">Page information</a></li>
+			<li id="t-whatlinkshere"><a href="/wiki/index_Special:WhatLinksHere/Getting_Started" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/index_Special:RecentChangesLinked/Getting_Started" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-specialpages"><a href="/wiki/index_Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-print"><a href="/wiki/index_Getting_Started&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+			<li id="t-permalink"><a href="/wiki/index_Getting_Started&amp;oldid=582" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/wiki/index_Getting_Started&amp;action=info">Page information</a></li>
 		</ul>
 	</div>
 </div>
@@ -254,9 +254,9 @@ Expensive parser function count: 0/100
 											<li id="footer-info-viewcount">This page has been accessed 69,625 times.</li>
 									</ul>
 							<ul id="footer-places">
-											<li id="footer-places-privacy"><a href="/wiki/index.php?title=OpenStora:Privacy_policy" title="OpenStora:Privacy policy">Privacy policy</a></li>
-											<li id="footer-places-about"><a href="/wiki/index.php?title=OpenStora:About" title="OpenStora:About">About OpenStora</a></li>
-											<li id="footer-places-disclaimer"><a href="/wiki/index.php?title=OpenStora:General_disclaimer" title="OpenStora:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-privacy"><a href="/wiki/index_OpenStora:Privacy_policy" title="OpenStora:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/index_OpenStora:About" title="OpenStora:About">About OpenStora</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/index_OpenStora:General_disclaimer" title="OpenStora:General disclaimer">Disclaimers</a></li>
 									</ul>
 										<ul id="footer-icons" class="noprint">
 					<li id="footer-poweredbyico">
