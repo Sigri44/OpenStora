@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-gb" xml:lang="en-gb">
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-language" content="en-gb" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="resource-type" content="document" />
+<meta name="distribution" content="global" />
+<meta name="copyright" content="2000, 2002, 2005, 2007 phpBB Group" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="robots" content="noindex" />
+
+<title>OpenStora Forums &bull; View topic - BitTorrent Sync on stora???</title>
+
+<link href="./styles/absolution/theme/print.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body id="phpbb">
+<div id="wrap">
+	<a id="top" name="top" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>OpenStora Forums</h1>
+		<p>OpenStora Forum<br /><a href="http://openstora.com/forum/">http://openstora.com/forum/</a></p>
+
+		<h2>BitTorrent Sync on stora???</h2>
+		<p><a href="http://openstora.com/forum/viewtopic.php?f=18&amp;t=1816">http://openstora.com/forum/viewtopic.php?f=18&amp;t=1816</a></p>
+	</div>
+
+	<div id="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+		
+			<div class="post">
+				<h3>BitTorrent Sync on stora???</h3>
+				<div class="date"><img src="./styles/absolution/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />Posted: <strong>Tue May 07, 2013 4:34 pm</strong></div>
+				<div class="author">by <strong>gzylo</strong></div>
+				<div class="content">Hi all<br /><br /><!-- m --><a class="postlink" href="http://labs.bittorrent.com/experiments/sync.html">http://labs.bittorrent.com/experiments/sync.html</a><!-- m --><br /><br />is it doable?<br /><br />Thanks</div>
+			</div>
+			<hr />
+		
+			<div class="post">
+				<h3>Re: BitTorrent Sync on stora???</h3>
+				<div class="date"><img src="./styles/absolution/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />Posted: <strong>Sun Aug 11, 2013 10:35 pm</strong></div>
+				<div class="author">by <strong>jberghuis</strong></div>
+				<div class="content">BitTorrent Sync is a great personal self-hosted cloud alternative to Dropbox. <br /><br />I have managed to get BitTorrent Sync running on the Stora with no issues so far.  <br />Below is how I did it (based on instructions for the Raspberry Pi, <a href="http://jack.minardi.org/raspberry_pi/replace-dropbox-with-bittorrent-sync-and-a-raspberry-pi/" class="postlink">http://jack.minardi.org/raspberry_pi/replace-dropbox-with-bittorrent-sync-and-a-raspberry-pi/</a>)<br /><br /><span style="font-weight: bold"><span style="color: #FF0000">I'm not a professional coder, so please let me if I'm doing something terribly wrong! Also let me know how it can be improved.</span></span><br /><br /><span style="font-weight: bold">Installing BitTorrent Sync on the Netgear Stora</span><br /><br />You need to make a directory, grab the ARM build of BitTorrent Sync and uncompress it:<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>mkdir ~/.btsync &amp;&amp; cd ~/.btsync<br />wget http://btsync.s3-website-us-east-1.amazonaws.com/btsync_arm.tar.gz<br />tar xvfz btsync_arm.tar.gz</code></dd></dl><br /><br />Now you only have to launch the btsync application:<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>cd ~/.btsync<br />sudo ./btsync</code></dd></dl><br /><br />If you see the following output btsync is properly running (your pid will be different).<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>BitTorrent Sync forked to background. pid = 3003</code></dd></dl><br /><br />Navigate your browser to <span style="font-weight: bold">Your-Stora-IP-Address:8888</span> to manage your syncing. To add a folder click &quot;Add Folder&quot; and navigate to it. You will need to generate a secret as this is the first time you are adding the folder. You use the same secret for the folder you want to sync on your other device.<br /><br /><br /><span style="font-weight: bold">Starting at Boot</span><br /><br />You may want to set btsync to start when you boot your Stora. To do that we will place a script in /etc/init.d/ and then register it with chkconfig. First open in nano:<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>sudo nano /etc/init.d/btsync</code></dd></dl><br /><br />Paste the following code in the script. Replace <span style="font-weight: bold">&lt;&lt;username&gt;&gt;</span> with your Stora username.<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>!/bin/sh<br /># chkconfig: 2345 95 20<br /># description: btsync<br /># processname: Starting btsync.<br /># /etc/init.d/btsync<br />#<br /># Carry out specific functions when asked to by the system<br />case &quot;$1&quot; in<br />start)<br />&nbsp; &nbsp; /home/&lt;&lt;username&gt;&gt;/.btsync/btsync<br />&nbsp; &nbsp; ;;<br />stop)<br />&nbsp; &nbsp; killall btsync<br />&nbsp; &nbsp; ;;<br />*)<br />&nbsp; &nbsp; echo &quot;Usage: /etc/init.d/btsync {start|stop}&quot;<br />&nbsp; &nbsp; exit 1<br />&nbsp; &nbsp; ;;<br />esac<br />exit 0<br /></code></dd></dl><br /><br />Save and exit.<br />Then change the permissions, test, and register it to run at boot:<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>sudo chmod 755 /etc/init.d/btsync<br />sudo /etc/init.d/btsync start<br />sudo /etc/init.d/btsync stop<br />sudo /sbin/chkconfig --add btsync<br />sudo /sbin/chkconfig --levels 2345 btsync on<br /></code></dd></dl><br /><br />Restart your Stora to check whether BTSync will autostart on boot:<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>shutdown -r now</code></dd></dl><br /><br />Navigate your browser to <span style="font-weight: bold">Your-Stora-IP-Address:8888</span> to see if it works.</div>
+			</div>
+			<hr />
+		
+			<div class="post">
+				<h3>Re: BitTorrent Sync on stora???</h3>
+				<div class="date"><img src="./styles/absolution/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />Posted: <strong>Mon Sep 16, 2013 3:31 pm</strong></div>
+				<div class="author">by <strong>gzylo</strong></div>
+				<div class="content">Thanks for the info!</div>
+			</div>
+			<hr />
+		
+			<div class="post">
+				<h3>Re: BitTorrent Sync on stora???</h3>
+				<div class="date"><img src="./styles/absolution/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />Posted: <strong>Wed Aug 13, 2014 3:04 am</strong></div>
+				<div class="author">by <strong>leightong</strong></div>
+				<div class="content">I read this and decided to blow the dust off my old Stora and give it a go.<br />It now has a new lease of life, thank you very much for putting this together, much appreciated.<br /><img src="./images/smilies/smiley.gif" alt=":)" title="Smiley" /></div>
+			</div>
+			<hr />
+		
+			<div class="post">
+				<h3>Re: BitTorrent Sync on stora???</h3>
+				<div class="date"><img src="./styles/absolution/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />Posted: <strong>Thu Sep 25, 2014 9:56 pm</strong></div>
+				<div class="author">by <strong>Preax</strong></div>
+				<div class="content">works on my stora as well, but you need to get the arm files directly from bittorent sync website and follow above instructions.</div>
+			</div>
+			<hr />
+		
+			<div class="post">
+				<h3>Re: BitTorrent Sync on stora???</h3>
+				<div class="date"><img src="./styles/absolution/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />Posted: <strong>Sun Sep 20, 2015 5:25 pm</strong></div>
+				<div class="author">by <strong>Bimme</strong></div>
+				<div class="content">I've got version 1.4 working.<br />But version 2.x won't answer on the web interface.<br />Has anyone got 2.x working?</div>
+			</div>
+			<hr />
+		
+			<div class="post">
+				<h3>Re: BitTorrent Sync on stora???</h3>
+				<div class="date"><img src="./styles/absolution/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />Posted: <strong>Mon Sep 21, 2015 3:14 am</strong></div>
+				<div class="author">by <strong>pippone</strong></div>
+				<div class="content">you may have to run the btsync daemon specifying a command line option to set the listen port:<br /><br />./btsync --webui.listen &lt;yourstoraip&gt;:8888<br /><br />it worked for me</div>
+			</div>
+			<hr />
+		
+			<div class="post">
+				<h3>Re: BitTorrent Sync on stora???</h3>
+				<div class="date"><img src="./styles/absolution/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />Posted: <strong>Mon Sep 21, 2015 5:49 pm</strong></div>
+				<div class="author">by <strong>Bimme</strong></div>
+				<div class="content"><![if !IE]><div class="bubble"></div><![endif]><blockquote><div><cite>pippone wrote:</cite>./btsync --webui.listen &lt;yourstoraip&gt;:8888<br /></div></blockquote><br />Thanks, it worked!</div>
+			</div>
+			<hr />
+		
+	</div>
+
+<!--
+	We request you retain the full copyright notice below including the link to www.phpbb.com.
+	This not only gives respect to the large amount of time given freely by the developers
+	but also helps build interest, traffic and use of phpBB3. If you (honestly) cannot retain
+	the full copyright we ask you at least leave in place the "Powered by phpBB" line, with
+	"phpBB" linked to www.phpbb.com. If you refuse to include even this then support on our
+	forums may be affected.
+
+	The phpBB Group : 2006
+//-->
+	<div id="page-footer">
+		<div class="page-number">All times are UTC - 5 hours [ <abbr title="Daylight Saving Time">DST</abbr> ]<br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB &copy; 2000, 2002, 2005, 2007 phpBB Group<br />http://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+</html>

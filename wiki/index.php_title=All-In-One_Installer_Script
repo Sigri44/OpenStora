@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" /><title>All-In-One Installer Script - OpenStora</title>
+<meta name="generator" content="MediaWiki 1.22.6" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki/opensearch_desc.php" title="OpenStora (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://www.openstora.com/wiki/api.php?action=rsd" />
+<link rel="alternate" type="application/atom+xml" title="OpenStora Atom feed" href="/wiki/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="stylesheet" href="http://www.openstora.com/wiki/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cskins.vector&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(ckb),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: hardwar6_wiki:resourceloader:filter:minify-css:7:a5305c32ce5719fffdb0ebb117d3d93a */</style>
+
+<script src="http://www.openstora.com/wiki/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"All-In-One_Installer_Script","wgTitle":"All-In-One Installer Script","wgCurRevisionId":1129,"wgRevisionId":1129,"wgArticleId":84,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"All-In-One_Installer_Script","wgIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":0,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,
+"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: hardwar6_wiki:resourceloader:filter:minify-js:7:5a69c7e0fa6557851b6dea8a62efaffb */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","skins.vector.js"]);
+}</script>
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/wiki/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-All-In-One_Installer_Script skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">All-In-One Installer Script</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From OpenStora</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#All-In-One_Installer_Script"><span class="tocnumber">1</span> <span class="toctext">All-In-One Installer Script</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Screenshots"><span class="tocnumber">2</span> <span class="toctext">Screenshots</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Instructions"><span class="tocnumber">3</span> <span class="toctext">Instructions</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Collaboration"><span class="tocnumber">4</span> <span class="toctext">Collaboration</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Script"><span class="tocnumber">5</span> <span class="toctext">Script</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Forum"><span class="tocnumber">6</span> <span class="toctext">Forum</span></a></li>
+</ul>
+</div>
+
+<h3><span class="mw-headline" id="All-In-One_Installer_Script">All-In-One Installer Script</span></h3>
+<p>The idea behind this page is to create a script which everyone can use to help automate the customisation/installation of software on their stora.
+</p>
+<h2><span class="mw-headline" id="Screenshots">Screenshots</span></h2>
+<p><a href="/wiki/index.php?title=File:Stora_v3-1.png" class="image"><img alt="Stora v3-1.png" src="/wiki/images/2/29/Stora_v3-1.png" width="834" height="420" /></a>
+</p><p><a href="/wiki/index.php?title=File:Stora_v3-2.png" class="image"><img alt="Stora v3-2.png" src="/wiki/images/d/d2/Stora_v3-2.png" width="833" height="420" /></a>
+</p><p>For those with any scripting/programming skills it should be fairly straightforward to add additional functions + programs to script. For those without, it should be fairly simple to use the script&#160;:)
+</p>
+<h2><span class="mw-headline" id="Instructions">Instructions</span></h2>
+<p>You will need to ssh into your stora, as pastebin seems to use windows based EOL we have to convert them to unix ones too.
+</p>
+<pre>-bash-3.2$ wget -O ./storaAIO.sh.dos <a rel="nofollow" class="external free" href="http://pastebin.com/raw/QDjSFtTT">http://pastebin.com/raw/QDjSFtTT</a>
+-bash-3.2$ sed 's/\r$//' ./storaAIO.sh.dos &gt; ./storaAIO.sh
+-bash-3.2$ rm ./storaAIO.sh.dos
+-bash-3.2$ chmod +x ./storaAIO.sh
+-bash-3.2$ sudo ./storaAIO.sh
+</pre>
+<p>Choose an option from the menu.
+</p>
+<h2><span class="mw-headline" id="Collaboration">Collaboration</span></h2>
+<p>If you wish to add extra functionality to the script, please do so, but make sure it's been tested on your stora before updating the wiki&#160;:)
+</p>
+<h2><span class="mw-headline" id="Script">Script</span></h2>
+<pre>#!/bin/sh
+######################################################
+# storaSetup.sh
+# 
+# v0.03 (26.11.2010)
+#
+###################################################### 
+# Changelog:
+#
+# 0.01 - Initial Version
+# 0.02 - Uses functions, new menu system
+# 0.03 - Added Transmission
+#
+######################################################
+# variable setup
+temp="/tmp"                            &#160;; # this is where temporary files are downloaded to
+nzb_home="/home/nzbget"                &#160;; # this is where nzbget will setup it's files
+nfs_kernel_check="2.6.22.18-Netgear"   &#160;; # minimum version needed for NFS
+TEXT=""
+# package locations
+     SSHD_LOCATION="<a rel="nofollow" class="external free" href="http://www.streetster.co.uk/dl/stora/sshd.tar.gz">http://www.streetster.co.uk/dl/stora/sshd.tar.gz</a>"
+     IPKG_LOCATION="<a rel="nofollow" class="external free" href="http://ipkg.nslu2-linux.org/feeds/optware/cs08q1armel/cross/stable/ipkg-opt_0.99.163-10_arm.ipk">http://ipkg.nslu2-linux.org/feeds/optware/cs08q1armel/cross/stable/ipkg-opt_0.99.163-10_arm.ipk</a>"
+      NFS_LOCATION="<a rel="nofollow" class="external free" href="http://www.streetster.co.uk/dl/stora/nfs-utils_STORA.tar.gz">http://www.streetster.co.uk/dl/stora/nfs-utils_STORA.tar.gz</a>"
+NZBGETWEB_LOCATION="<a rel="nofollow" class="external free" href="http://www.streetster.co.uk/dl/stora/nzbgetweb-1.4.zip">http://www.streetster.co.uk/dl/stora/nzbgetweb-1.4.zip</a>"
+  NZBGETD_LOCATION="<a rel="nofollow" class="external free" href="http://www.streetster.co.uk/dl/stora/nzbgetd">http://www.streetster.co.uk/dl/stora/nzbgetd</a>"
+   RPCLIB_LOCATION="<a rel="nofollow" class="external free" href="http://www.streetster.co.uk/dl/stora/xmlrpc-2.2.2.tar.gz">http://www.streetster.co.uk/dl/stora/xmlrpc-2.2.2.tar.gz</a>"
+TRANSMISSIOND_LOCATION="<a rel="nofollow" class="external free" href="http://www.streetster.co.uk/dl/stora/transmission-daemon">http://www.streetster.co.uk/dl/stora/transmission-daemon</a>"
+
+# You should not need to edit below this line...
+######################################################
+#                   FUNCTIONS                        #
+######################################################
+######################################################
+# drawMenu - user front-end
+######################################################
+drawMenu() {
+# clear the screen
+clear
+cat &lt;&lt;MENU_END
+  
+  ######################################################
+  # Welcome to the stora all-in-one script...
+  ######################################################
+  
+  What would you like to do:
+  
+  1) Setup the PATH variable/environment
+  2) Swap the SSH Daemon with a clean version
+  3) Install the IPKG Package Manager
+  4) Move /opt to the harddrive
+  5) Install Kernel NFS
+  6) Remove Access Patrol
+  7) Install NZBget
+  8) Install NZBget-server
+  9) Install Transmission
+  
+  X. eXit
+  
+  Option: _
+  
+  $1
+  
+MENU_END
+tput cup 19 10
+read selection
+case $selection in
+    1) setPath;             checkIt;; 
+    2) replaceSSHd;         checkIt;;
+    3) installIPKG;         checkIt;;
+    4) moveOpt;             checkIt;;
+    5) installNFS;          checkIt;;
+    6) disableAP;            checkIt;;
+    7) installNZBget;       checkIt;;
+    8) installNZBgetServer; checkIt;;
+    9) installTransmission; checkIt;;
+    X|x|Q|q) tput sgr0; echo ""; exit 0  &#160;;;
+    *) TEXT="Error: Invalid Selection";  &#160;;;
+esac
+}
+######################################################
+# checkIt - displays message after function runs
+######################################################
+checkIt() {
+    if [ "$?" -eq "0" ]
+    then     
+        echo "OK."
+    elif [ "$?" -eq "0" ]
+    then
+        echo "Download Failed."
+    else
+        echo "Failed."    
+    fi
+    echo ""
+    echo "Hit ENTER to continue..."
+    read blah    
+}
+######################################################
+# setPath - sets up the users /etc/environment
+######################################################
+setPath() {
+    clear
+    echo "Setting up PATH variable..."    
+    # return value
+    ret="0"
+    
+    # setup new path variable
+    NEW_PATH="/usr/local/bin:/usr/bin:/bin:/opt/bin:/usr/sbin:/opt/sbin:/usr/sbin:/sbin"
+    #export the path too
+    export PATH=$NEW_PATH
+    
+    # set the environment
+    echo "PATH=$NEW_PATH" &gt; /etc/environment
+    # return
+    return $ret
+}
+######################################################
+# replaceSSHd - replaces SSH daemon with clean version
+######################################################
+replaceSSHd() {
+    clear
+    echo "Replacing SSH Daemon..."
+    
+    # return value
+    ret="0"
+    
+    # download
+    wget -O $temp/sshd.tar.gz $SSHD_LOCATION  
+    # check file exists
+    if [ -s $temp/sshd.tar.gz ]
+    then
+        # extract
+        tar -xzf $temp/sshd.tar.gz -C $temp/
+        # backup original
+        cp /usr/sbin/sshd /usr/sbin/sshd.original
+        chmod -x /usr/sbin/sshd.original
+   
+        # replace and make executable
+        mv $temp/sshd /usr/sbin/sshd
+        chmod +x /usr/sbin/sshd
+   
+        # restart daemon
+        /etc/init.d/sshd restart
+        # clean-up
+        rm $temp/sshd.tar.gz
+    else
+        ret="1"
+    fi
+    
+    # return    
+    return $ret
+}
+######################################################
+# installIPKG - installs the IPKG package manager
+######################################################
+installIPKG() {
+    clear
+    echo "Install IPKG..."
+    
+    # return value
+    ret="0"
+    
+    # download
+    wget -O $temp/ipkg.ipk $IPKG_LOCATION
+    # check file exists
+    if [ -s $temp/ipkg.ipk ]
+    then
+        # extract
+        tar -xzf $temp/ipkg.ipk -C $temp/
+        tar -xzf $temp/data.tar.gz -C /
+        # setup sources
+        echo "src cs08q1armel <a rel="nofollow" class="external free" href="http://ipkg.nslu2-linux.org/feeds/optware/cs08q1armel/cross/stable">http://ipkg.nslu2-linux.org/feeds/optware/cs08q1armel/cross/stable</a>" &gt;&gt; /opt/etc/ipkg.conf 
+        /opt/bin/ipkg update
+        # clean-up
+        rm $temp/ipkg.ipk
+        rm $temp/data.tar.gz
+        rm $temp/control.tar.gz
+        rm $temp/debian-binary
+    else
+        ret="1"
+    fi
+    
+    # return    
+    return $ret
+}    
+######################################################
+# moveOpt - moves /opt to /home/opt
+######################################################
+moveOpt() {
+    clear
+    echo "Moving /opt to harddrive..."
+    
+    # return value
+    ret="0"
+    
+    # copy everything
+    cp -r /opt /home/opt
+    # rename old
+    mv /opt /opt-old
+    # symbolic link to hdd
+    ln -s /home/opt /opt
+    
+    # return    
+    return $ret    
+}
+######################################################
+# installNFS - installs Kernel NFS
+######################################################
+installNFS() {
+    clear
+    echo "Installing Kernel NFS"
+    
+    # return value
+    ret="0"
+    
+    # check kernel
+    if [ `uname -r` = "$nfs_kernel_check" ]
+    then
+        # download
+        wget -O $temp/nfs.tar.gz $NFS_LOCATION
+    
+        # check file exists
+        if [ -s $temp/nfs.tar.gz ]
+        then
+            # extract
+            tar -xzf $temp/nfs.tar.gz -C /
+            # load/check module
+            /sbin/depmod -a
+            /sbin/modprobe nfsd
+            /sbin/lsmod | grep nfsd
+            # add default share
+            echo "/home/0common 192.168.1.0/255.255.255.0(rw,sync,no_root_squash,no_subtree_check)" &gt; /etc/exports
+            # remove v4 support
+            mv /etc/sysconfig/nfs /etc/sysconfig/nfs.original
+            cat /etc/sysconfig/nfs.original | sed 's/^#RPCNFSDARGS="-N\ 4"/RPCNFSDARGS="-N\ 4"/' &gt; /etc/sysconfig/nfs
+            # start daemons
+            /etc/init.d/portmap start
+            /etc/init.d/nfs start
+    
+            # start at boot
+            /sbin/chkconfig --add portmap
+            /sbin/chkconfig --level 235 portmap on
+            /sbin/chkconfig --add nfs
+            /sbin/chkconfig --level 235 nfs on
+            # check it looks ok
+            /sbin/exportfs -v
+            # clean-up
+            rm $temp/nfs.tar.gz
+        else
+            # download failed
+            ret="1"
+        fi
+    else
+        # wrong kernel
+        ret="2"
+    fi
+    
+    # return    
+    return $ret
+}
+######################################################
+#
+######################################################
+installNZBget() {
+    clear
+    echo "Installing NZBget..."
+    
+    # return value
+    ret="0"
+# check if we have IPKG
+    if [&#160;! -e /opt/bin/ipkg ]
+        then
+        # install ipkg
+            echo "IPKG not found. Installing..."
+        installIPKG
+    fi
+# check if we have IPKG (again)
+    if [ -e /opt/bin/ipkg ]    
+    then
+    
+    # install nzbget using ipkg
+    /opt/bin/ipkg install nzbget
+    
+    # install unrar too
+    /opt/bin/ipkg install unrar
+    # set home directory, umask to 0000 and parcheck to yes...
+    cat /opt/share/doc/nzbget/nzbget.conf.example | sed -e "s#~/download#$nzb_home#"\
+                                -e "s#UMask=1000#UMask=0000#"\
+                                -e "s#DirectWrite=no#DirectWrite=yes#"\
+                                -e "s#PostProcess=#PostProcess=$nzb_home/postprocess.sh#"\
+                                -e "s#ParCheck=no#ParCheck=yes#" &gt; /usr/etc/nzbget.conf
+                                
+    # copy example post-process script + conf
+    cp /opt/share/doc/nzbget/postprocess-example.sh $nzb_home/postprocess.sh
+    cp /opt/share/doc/nzbget/postprocess-example.conf $nzb_home/postprocess-example.conf
+    # setup nzbget daemon
+    wget -O $temp/nzbgetd $NZBGETD_LOCATION
+    mv $temp/nzbgetd /etc/init.d/nzbgetd
+    chmod +x /etc/init.d/nzbgetd
+    # start at boot
+    /sbin/chkconfig --add nzbgetd
+    /sbin/chkconfig --level 235 nzbgetd on
+    # start daemon
+    /etc/init.d/nzbgetd start
+    
+    else
+        # we don't have IPKG so fail
+        ret="1"
+    fi
+    
+    # return    
+    return $ret
+}
+######################################################
+#
+######################################################
+installNZBgetServer() {
+    clear
+    echo "Setting up NZBGET-web..."
+    # return value
+    ret="0"
+    
+    # download 
+    wget -O $temp/nzbgetweb.zip $NZBGETWEB_LOCATION
+    wget -O $temp/xmlrpc.tar.gz $RPCLIB_LOCATION
+    # grab unzip if we dont have it already
+    if [&#160;! -e /opt/bin/unzip ]
+    then
+        /opt/bin/ipkg install unzip
+    fi
+       
+    # we can share the http server by placing files in /var/www/
+    /opt/bin/unzip -d /var/www $temp/nzbgetweb.zip  
+    # we also need the PHP RPC library
+    tar -xzf $temp/xmlrpc.tar.gz -C $temp/
+    cp -r $temp/xmlrpc-2.2.2/lib /var/www/nzbgetweb/lib
+    # set permissions
+    chgrp -R www /var/www/nzbgetweb/
+    chmod -R 755 /var/www/nzbgetweb/
+    chown -R apache /var/www/nzbgetweb/
+    # setup the alias
+    cp /etc/httpd/conf/httpd.conf /etc/httpd/conf/httpd.conf.original
+    echo 'Alias /nzbgetweb/ "/var/www/nzbgetweb/"' &gt;&gt; /etc/httpd/conf/httpd.conf
+    # restart httpd daemon
+    /sbin/service httpd reload
+    # clean-up
+    rm $temp/nzbgetweb.zip
+    rm $temp/xmlrpc.tar.gz
+    rm -r $temp/xmlrpc-2.2.2
+    # return    
+    return $ret
+}
+######################################################
+# disableAP - disables the Access Patrol
+######################################################
+disableAP() {
+    clear
+    echo "Disabling Access Patrol..."
+    # return value
+    ret="0"
+    
+    # stop service
+    /etc/init.d/access-patrol stop
+    echo ""
+    echo ""
+    # remove from boot
+    /sbin/chkconfig --levels 2345 access-patrol off
+    # remove executable flag
+    chmod a-x /usr/sbin/access-patrol
+    # return    
+    return $ret
+}
+######################################################
+# installTransmission - install bittorrent server
+######################################################
+installTransmission() {
+clear
+echo "Installing Transmission..."
+echo ""
+# check if we have IPKG
+if [&#160;! -e /opt/bin/ipkg ]
+    then
+    # install ipkg
+        echo "IPKG not found. Installing..."
+    installIPKG
+fi
+# get daemon user, use sudo-er by default
+echo -n "Please enter the daemon user: [$SUDO_USER] "
+read TRANSMISSION_USER
+if [ -z $TRANSMISSION_USER ]
+then
+    TRANSMISSION_USER=$SUDO_USER
+fi
+# get transmission home location, use ~/transmission by default    
+echo -n "Please enter the destination where you want files saved: [/home/$TRANSMISSION_USER/transmission/] "
+read TRANSMISSION_HOME
+if [ -z $TRANSMISSION_HOME ]
+then
+    TRANSMISSION_HOME=/home/$TRANSMISSION_USER/transmission
+fi
+# get monitoring directory, use ~/transmission/monitor by default
+echo -n "Please enter the directory to monitor for new .torrent files: [/home/$TRANSMISSION_USER/transmission/monitor/] "
+read TRANSMISSION_MONITOR_HOME
+if [ -z $TRANSMISSION_MONITOR_HOME ]
+then
+    TRANSMISSION_MONITOR_HOME=/home/$TRANSMISSION_USER/transmission/monitor
+fi
+
+# install using ipkg
+/opt/bin/ipkg install transmission
+
+# get daemon and setup home dir
+wget $TRANSMISSIOND_LOCATION -O $temp/transmission-daemon.default
+cat $temp/transmission-daemon.default | sed -e "s#TRANSMISSION_HOME=#TRANSMISSION_HOME=$TRANSMISSION_HOME#"\
+                                            -e "s#DAEMON_USER=#DAEMON_USER=\"$TRANSMISSION_USER\"#" &gt; /etc/init.d/transmission-daemon
+# make executable
+chmod 755 /etc/init.d/transmission-daemon
+# create dirs if they dont exist
+if [&#160;! -d "$TRANSMISSION_HOME" ]
+then
+    echo "Creating $TRANSMISSION_HOME..."
+    mkdir -p "$TRANSMISSION_HOME"
+    chmod 777 "$TRANSMISSION_HOME"
+    chown $TRANSMISSION_USER:$TRANSMISSION_USER "$TRANSMISSION_HOME"
+fi
+if [&#160;! -d "$TRANSMISSION_MONITOR_HOME" ]
+then
+    echo "Creating $TRANSMISSION_MONITOR_HOME..."
+    mkdir -p "$TRANSMISSION_MONITOR_HOME"
+    chmod 777 "$TRANSMISSION_MONITOR_HOME"
+    chown $TRANSMISSION_USER:$TRANSMISSION_USER "$TRANSMISSION_MONITOR_HOME"
+fi
+# start/stop daemon to generate config file
+echo "Starting Transmission..."
+/etc/init.d/transmission-daemon start
+# kill the daemon
+echo "Killing Transmission"
+/etc/init.d/transmission-daemon stop
+# add extra excape chars
+TRANSMISSION_MONITOR_HOME=`echo $TRANSMISSION_MONITOR_HOME | sed 's#\/#\\\\\\\/#g'`
+# add configuration
+mv $TRANSMISSION_HOME/settings.json $TRANSMISSION_HOME/settings.json.original
+sleep 1
+cat $TRANSMISSION_HOME/settings.json.original | sed "s#\"rpc-whitelist-enabled\": true,#\"rpc-whitelist-enabled\": false,\n    \"watch-dir\":\"$TRANSMISSION_MONITOR_HOME\",\n    \"watch-dir-enabled\":true,#" &gt; $TRANSMISSION_HOME/settings.json
+# make daemon start at boot
+echo "Adding transmission-daemon to startup..."
+/sbin/chkconfig --add transmission-daemon
+/sbin/chkconfig --levels 2345 transmission-daemon on
+# start transmission and we're done
+/etc/init.d/transmission-daemon start
+return 0
+}
+
+# end of functions #
+
+# nice and white
+tput bold
+# check that we are root before starting
+if [ $(whoami)&#160;!= "root" ] 
+then
+    echo ""
+    echo "  Error: You must have root privileges to run this script."
+    echo ""
+    echo "         Try again using 'sudo $0'."
+    echo ""
+    tput sgr0
+    # die
+    exit 1
+fi
+while [ 1 -lt 2 ]
+do
+ if [&#160;! "$TEXT" = "" ]
+ then
+     foo="$TEXT"
+     TEXT=""
+     drawMenu "$foo"
+ else
+     drawMenu
+ fi
+done
+# EOF
+</pre>
+<h2><span class="mw-headline" id="Forum">Forum</span></h2>
+<p>Original thread on this is <a rel="nofollow" class="external text" href="http://www.openstora.com/forum/viewtopic.php?f=1&amp;t=471">here</a> -- <a href="/wiki/index.php?title=Streetster&amp;action=edit&amp;redlink=1" class="new" title="Streetster (page does not exist)">streetster</a> @ 23.11.2010
+</p>
+<!-- 
+NewPP limit report
+CPU time usage: 0.063 seconds
+Real time usage: 0.071 seconds
+Preprocessor visited node count: 22/1000000
+Preprocessor generated node count: 28/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key hardwar6_wiki:pcache:idhash:84-0!*!0!!en!2!* and timestamp 20171216000459
+ -->
+</div>								<div class="printfooter">
+				Retrieved from "<a href="http://www.openstora.com/wiki/index.php?title=All-In-One_Installer_Script&amp;oldid=1129">http://www.openstora.com/wiki/index.php?title=All-In-One_Installer_Script&amp;oldid=1129</a>"				</div>
+												<div id='catlinks' class='catlinks catlinks-allhidden'></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-login"><a href="/wiki/index.php?title=Special:UserLogin&amp;returnto=All-In-One+Installer+Script" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/index.php?title=All-In-One_Installer_Script"  title="View the content page [c]" accesskey="c">Page</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="/wiki/index.php?title=Talk:All-In-One_Installer_Script&amp;action=edit&amp;redlink=1"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/wiki/index.php?title=All-In-One_Installer_Script" >Read</a></span></li>
+					<li id="ca-viewsource"><span><a href="/wiki/index.php?title=All-In-One_Installer_Script&amp;action=edit"  title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/wiki/index.php?title=All-In-One_Installer_Script&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/wiki/index.php" id="searchform">
+				<div id="simpleSearch">
+						<input name="search" placeholder="Search" title="Search OpenStora [f]" accesskey="f" id="searchInput" />						<button type="submit" name="button" title="Search the pages for this text" id="searchButton"><img src="/wiki/skins/vector/images/search-ltr.png?303" alt="Search" width="12" height="13" /></button>								<input type='hidden' name="title" value="Special:Search"/>
+		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(/wiki/images/logo.png);" href="/wiki/index.php?title=Main_Page"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-Website' aria-labelledby='p-Website-label'>
+	<h3 id='p-Website-label'>Website</h3>
+	<div class="body">
+		<ul>
+			<li id="n-OpenStora-Home"><a href="http://www.openstora.com" rel="nofollow">OpenStora Home</a></li>
+			<li id="n-OpenStora-Forum"><a href="http://www.openstora.com/phpBB3" rel="nofollow">OpenStora Forum</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-Wiki' aria-labelledby='p-Wiki-label'>
+	<h3 id='p-Wiki-label'>Wiki</h3>
+	<div class="body">
+		<ul>
+			<li id="n-Main-Page"><a href="/wiki/index.php?title=Main_Page">Main Page</a></li>
+			<li id="n-Recent-changes"><a href="http://www.openstora.com/wiki/index.php?title=Special:Recentchanges" rel="nofollow">Recent changes</a></li>
+			<li id="n-Help"><a href="/wiki/index.php?title=Help">Help</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/index.php?title=Special:WhatLinksHere/All-In-One_Installer_Script" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/index.php?title=Special:RecentChangesLinked/All-In-One_Installer_Script" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-specialpages"><a href="/wiki/index.php?title=Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-print"><a href="/wiki/index.php?title=All-In-One_Installer_Script&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+			<li id="t-permalink"><a href="/wiki/index.php?title=All-In-One_Installer_Script&amp;oldid=1129" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/wiki/index.php?title=All-In-One_Installer_Script&amp;action=info">Page information</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 4 February 2017, at 19:40.</li>
+											<li id="footer-info-viewcount">This page has been accessed 43,261 times.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="/wiki/index.php?title=OpenStora:Privacy_policy" title="OpenStora:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/index.php?title=OpenStora:About" title="OpenStora:About">About OpenStora</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/index.php?title=OpenStora:General_disclaimer" title="OpenStora:General disclaimer">Disclaimers</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="/wiki/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script>if(window.mw){
+mw.loader.state({"site":"ready"});
+}</script>
+<!-- Served in 0.169 secs. -->
+	</body>
+</html>

@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" /><title>Manual firmware update and info - OpenStora</title>
+<meta name="generator" content="MediaWiki 1.22.6" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki/opensearch_desc.php" title="OpenStora (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://www.openstora.com/wiki/api.php?action=rsd" />
+<link rel="alternate" type="application/atom+xml" title="OpenStora Atom feed" href="/wiki/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="stylesheet" href="http://www.openstora.com/wiki/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cskins.vector&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(ckb),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: hardwar6_wiki:resourceloader:filter:minify-css:7:a5305c32ce5719fffdb0ebb117d3d93a */</style>
+
+<script src="http://www.openstora.com/wiki/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Manual_firmware_update_and_info","wgTitle":"Manual firmware update and info","wgCurRevisionId":1132,"wgRevisionId":1132,"wgArticleId":67,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Manual_firmware_update_and_info","wgIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":0,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,
+"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: hardwar6_wiki:resourceloader:filter:minify-js:7:5a69c7e0fa6557851b6dea8a62efaffb */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","skins.vector.js"]);
+}</script>
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/wiki/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Manual_firmware_update_and_info skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Manual firmware update and info</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From OpenStora</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p>You may be interested in updating your Stora even if you disabled the automatic update check (there's a wiki page for this), so here are some useful info:
+</p>
+<pre><b>Note</b>: You might want to make a backup of your /etc folder since some
+configuration files will be replaced
+(e.g. /etc/init.d/oe-bootfinish that enables the firewall,
+/etc/samba/smb.conf and /etc/ssh/sshd_config)
+</pre>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Determine_current_firmware_version"><span class="tocnumber">1</span> <span class="toctext">Determine current firmware version</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Firmware_version_table"><span class="tocnumber">2</span> <span class="toctext">Firmware version table</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Manually_check_for_available_firmware_update"><span class="tocnumber">3</span> <span class="toctext">Manually check for available firmware update</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Manually_download_the_available_firmware"><span class="tocnumber">4</span> <span class="toctext">Manually download the available firmware</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Determine_current_firmware_version">Determine current firmware version</span></h2>
+<p>The current firmware version for your stora is located in a file in the /etc folder.
+</p><p>Type 'cat <b>/etc/oe-release'</b> to reveal that information.
+</p><p>Example contents:
+</p><p>Version     2.0.0.368<br />
+DistName    hipserv2_netgear<br />
+VersionName 2.5<br />
+CentralServer mystora.com<br />
+Serial NGKD-xxxx-xxxx-xxxx<br />
+Subdomain stora<br />
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="Firmware_version_table">Firmware version table</span></h2>
+<pre><b>WARNING</b>: this table isn't official, it should just be considered a reference.
+Some firmware version reported here are just test firmware, to check which firmware update
+you should apply, use the website check as described below this table!
+<b>BOLD</b> update names are official updates, officially released by Netgear.
+</pre>
+<table border="1">
+<tr>
+<th>Update name
+</th>
+<th>Firmware version
+</th>
+<th>Updates from
+</th>
+<th>Version name
+</th>
+<th>Download URL
+</th>
+<th>Changelog
+</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><b>hbs-5044</b>
+</td>
+<td>2.0.0.433
+</td>
+<td>426,427
+</td>
+<td>2.6.1
+</td>
+<td><a rel="nofollow" class="external free" href="http://netgear.hipserv.com/updates/netgear/v_2_0/hbs-5044.upd">http://netgear.hipserv.com/updates/netgear/v_2_0/hbs-5044.upd</a>
+</td>
+<td>No Changelog available.
+</td>
+<td>
+</td></tr>
+<tr>
+<td><b>hbs-5043</b>
+</td>
+<td>2.0.0.427
+</td>
+<td>419,420,422
+</td>
+<td>2.6
+</td>
+<td><a rel="nofollow" class="external free" href="http://netgear.hipserv.com/updates/netgear/v_2_0/hbs-5043.upd">http://netgear.hipserv.com/updates/netgear/v_2_0/hbs-5043.upd</a>
+</td>
+<td><a rel="nofollow" class="external free" href="http://support.netgear.hipserv.com/release_notes/v_2_6.html">http://support.netgear.hipserv.com/release_notes/v_2_6.html</a>
+</td>
+<td>adds iTunes 10.5 support
+</td></tr>
+<tr>
+<td>hbs-5042
+</td>
+<td>2.0.0.420
+</td>
+<td>377
+</td>
+<td>2.5.3
+</td>
+<td><a rel="nofollow" class="external free" href="http://netgear.hipserv.com/updates/netgear/v_2_0/hbs-5042.upd">http://netgear.hipserv.com/updates/netgear/v_2_0/hbs-5042.upd</a>
+</td>
+<td>Forum notes <a rel="nofollow" class="external free" href="http://www.openstora.com/phpBB3/viewtopic.php?f=18&amp;t=1164">http://www.openstora.com/phpBB3/viewtopic.php?f=18&amp;t=1164</a>
+<p><b>BETA</b> release - MySync support, OSX Lion Timemachine fixes 
+replaces HBS-5040
+</p>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>hbs-5040
+</td>
+<td>2.0.0.417
+</td>
+<td>377
+</td>
+<td>2.5.3
+</td>
+<td><a rel="nofollow" class="external free" href="http://netgear.hipserv.com/updates/netgear/v_2_0/hbs-5040.upd">http://netgear.hipserv.com/updates/netgear/v_2_0/hbs-5040.upd</a>
+</td>
+<td>Forum notes <a rel="nofollow" class="external free" href="http://www.openstora.com/phpBB3/viewtopic.php?f=18&amp;t=1086">http://www.openstora.com/phpBB3/viewtopic.php?f=18&amp;t=1086</a>
+<p><b>BETA</b> release - MySync support
+</p>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><b>hbs-5037</b>
+</td>
+<td>2.0.0.377
+</td>
+<td>365,368,374
+</td>
+<td>2.5.1
+</td>
+<td><a rel="nofollow" class="external free" href="http://netgear.hipserv.com/updates/netgear/v_2_0/hbs-5037.upd">http://netgear.hipserv.com/updates/netgear/v_2_0/hbs-5037.upd</a>
+</td>
+<td><a rel="nofollow" class="external free" href="http://support.netgear.hipserv.com/release_notes/v_2_5_1.html">http://support.netgear.hipserv.com/release_notes/v_2_5_1.html</a>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><b>hbs-5036</b>
+</td>
+<td>2.0.0.368
+</td>
+<td>365
+</td>
+<td>2.5
+</td>
+<td><a rel="nofollow" class="external free" href="http://netgear.hipserv.com/updates/netgear/v_2_0/hbs-5036.upd">http://netgear.hipserv.com/updates/netgear/v_2_0/hbs-5036.upd</a>
+</td>
+<td><a rel="nofollow" class="external free" href="http://support.netgear.hipserv.com/release_notes/v_2_5.html">http://support.netgear.hipserv.com/release_notes/v_2_5.html</a>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><b>hbs-5035</b>
+</td>
+<td>2.0.0.368
+</td>
+<td>145,146,149
+</td>
+<td>2.5
+</td>
+<td><a rel="nofollow" class="external free" href="http://netgear.hipserv.com/updates/netgear/v_2_0/hbs-5035.upd">http://netgear.hipserv.com/updates/netgear/v_2_0/hbs-5035.upd</a>
+</td>
+<td><a rel="nofollow" class="external free" href="http://support.netgear.hipserv.com/release_notes/v_2_5.html">http://support.netgear.hipserv.com/release_notes/v_2_5.html</a>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><b>hbs-5034</b>
+</td>
+<td>2.0.0.368
+</td>
+<td>261,262,271
+</td>
+<td>2.5
+</td>
+<td><a rel="nofollow" class="external free" href="http://netgear.hipserv.com/updates/netgear/v_2_0/hbs-5034.upd">http://netgear.hipserv.com/updates/netgear/v_2_0/hbs-5034.upd</a>
+</td>
+<td><a rel="nofollow" class="external free" href="http://support.netgear.hipserv.com/release_notes/v_2_5.html">http://support.netgear.hipserv.com/release_notes/v_2_5.html</a>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><b>hbs-5033</b>
+</td>
+<td>2.0.0.271
+</td>
+<td>145,146,149
+</td>
+<td>2.3.3
+</td>
+<td><a rel="nofollow" class="external free" href="http://netgear.hipserv.com/updates/netgear/v_2_0/hbs-5033.upd">http://netgear.hipserv.com/updates/netgear/v_2_0/hbs-5033.upd</a>
+</td>
+<td><a rel="nofollow" class="external free" href="http://support.netgear.hipserv.com/release_notes/v_2_3_3.html">http://support.netgear.hipserv.com/release_notes/v_2_3_3.html</a>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><b>hbs-5032</b>
+</td>
+<td>2.0.0.271
+</td>
+<td>261,262
+</td>
+<td>2.3.3
+</td>
+<td><a rel="nofollow" class="external free" href="http://netgear.hipserv.com/updates/netgear/v_2_0/hbs-5032.upd">http://netgear.hipserv.com/updates/netgear/v_2_0/hbs-5032.upd</a>
+</td>
+<td><a rel="nofollow" class="external free" href="http://support.netgear.hipserv.com/release_notes/v_2_3_3.html">http://support.netgear.hipserv.com/release_notes/v_2_3_3.html</a>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>hbs-5031
+</td>
+<td>2.0.0.149
+</td>
+<td>145,146
+</td>
+<td>1.2.1
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><b>hbs-5028</b>
+</td>
+<td>2.0.0.262
+</td>
+<td>145,146,149
+</td>
+<td>2.3.2
+</td>
+<td>
+</td>
+<td><a rel="nofollow" class="external free" href="http://support.netgear.hipserv.com/release_notes/v_2_3.html">http://support.netgear.hipserv.com/release_notes/v_2_3.html</a>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><b>hbs-5027</b>
+</td>
+<td>2.0.0.262
+</td>
+<td>256
+</td>
+<td>2.3.2
+</td>
+<td>
+</td>
+<td><a rel="nofollow" class="external free" href="http://support.netgear.hipserv.com/release_notes/v_2_3.html">http://support.netgear.hipserv.com/release_notes/v_2_3.html</a>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>hbs-5026
+</td>
+<td>2.0.0.256
+</td>
+<td>253
+</td>
+<td>2.3.1
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>hbs-5025
+</td>
+<td>2.0.0.254
+</td>
+<td>252,253
+</td>
+<td>2.3
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>hbs-5024
+</td>
+<td>2.0.0.253
+</td>
+<td>61,72,74,75,77,78,84,86
+</td>
+<td>2.3
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>hbs-5023
+</td>
+<td>2.0.0.253
+</td>
+<td>145,146,149
+</td>
+<td>2.3
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>hbs-5022
+</td>
+<td>2.0.0.149
+</td>
+<td>145,146
+</td>
+<td>1.3
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>hbs-5021
+</td>
+<td>2.0.0.250
+</td>
+<td>145,146
+</td>
+<td>2.3
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>
+</td>
+<td>2.0.0.146
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><b>hbs-5018</b>
+</td>
+<td>2.0.0.145
+</td>
+<td>84,86,87
+</td>
+<td>1.2
+</td>
+<td><a rel="nofollow" class="external free" href="http://netgear.hipserv.com/updates/netgear/v_2_0/hbs-5018.upd">http://netgear.hipserv.com/updates/netgear/v_2_0/hbs-5018.upd</a>
+</td>
+<td><a rel="nofollow" class="external free" href="http://support.netgear.hipserv.com/release_notes/v_1_2.html">http://support.netgear.hipserv.com/release_notes/v_1_2.html</a>
+</td>
+<td>First public version (?)
+</td></tr>
+<tr>
+<td>
+</td>
+<td>2.0.0.87
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>
+</td>
+<td>2.0.0.86
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>hbs-5011
+</td>
+<td>2.0.0.75
+</td>
+<td>50,52
+</td>
+<td>1.1
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>hbs-5010
+</td>
+<td>2.0.0.84
+</td>
+<td>72,74,75,77,78
+</td>
+<td>1.1.1
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>hbs-5006
+</td>
+<td>2.0.0.77
+</td>
+<td>50
+</td>
+<td>1.1
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>hbs-5002
+</td>
+<td>2.0.0.53
+</td>
+<td>52
+</td>
+<td>1.0
+</td>
+<td><a rel="nofollow" class="external free" href="http://netgear.hipserv.com/updates/netgear/v_2_0/hbs-5002.upd">http://netgear.hipserv.com/updates/netgear/v_2_0/hbs-5002.upd</a>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>
+</td>
+<td>2.0.0.52
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>hbs-5001
+</td>
+<td>2.0.0.50
+</td>
+<td>36
+</td>
+<td>1.0
+</td>
+<td><a rel="nofollow" class="external free" href="http://netgear.hipserv.com/updates/netgear/v_2_0/hbs-5001.upd">http://netgear.hipserv.com/updates/netgear/v_2_0/hbs-5001.upd</a>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>
+</td>
+<td>2.0.0.36
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr></table>
+<h2><span class="mw-headline" id="Manually_check_for_available_firmware_update">Manually check for available firmware update</span></h2>
+<p>Whenever the Stora need to check if there's any available firmware update, it does it by checking a particular webpage:
+</p>
+<pre><a rel="nofollow" class="external free" href="https://update.mystora.com/downloads/updates/check.php?SN=YOUR_SERIAL&amp;VR=CURRENT_FIRMWARE&amp;DIST=DIST_VERSION">https://update.mystora.com/downloads/updates/check.php?SN=YOUR_SERIAL&amp;VR=CURRENT_FIRMWARE&amp;DIST=DIST_VERSION</a>
+</pre>
+<p>or
+</p>
+<pre><a rel="nofollow" class="external free" href="https://update.mystora.com/downloads/updates/autocheck.php?myver=CURRENT_FIRMWARE_VERSION&amp;myserial=YOUR_SERIAL&amp;mydist=DIST_VERSION">https://update.mystora.com/downloads/updates/autocheck.php?myver=CURRENT_FIRMWARE_VERSION&amp;myserial=YOUR_SERIAL&amp;mydist=DIST_VERSION</a>
+
+</pre>
+<p>(not sure what's the difference between the two, but the first seems to show more updates)
+</p><p>where CURRENT_FIRMWARE_VERSION, YOUR_SERIAL (doesn't really matter, you can just use XXXX-XXXX-XXXX-XXXX) and DIST_VERSION are respectively the values for Version, Serial and DistName (most probably "hipserv2_netgear") parameters as found on the /etc/oe-release file.
+</p><p>If checking for that webpage returns a "no update", it means no update exists (really?&#160;:-) ), otherwise you'll get a webpage like this:
+</p>
+<pre><a rel="nofollow" class="external free" href="http://netgear.hipserv.com/updates/netgear/v_2_0/hbs-5033.upd">http://netgear.hipserv.com/updates/netgear/v_2_0/hbs-5033.upd</a> 31223978
+</pre>
+<p><b>NOTE: As of 15Jun2017 the site 'netgear.hipserv.com' is not reachable</b>
+</p>
+<h2><span class="mw-headline" id="Manually_download_the_available_firmware">Manually download the available firmware</span></h2>
+<p>With the above procedure, you'll get the url for the newest firmware (<a rel="nofollow" class="external free" href="http://netgear.hipserv.com/updates/netgear/v_2_0/hbs-5033.upd">http://netgear.hipserv.com/updates/netgear/v_2_0/hbs-5033.upd</a> in this case), ssh into the Stora, get root access and proceed to download it somewhere, for example under /tmp which resides on your hard drive(s):
+</p>
+<pre>cd /tmp
+wget <a rel="nofollow" class="external free" href="http://netgear.hipserv.com/updates/netgear/v_2_0/hbs-5033.upd">http://netgear.hipserv.com/updates/netgear/v_2_0/hbs-5033.upd</a>
+</pre>
+<p>The downloaded image isn't ready yet as it contains Axentra signature, probably to check if it's genuine and to prevent people (not like us&#160;:) ) from extracting it, so issue this command to check the signature and extract the real image:
+</p>
+<pre>/usr/bin/gpg --homedir=/etc/gpg/ --output=/tmp/hbs-5033.tar /tmp/hbs-5033.upd
+</pre>
+<p>Now that you have a nice tar file, you can regularly extract it with tar:
+</p>
+<pre>mkdir /tmp/hbs-5033
+tar -xvf hbs-5033.tar -C /tmp/hbs-5033
+</pre>
+<p>now after a lot of text, you'll have the update extracted inside the /tmp/hbs-5033 directory, you can then proceed with the update:
+</p>
+<pre>cd /tmp/hbs-5033
+./runupdate
+</pre>
+<p>or if you're curious about what it does, you can inspect it since it's a plain text bash file.
+</p><p><b>NOTE:</b> this can be useful if you're having issues with your firmware update, the whole process is logged on a file: "/var/log/2.0.0-update" so check it in case you have problems!
+</p><p>Have fun!
+</p><p>--<a href="/wiki/index.php?title=User:Pippone&amp;action=edit&amp;redlink=1" class="new" title="User:Pippone (page does not exist)">Pippone</a> 13:52, 29 October 2010 (UTC)
+</p>
+<!-- 
+NewPP limit report
+CPU time usage: 0.047 seconds
+Real time usage: 0.053 seconds
+Preprocessor visited node count: 15/1000000
+Preprocessor generated node count: 20/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key hardwar6_wiki:pcache:idhash:67-0!*!0!!en!*!* and timestamp 20171226034009
+ -->
+</div>								<div class="printfooter">
+				Retrieved from "<a href="http://www.openstora.com/wiki/index.php?title=Manual_firmware_update_and_info&amp;oldid=1132">http://www.openstora.com/wiki/index.php?title=Manual_firmware_update_and_info&amp;oldid=1132</a>"				</div>
+												<div id='catlinks' class='catlinks catlinks-allhidden'></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-login"><a href="/wiki/index.php?title=Special:UserLogin&amp;returnto=Manual+firmware+update+and+info" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/index.php?title=Manual_firmware_update_and_info"  title="View the content page [c]" accesskey="c">Page</a></span></li>
+					<li  id="ca-talk"><span><a href="/wiki/index.php?title=Talk:Manual_firmware_update_and_info"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/wiki/index.php?title=Manual_firmware_update_and_info" >Read</a></span></li>
+					<li id="ca-viewsource"><span><a href="/wiki/index.php?title=Manual_firmware_update_and_info&amp;action=edit"  title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/wiki/index.php?title=Manual_firmware_update_and_info&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/wiki/index.php" id="searchform">
+				<div id="simpleSearch">
+						<input name="search" placeholder="Search" title="Search OpenStora [f]" accesskey="f" id="searchInput" />						<button type="submit" name="button" title="Search the pages for this text" id="searchButton"><img src="/wiki/skins/vector/images/search-ltr.png?303" alt="Search" width="12" height="13" /></button>								<input type='hidden' name="title" value="Special:Search"/>
+		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(/wiki/images/logo.png);" href="/wiki/index.php?title=Main_Page"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-Website' aria-labelledby='p-Website-label'>
+	<h3 id='p-Website-label'>Website</h3>
+	<div class="body">
+		<ul>
+			<li id="n-OpenStora-Home"><a href="http://www.openstora.com" rel="nofollow">OpenStora Home</a></li>
+			<li id="n-OpenStora-Forum"><a href="http://www.openstora.com/phpBB3" rel="nofollow">OpenStora Forum</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-Wiki' aria-labelledby='p-Wiki-label'>
+	<h3 id='p-Wiki-label'>Wiki</h3>
+	<div class="body">
+		<ul>
+			<li id="n-Main-Page"><a href="/wiki/index.php?title=Main_Page">Main Page</a></li>
+			<li id="n-Recent-changes"><a href="http://www.openstora.com/wiki/index.php?title=Special:Recentchanges" rel="nofollow">Recent changes</a></li>
+			<li id="n-Help"><a href="/wiki/index.php?title=Help">Help</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/index.php?title=Special:WhatLinksHere/Manual_firmware_update_and_info" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/index.php?title=Special:RecentChangesLinked/Manual_firmware_update_and_info" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-specialpages"><a href="/wiki/index.php?title=Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-print"><a href="/wiki/index.php?title=Manual_firmware_update_and_info&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+			<li id="t-permalink"><a href="/wiki/index.php?title=Manual_firmware_update_and_info&amp;oldid=1132" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/wiki/index.php?title=Manual_firmware_update_and_info&amp;action=info">Page information</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 15 June 2017, at 09:50.</li>
+											<li id="footer-info-viewcount">This page has been accessed 96,267 times.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="/wiki/index.php?title=OpenStora:Privacy_policy" title="OpenStora:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/index.php?title=OpenStora:About" title="OpenStora:About">About OpenStora</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/index.php?title=OpenStora:General_disclaimer" title="OpenStora:General disclaimer">Disclaimers</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="/wiki/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script>if(window.mw){
+mw.loader.state({"site":"ready"});
+}</script>
+<!-- Served in 0.187 secs. -->
+	</body>
+</html>

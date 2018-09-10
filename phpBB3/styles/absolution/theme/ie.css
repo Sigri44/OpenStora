@@ -1,0 +1,12 @@
+/* IE Tweak to correctly display javascript flyout below author's name */
+.dropdown dd {margin-left: -94px !important;}
+
+/* IE Tweak to show all of back to top icon */
+.btt img {margin-top: 0;}
+
+/* IE Tweak to show all of custom list style image on unordered lists */
+.vt-postcontent ul li {min-height: 9px;}
+
+/* IE Tweak to vertically-align Online Indicator properly */
+.online-indicator {margin-top: 0;}
+

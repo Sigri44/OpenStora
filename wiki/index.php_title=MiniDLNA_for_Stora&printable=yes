@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<title>MiniDLNA for Stora - OpenStora</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.18.1" />
+<meta name="robots" content="noindex,follow" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki/opensearch_desc.php" title="OpenStora (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://www.openstora.com/wiki/api.php?action=rsd" />
+<link rel="alternate" type="application/atom+xml" title="OpenStora Atom feed" href="/wiki/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="stylesheet" href="/wiki/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cskins.monobook&amp;only=styles&amp;printable=1&amp;skin=monobook&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: hardwar6_wiki:resourceloader:filter:minify-css:4:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+<script src="/wiki/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;printable=1&amp;skin=monobook&amp;*"></script>
+<script>if(window.mw){
+	mw.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "MiniDLNA_for_Stora", "wgTitle": "MiniDLNA for Stora", "wgCurRevisionId": 942, "wgArticleId": 90, "wgIsArticle": true, "wgAction": "view", "wgUserName": null, "wgUserGroups": ["*"], "wgCategories": [], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
+}
+</script><script>if(window.mw){
+	mw.loader.load(["mediawiki.page.startup"]);
+}
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-MiniDLNA_for_Stora action-view skin-monobook">
+<div id="globalWrapper">
+<div id="column-content"><div id="content">
+	<a id="top"></a>
+	
+	<h1 id="firstHeading" class="firstHeading">MiniDLNA for Stora</h1>
+	<div id="bodyContent">
+		<div id="siteSub">From OpenStora</div>
+		<div id="contentSub"></div>
+		<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>
+		<!-- start content -->
+<div lang="en" dir="ltr" class="mw-content-ltr"><p><b>miniDLNA How-To … or … The Missing Manual</b>
+</p><p>This text will attempt to tell you where miniDLNA puts its files, what it does and how you can adjust it. IT will also guide you though updating miniDLNA to the latest version. It assumes a standard Stora installation.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Intended_Audience:"><span class="tocnumber">1</span> <span class="toctext">Intended Audience:</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Prerequisites:"><span class="tocnumber">2</span> <span class="toctext">Prerequisites:</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#The_Basics:"><span class="tocnumber">3</span> <span class="toctext">The Basics:</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#The_files_for_miniDLNA:"><span class="tocnumber">3.1</span> <span class="toctext">The files for miniDLNA:</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Notes_regarding_.E2.80.9Cdebug.E2.80.9D_mode_and_.E2.80.9Crebuilding.E2.80.9D_the_database:"><span class="tocnumber">3.2</span> <span class="toctext">Notes regarding “debug” mode and “rebuilding” the database:</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#The_miniDLNA_configuration_file:"><span class="tocnumber">3.3</span> <span class="toctext">The miniDLNA configuration file:</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Notes_regarding_Artwork:"><span class="tocnumber">3.4</span> <span class="toctext">Notes regarding Artwork:</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Updating_miniDLNA_to_a_later_version"><span class="tocnumber">4</span> <span class="toctext">Updating miniDLNA to a later version</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#AVCHD_Format"><span class="tocnumber">5</span> <span class="toctext">AVCHD Format</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#Comment_regarding_AVCHD_.28m2ts.29_on_Sony_equipment_with_1.0.18_version_of_miniDLNA"><span class="tocnumber">5.1</span> <span class="toctext">Comment regarding AVCHD (m2ts) on Sony equipment with 1.0.18 version of miniDLNA</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+<h2> <span class="mw-headline" id="Intended_Audience:">Intended Audience:</span></h2>
+<p>The hope is that this document will be written to provide some value to users of all levels. While the *nix guns will flash over some bits, other bits may save them a few minutes of playing and poking. While new users won’t find every bit of detail here, they will at least get a grasp on what is happening and where to look or go for help and guidance If they need it. If new users find that the introduction to a section refers to stuff they know nothing about, just keep reading, there will usually be a link for you towards the end of that section to steer you in the right direction or to find the files and detail you need to move on. If you’re a *nix gun and find all this mamby-pamby stuff a bit boring, all I ask is that you remember how there was a time when you were inside your mothers womb and didn’t quite know everything.
+</p><p>If you can’t cope with that, then just press the back button on your browser now.
+</p>
+<h2> <span class="mw-headline" id="Prerequisites:">Prerequisites:</span></h2>
+<p>The following text assumes that you have full file system access and can login to the Stora as the root user.
+</p><p>Other assumptions are that you can navigate the filesystem using the command line or have a navigation tool you are comfortable with. One suggestion in this area is Midnight Commander for terminal mode access using FTP (putty).
+</p><p>Midnight Commander can be installed using ipkg where the package is known as “mc”. The install is as simple as typing “ipkg install mc”. There are a few directory permission issues you need to resolve at the user level, to stop mc barfing on exit, but you’ll quickly work them out.
+</p><p>For Windows users, who don’t already have a favourite FTP and/or filesystem Navigation tool, consider looking at WinSCP which can be found <a rel="nofollow" class="external text" href="http://winscp.net/eng/index.php">"here"</a>
+</p><p>The last assumption is that you can edit *nix style configuration and/or text files either using vi, nano, or another editor. This means that if you are using a Windows editor, you understand the difference between a *nix and win “text file”.
+</p><p>If you don’t have “root” access, then all the details are available on the Wiki which can be found <a rel="nofollow" class="external text" href="http://www.openstora.com/wiki/index.php?title=Main_Page#Accessing_Root">"here"</a>
+</p><p>If you haven’t installed ipkg yet, then all the details are available on the Wiki which can be found <a rel="nofollow" class="external text" href="http://www.openstora.com/wiki/index.php?title=Installing_a_package_manager">"here"</a>
+</p><p>If you haven’t done so yet, I would suggest you follow optional extra steps shown: install “nano” and edit the path variable. Nano is a lovely piece of work. It is small, quick, elegant, and so easy to use. While Midnight Commander and WinSCP have editors built-in you will still find nano really handy, so just do it&#160;:)
+</p>
+<h2> <span class="mw-headline" id="The_Basics:">The Basics:</span></h2>
+<p>miniDLNA is a DLNA server which has been written by a Netgear employee. However, the package is an open-source program and the source code along with a wiki and various tid-bits can be found <a rel="nofollow" class="external text" href="http://sourceforge.net/projects/minidlna/">"here"</a>
+</p><p>miniDLNA won’t transcode (convert between formats on the fly), nor will it  magically fix your broken DLNA client (expensive television). The reason your TV won’t do certain things are not the fault of miniDLNA. They are issues created by the DLNA licensing/certification organisation and your TV manufacturer. While the author of this document has found miniDLNA to be quite good supporting quirks from some TV manufacturers, it can not fix basic problems that the manufacturers should address but either can’t or won’t. These issues can not be solved or supported by Netgear, this site, or the author of this document.
+</p><p>Extensive testing by the author of this document leads me to believe that miniDLNA may have a few quirks, although it is basically very sound. As a “server” or provider of data it can not and is not responsible for a particular file not playing or the sound not being right or even played on your TV or client. If pictures or images are not right, then chances are that your client (TV) doesn’t support them properly. miniDLNA has been tested serving files over 16GB with almost all known video and audio codecs and it has done it properly.
+</p><p>So, in a nutshell, miniDLNA is simply a server which sends raw data to your client which will usually be a TV. What your TV does with the data is up to the TV. How your TV asks for the data is also the responsibility of the TV.
+</p><p>miniDLNA runs as a background process in your Stora. It listens for requests from your TV and services them. Basically, your TV asks it what files it has available and what if any pictures it may have that go with the file list request, and miniDLNA tells it and throws the pictures (if any) at your TV. 
+</p><p>To do this, it needs to know where you are going to dump the files, and it needs to know what sort of files it should look for. It tries to catch the filenames for these files as you drop them onto the Stora and keeps a database in a SQLite (v3) database which it manages and maintains. It also runs a “sweep” of the directory tree every once in a while and does it’s best to keep the database up to date and correct. The reason for the database is that when your TV asks miniDLNA what files or shows it has, it just looks into the database instead of scanning the entire disc. However, sometimes this database can get out of sync or it might miss something for a variety of reasons. It might also think that a file is corrupt or invalid, in which case it won’t add it to the database. If you change the name of a file (or directory) after you have put it on the Stora, then chances are that miniDLNA won’t notice or can’t track the change and that file (movie/song) won’t be available or shown to your TV/player. However, there are some simple things we can do to get miniDLNA to rebuild the database and we will get to these soon.
+</p>
+<h3> <span class="mw-headline" id="The_files_for_miniDLNA:">The files for miniDLNA:</span></h3>
+<p><i>miniDLNA requires or creates the following files.</i>
+</p><p>/usr/sbin/minidlna … the actual miniDLNA executable or daemon
+</p><p>/etc/rc.d/init.d/minidlna.init … A script which start and stops miniDLNA
+</p><p>/etc/miniupnpd/minidlna.conf … miniDLNA’s configuration file
+</p><p>/mnt/tmpfs/var/run/minidlna.pid … a temp system file containing the process ID of the current (or a running) instance of miniDLNA
+</p><p>/tmp/minidlna … The directory where miniDLNA stores its database and other stuff
+</p><p>/tmp/minidlna/art_cache … The directory where miniDLNA creates and stores images (pictures/thumbnails) sent to your TV
+</p><p>/tmp/minidlna/files.db … the database that miniDLNA creates/updates/uses
+</p><p>/tmp/minidlna/minidlna.log … a log file created and updated byminiDLNA
+</p><p><br />
+The current version of miniDLNA is 1.0.22
+</p><p>The current Stora version of miniDLNA is 1.0.22
+</p><p>The previous “public” release version of miniDLNA was 1.0.17
+</p><p><br />
+<i>The latest release of miniDLNA requires the following packages:</i>
+</p><p>- libexif - read/write (parse) EXIF data embedded within JPEG files
+</p><p>- libjpeg – (version 8) a JPEG decoder/encoder (used to create thumbnails)
+</p><p>- libid3tag - read/write ID3 tags
+</p><p>- libFLAC - Lossless Audio Codec
+</p><p>- libvorbis -Audio Codec
+</p><p>- sqlite3 – SQL Database engine- libavformat (the ffmpeg libraries)
+</p><p>- libavformat – libraries which provide calls to FFmpeg video libraries
+</p><p>- libuuid - generates unique system file and or process ID numbers
+</p><p><br />
+The Stora version of miniDLNA does not requires all of these packages. Therefore, some of these packages are not installed on a standard Stora. For this reason, you can not replace or update the Stora version of miniDLNA with a standard release unless the appropriate packages are installed. Updating your miniDLNA will be detailed in another section of this document.
+</p><p><b>Commands used to Start, Stop, Get Status and Rebuild Database:</b>
+</p><p><b>stop minidlna:</b>         /etc/init.d/minidlna.init stop
+</p><p><b>start minidlna:</b>     /etc/init.d/minidlna.init start
+</p><p><b>status minidlna:</b>   /etc/init.d/minidlna.init status
+</p><p><br />
+<b>report version of minidlna:</b>	 /usr/sbin/minidlna -V
+</p><p><b>run minidlna in debug mode:</b> 	/usr/sbin/minidlna -d -f /etc/miniupnpd/minidlna.conf
+</p><p><b>rebuild minidlna database:</b>  	/usr/sbin/minidlna -R -f /etc/miniupnpd/minidlna.conf
+</p><p><b>rebuild minidlna database in debug mode:</b>  	/usr/sbin/minidlna -R -d -f /etc/miniupnpd/minidlna.conf
+</p><p><br />
+<b>Note:</b> you should stop miniDLNA before you play with configuration files, or update any libraries it requires.
+</p>
+<h3> <span class="mw-headline" id="Notes_regarding_.E2.80.9Cdebug.E2.80.9D_mode_and_.E2.80.9Crebuilding.E2.80.9D_the_database:">Notes regarding “debug” mode and “rebuilding” the database:</span></h3>
+<p>It is suggested that you STOP miniDLNA before using either of these capabilities.
+The author of this document has never tried running two processes of miniDLNA and the results are unknown.
+</p><p>When running in Debug mode. The log file will not be created or updated.
+Debug mode can be handy when doing a rebuild so that you can tell when it is finished, at which point your console will stop. However, if miniDLNA finds any files or artwork which is corrupt or contains a problem, you will need to note it as a log entry will not be made. If you rebuild in normal mode, miniDLNA will create an entry in the log for any files it finds that are not right, thereby allowing you to just check the log to find any errors or faults. You can choose which method works for you.
+</p><p>Debug mode can also be handy to see the messages your TV sends and how miniDLNA responds. This may or may not help you work out why your TV does not do something you think it should. Decyphering the messages and commands received and sent are left as a reader exercise.
+</p><p>To exit Debug mode, press the Control-C key combination.
+</p><p>When running in Rebuild mode, miniDLNA will empty the database file and rebuild it from scratch. It will also rebuild any thumbnails although it won’t delete any existing thumbnails or those which may not be required due to file deletions or whatever.  If you manually delete or remove the <b>/tmp/minidlna/artwork</b> directory and its content, miniDLNA will recreate the structure and files required.
+</p><p>If started in Rebuild mode, miniDLNA will continue to run after the rebuild is finished, but you won’t know when it has finished unless you know roughly how large the database will be. While it may take a few minutes to rebuild, it is suggested that you do rebuilds in debug mode so you can tell when it has finished and then “break” out of debug mode and restart miniDLNA in the normal fashion.
+</p>
+<h3> <span class="mw-headline" id="The_miniDLNA_configuration_file:">The miniDLNA configuration file:</span></h3>
+<p>Filename: /etc/miniupnpd/minidlna.conf
+</p><p>The file itself contains comments that should allow you to see what things are and what you can do. 
+Items that might be of interest to those who have not looked at the file yet are:
+</p><p>This is where you can tell miniDLNA to search for files in non-standard directories.
+</p><p>You can change the name of the DLNA device shown in your TV
+</p><p>You can add or change the names looked for when searching for cover artwork.
+</p>
+<h3> <span class="mw-headline" id="Notes_regarding_Artwork:">Notes regarding Artwork:</span></h3>
+<p>As the standard Stora does not contain some of the key packages required it is assumed that the standard Stora version of miniDLNA does not support Artwork.
+</p><p>While miniDLNA looks for artwork using specific filenames, it will also find artwork with the exact same filename as the media file if it has a jpg extension.
+</p><p>If you have a directory with individual mp3 or movie files and a single artwork file which matches one of the “generic” filenames such as “cover.jpg”, then miniDLNA will create an individual thumbnail for each media file in the artwork directory. All of these thumbnails will be the same as the cover artwork.
+</p>
+<h2> <span class="mw-headline" id="Updating_miniDLNA_to_a_later_version">Updating miniDLNA to a later version</span></h2>
+<p>Moved to the <a href="/wiki/index.php?title=MiniDLNA_for_Stora/Updating" title="MiniDLNA for Stora/Updating">Updating miniDLNA</a> page
+</p>
+<h2> <span class="mw-headline" id="AVCHD_Format">AVCHD Format</span></h2>
+<p>Moved to the <a href="/wiki/index.php?title=MiniDLNA_for_Stora/Media_Formats" title="MiniDLNA for Stora/Media Formats">Media Formats</a> page
+</p>
+<h3> <span class="mw-headline" id="Comment_regarding_AVCHD_.28m2ts.29_on_Sony_equipment_with_1.0.18_version_of_miniDLNA">Comment regarding AVCHD (m2ts) on Sony equipment with 1.0.18 version of miniDLNA</span></h3>
+<p>1.0.18 is quite an old version of miniDLNA, and does not display AVCHD on Sony TVs (and probably PS3s) as well as not having support for a lot of later Samsung and other vendor features.  To get it to do so, you may also like to try the following...
+</p><p>As root (just like above)..
+</p><p>bash-3.2# sqlite3 /tmp/minidlna/files.db 
+</p><p>sqlite&gt; update details set dlna_pn="MPEG_TS_SD_EU;DLNA.ORG_OP=01;DLNA.ORG_CI=0" where path like "%.%TS";
+</p><p>sqlite&gt; .exit
+</p><p>According to a post on the Ubuntu forums this change allows Pausing, FF and RW of M2TS on miniDLNA 1.0.18 though version 1.0.22 offers this without having to manually run an SQL update.
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 39/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key hardwar6_wiki:pcache:idhash:90-0!*!0!!en!*!* and timestamp 20130421081452 -->
+</div><div class="printfooter">
+Retrieved from "<a href="http://www.openstora.com/wiki/index.php?title=MiniDLNA_for_Stora&amp;oldid=942">http://www.openstora.com/wiki/index.php?title=MiniDLNA_for_Stora&amp;oldid=942</a>"</div>
+		<div id='catlinks' class='catlinks catlinks-allhidden'></div>		<!-- end content -->
+				<div class="visualClear"></div>
+	</div>
+</div></div>
+<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+				<li id="ca-nstab-main" class="selected"><a href="/wiki/index.php?title=MiniDLNA_for_Stora" title="View the content page [c]" accesskey="c">Page</a></li>
+				<li id="ca-talk"><a href="/wiki/index.php?title=Talk:MiniDLNA_for_Stora" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="/wiki/index.php?title=MiniDLNA_for_Stora&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="/wiki/index.php?title=MiniDLNA_for_Stora&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+
+<!-- SSO MOD -->
+<a href="/phpBB3/ucp.php?mode=login" title="Login" accesskey="l">Login</a>
+                 / <a href="/phpBB3/ucp.php?mode=register">Register</a>
+<!-- END SSO MOD -->
+
+<!-- 				<li id="pt-login"><a href="/wiki/index.php?title=Special:UserLogin&amp;returnto=MiniDLNA+for+Stora&amp;returntoquery=printable%3Dyes" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+-->
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a title="Visit the main page" style="background-image: url(/wiki/images/logo.png);" href="/wiki/index.php?title=Main_Page"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class="generated-sidebar portlet" id="p-Website">
+		<h5>Website</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-HHU-Home"><a href="http://www.hardwarehackersunite.com" rel="nofollow">HHU Home</a></li>
+				<li id="n-HHU-Forum"><a href="http://www.hardwarehackersunite.com/phpBB3" rel="nofollow">HHU Forum</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="generated-sidebar portlet" id="p-Wiki">
+		<h5>Wiki</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Main-Page"><a href="/wiki/index.php?title=Main_Page">Main Page</a></li>
+				<li id="n-Recent-changes"><a href="http://www.openstora.com/wiki/index.php?title=Special:Recentchanges" rel="nofollow">Recent changes</a></li>
+				<li id="n-Help"><a href="/wiki/index.php?title=Help">Help</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/wiki/index.php" id="searchform">
+				<input type='hidden' name="title" value="Special:Search"/>
+				<input type="search" name="search" title="Search OpenStora [f]" accesskey="f" id="searchInput" />
+				<input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchGoButton" class="searchButton" />&#160;
+				<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton" />
+			</form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="/wiki/index.php?title=Special:WhatLinksHere/MiniDLNA_for_Stora" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="/wiki/index.php?title=Special:RecentChangesLinked/MiniDLNA_for_Stora" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+				<li id="t-specialpages"><a href="/wiki/index.php?title=Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+				<li id="t-permalink"><a href="/wiki/index.php?title=MiniDLNA_for_Stora&amp;oldid=942" title="Permanent link to this revision of the page">Permanent link</a></li>
+			</ul>
+		</div>
+	</div>
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer">
+	<div id="f-poweredbyico">
+		<a href="http://www.mediawiki.org/"><img src="/wiki/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+	</div>
+	<ul id="f-list">
+		<li id="lastmod"> This page was last modified on 7 February 2012, at 06:48.</li>
+		<li id="viewcount">This page has been accessed 73,471 times.</li>
+		<li id="privacy"><a href="/wiki/index.php?title=OpenStora:Privacy_policy" title="OpenStora:Privacy policy">Privacy policy</a></li>
+		<li id="about"><a href="/wiki/index.php?title=OpenStora:About" title="OpenStora:About">About OpenStora</a></li>
+		<li id="disclaimer"><a href="/wiki/index.php?title=OpenStora:General_disclaimer" title="OpenStora:General disclaimer">Disclaimers</a></li>
+	</ul>
+</div>
+</div>
+<script>if(window.mw){
+	mw.loader.load(["mediawiki.user", "mediawiki.util", "mediawiki.page.ready", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax"]);
+}
+</script>
+<script>if(window.mw){
+	mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"monobook","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,
+	"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"en","language":"en","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;mw.user.tokens.set({"editToken":"+\\","watchToken":false});;mw.loader.state({"user.options":"ready","user.tokens":"ready"});
+	
+	/* cache key: hardwar6_wiki:resourceloader:filter:minify-js:4:99acc2c3ab516bb21085c70c2195f3df */
+}
+</script><!-- Served in 0.568 secs. --></body></html>

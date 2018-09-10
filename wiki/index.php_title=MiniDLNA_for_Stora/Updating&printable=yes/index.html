@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<title>MiniDLNA for Stora/Updating - OpenStora</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.18.1" />
+<meta name="robots" content="noindex,follow" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki/opensearch_desc.php" title="OpenStora (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://www.openstora.com/wiki/api.php?action=rsd" />
+<link rel="alternate" type="application/atom+xml" title="OpenStora Atom feed" href="/wiki/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="stylesheet" href="/wiki/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cskins.monobook&amp;only=styles&amp;printable=1&amp;skin=monobook&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: hardwar6_wiki:resourceloader:filter:minify-css:4:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+<script src="/wiki/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;printable=1&amp;skin=monobook&amp;*"></script>
+<script>if(window.mw){
+	mw.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "MiniDLNA_for_Stora/Updating", "wgTitle": "MiniDLNA for Stora/Updating", "wgCurRevisionId": 1031, "wgArticleId": 122, "wgIsArticle": true, "wgAction": "view", "wgUserName": null, "wgUserGroups": ["*"], "wgCategories": [], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
+}
+</script><script>if(window.mw){
+	mw.loader.load(["mediawiki.page.startup"]);
+}
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-MiniDLNA_for_Stora_Updating action-view skin-monobook">
+<div id="globalWrapper">
+<div id="column-content"><div id="content">
+	<a id="top"></a>
+	
+	<h1 id="firstHeading" class="firstHeading">MiniDLNA for Stora/Updating</h1>
+	<div id="bodyContent">
+		<div id="siteSub">From OpenStora</div>
+		<div id="contentSub"></div>
+		<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>
+		<!-- start content -->
+<div lang="en" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Updating_miniDLNA_to_a_later_version"><span class="tocnumber">1</span> <span class="toctext">Updating miniDLNA to a later version</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Instructions_for_version_1.0.25"><span class="tocnumber">1.1</span> <span class="toctext">Instructions for version 1.0.25</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Issues_with_non-stock_1.0.25"><span class="tocnumber">1.2</span> <span class="toctext">Issues with non-stock 1.0.25</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Version_1.0.25_release_notes"><span class="tocnumber">1.3</span> <span class="toctext">Version 1.0.25 release notes</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Reverting_to_the_backed_up_version_if_there.27s_a_problem"><span class="tocnumber">1.4</span> <span class="toctext">Reverting to the backed up version if there's a problem</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Comment_regarding_AVCHD_.28m2ts.29_on_Sony_equipment_with_1.0.18_version_of_miniDLNA"><span class="tocnumber">1.5</span> <span class="toctext">Comment regarding AVCHD (m2ts) on Sony equipment with 1.0.18 version of miniDLNA</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+<h2> <span class="mw-headline" id="Updating_miniDLNA_to_a_later_version">Updating miniDLNA to a later version</span></h2>
+<p>Check for a later version here <a rel="nofollow" class="external text" href="http://dev.shyd.de/2011/08/minidlna-dockstar-dlna-server/">dockstar minidlna</a>
+</p>
+<h3> <span class="mw-headline" id="Instructions_for_version_1.0.25">Instructions for version 1.0.25</span></h3>
+<p>Download the following files:
+</p><p><a rel="nofollow" class="external text" href="http://www.openstora.com/files/albums/userpics/14441/minidlna-1-0-25-compiled.zip">miniDLNA-1.0.25</a>
+</p><p><a rel="nofollow" class="external text" href="http://www.openstora.com/files/albums/uploads/libjpeg_so_8_0_2.zip">libjpeg-8</a>
+</p><p><a rel="nofollow" class="external text" href="http://www.openstora.com/files/albums/userpics/15704/libavutil_so_49_15_0.zip">libavutil-49</a>
+</p><p>Unpack/unzip the file to your local machine
+</p><p>Copy the files to your Stora. Following assumes you copied it to the base of Stora "share" path, being <b>/home/0common</b>
+</p><p>Login to the Stora as “root”
+</p><p>&lt;note: This command STOPS the minidlna daemon&gt;
+</p><p>-bash-3.2# /etc/init.d/minidlna.init stop
+</p><p>-bash-3.2# chown root:root /home/0common/minidlna
+</p><p>-bash-3.2# chown root:root /home/0common/libjpeg.so.8.0.2
+</p><p>-bash-3.2# chown root:root /home/0common/libavutil.so.49.15.0
+</p><p>-bash-3.2# chmod 755 /home/0common/minidlna
+</p><p>-bash-3.2# chmod 755 /home/0common/libjpeg.so.8.0.2
+</p><p>-bash-3.2# chmod 755 /home/0common/libavutil.so.49.15.0
+</p><p>-bash-3.2# cd /usr/sbin
+</p><p>&lt;note: This command renames the current miniDLNA program – just in case - replace the version number with whatever is currently installed&gt;
+</p><p>-bash-3.2# mv minidlna minidlna.1.0.22
+</p><p>-bash-3.2# mv /home/0common/minidlna minidlna
+</p><p>-bash-3.2# ls -al minidlna
+</p><p>&lt;note: This should be the output from the "ls" command&gt;
+</p><p>-rwxr-xr-x 1 root root 550973 Nov 21 17:05 minidlna
+</p><p>&lt;note: now we need to sort out the libjpeg library&gt;
+</p><p>&lt;note: we will place libjpeg onto our hard drive so we don’t waste flash&gt;
+</p><p>-bash-3.2# cd /home/opt/lib
+</p><p>-bash-3.2# mv /home/0common/libjpeg.so.8.0.2 libjpeg.so.8.0.2
+</p><p>-bash-3.2# mv /home/0common/libavutil.so.49.15.0 libavutil.so.49.15.0
+</p><p>&lt;note: now we need to create links to the program which are version independent&gt;
+</p><p>-bash-3.2# cd /
+</p><p>-bash-3.2# ln -s /home/opt/lib/libjpeg.so.8.0.2 /home/opt/lib/libjpeg.so
+</p><p>-bash-3.2# ln -s /home/opt/lib/libjpeg.so.8.0.2 /home/opt/lib/libjpeg.so.8
+</p><p>-bash-3.2# ln -s /home/opt/lib/libjpeg.so.8.0.2 /usr/lib/libjpeg.so
+</p><p>-bash-3.2# ln -s /home/opt/lib/libjpeg.so.8.0.2 /usr/lib/libjpeg.so.8
+</p><p>-bash-3.2# ln -s /home/opt/lib/libavutil.so.49.15.0 /usr/lib/libavutil.so.49
+</p><p>-bash-3.2# ln -s /usr/lib/libFLAC.so.7.0.0 /usr/lib/libFLAC.so.8
+</p><p>&lt;note: Basically, we are done, time to start miniDLNA and watch for errors&gt;
+</p><p>-bash-3.2# cd /
+</p><p>-bash-3.2# /etc/init.d/minidlna.init start
+</p><p>&lt;note: if we didn’t get any errors, we are done&gt;
+</p><p>If everything looks fine, you should stop miniDLNA and then do a “rebuild” so that the program can update your database and create thumbnails for any artwork you have. 
+</p><p>First, make sure you are actually running the new version.
+</p><p>-bash-3.2# /usr/sbin/minidlna -V
+</p><p>Then stop it, delete the old database, restart, then enjoy&#160;:)
+</p><p>-bash-3.2# /etc/init.d/minidlna.init stop
+</p><p>-bash-3.2# rm /tmp/minidlna/files.db 
+</p><p>Now restart and allow it to rebuild its database.
+</p><p>-bash-3.2# /etc/init.d/minidlna.init start
+</p><p>Enjoy.
+</p>
+<h3> <span class="mw-headline" id="Issues_with_non-stock_1.0.25">Issues with non-stock 1.0.25</span></h3>
+<p>Testing has so far revealed the following issues when used on a Stora:
+</p>
+<ul><li> On startup it may complain about the following but seems to work correctly
+</li></ul>
+<pre>Starting /usr/sbin/minidlna ... /usr/sbin/minidlna: /usr/lib/libavutil.so.49: no version information available (required by /usr/sbin/minidlna)
+/usr/sbin/minidlna: /usr/lib/libjpeg.so.62: no version information available (required by /usr/sbin/minidlna)
+</pre>
+<ul><li> It seems this binary uses /var/log/minidlna.log by default instead of /tmp/minidlna/minidlna.log for logging. Therefore you might want change the logfile position with the "log_dir=" directive inside /etc/miniupnpd/minidlna.conf to
+</li></ul>
+<pre>log_dir=/tmp/minidlna
+</pre>
+<ul><li> It might be worth also checking that your /etc/miniupnpd/minidlna.conf has the "strict_dlna=" directive set to no ensure more compatiblity with existing products. 
+</li></ul>
+<pre># set this to strictly adhere to DLNA standards.
+# * This will allow server-side downscaling of very large JPEG images,
+#   which may hurt JPEG serving performance on (at least) Sony DLNA products.
+strict_dlna=no
+</pre>
+<ul><li> The Netgear branding on the renderer is lost and replaced with an image of <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Tux">Tux</a> instead.
+</li></ul>
+<h3> <span class="mw-headline" id="Version_1.0.25_release_notes">Version 1.0.25 release notes</span></h3>
+<p>Release notes for the 1.0.25 version can be found on the <a rel="nofollow" class="external text" href="http://sourceforge.net/projects/minidlna/files/minidlna/1.0.25/">minidlna sourceforge page</a> and include the following improvements since 1.0.22...
+</p><p>1.0.25 - Released 13-July-2012
+</p>
+<hr />
+<p>- Fix a couple crash bugs on malformed WAV files.
+- Forcibly tweak the model number for Xbox360 clients, or they might ignore us.
+- Enable all network interfaces by default if none were specified.
+- Add flag to force downscaled thumbnails rather than using embedded ones.
+- Add DirecTV client detection, and fix image resolution issue.
+- Add support for the latest ffmpeg/libav library versions.
+- Fix a potential crash on requests for a resize of a non-existent image.
+- Make DeviceID checking more permissive for Sagem Radio.
+</p><p>1.0.24 - Released 14-Feb-2012
+</p>
+<hr />
+<ul><li> Fix playlist browsing with no SortOrder specified.
+</li><li> Fix inotify detection of caption file removal.
+</li><li> Handle an empty DeviceID from Zyxel media player SOAP request.
+</li><li> Fix false positives in playlist caching optimization when we have duplicate file names in different directories.
+</li><li> Trim the camera model name extracted from EXIF tags.
+</li><li> Add support for user-configurable log level settings.
+</li><li> Add DLNA.ORG_FLAGS support.
+</li></ul>
+<p>1.0.23 - Released 23-Jan-2012
+</p>
+<hr />
+<ul><li> Enable the subtitle menu on some Samsung TV's.
+</li><li> Add subtitle support for Panasonic TV's.
+</li><li> Add workarounds for LifeTab tablets' bad behavior.
+</li><li> Speed up playlist parsing.
+</li><li> Make metadata-based virtual containers case insensitive.
+</li><li> Add folder art support (very few clients support this though).
+</li><li> Improve trimming of quotation marks.
+</li><li> Fix SRT caption support with the latest Samsung Series D firmware.
+</li><li> Fix subtitles on LG TV's for items whose titles don't have a dot in them.
+</li><li> Add support for the av:mediaClass tag, so some Sony devices can filter items by media type.
+</li><li> Fix inotify detection issues on first-level folders.
+</li><li> Work around LifeTab's broken DLNA support.
+</li><li> Add image rotation support during resize. (mostly useful for TiVo)
+</li></ul>
+<p>The downloads on the sourceforge page are for intel processors, i.e. not useable by the Stora.  Please use the link at the top of this page for an ARM binary.
+</p>
+<h3> <span class="mw-headline" id="Reverting_to_the_backed_up_version_if_there.27s_a_problem">Reverting to the backed up version if there's a problem</span></h3>
+<p>-bash-3.2# cd /usr/bin
+</p><p>-bash-3.2# mv mindlna minidlna.updated
+</p><p>-bash-3.2# mv minidlna.sav minidlna
+</p><p>-bash-3.2# /etc/init.d/minidlna.init start
+</p>
+<h3> <span class="mw-headline" id="Comment_regarding_AVCHD_.28m2ts.29_on_Sony_equipment_with_1.0.18_version_of_miniDLNA">Comment regarding AVCHD (m2ts) on Sony equipment with 1.0.18 version of miniDLNA</span></h3>
+<p>Early versions of Stora software use the 1.0.18 or 1.0.17 version of miniDLNA.  This is quite an old version, and does not display AVCHD on Sony TVs (and probably PS3s) as well as not having support for a lot of later Samsung and other vendor features.  To get it to do so, you may also like to try the following...
+</p><p>As root (just like above)..
+</p><p>bash-3.2# sqlite3 /tmp/minidlna/files.db 
+</p><p>sqlite&gt; update details set dlna_pn="MPEG_TS_SD_EU;DLNA.ORG_OP=01;DLNA.ORG_CI=0" where path like "%.%TS";
+</p><p>sqlite&gt; .exit
+</p><p>According to a post on the Ubuntu forums this change allows Pausing, FF and RW of M2TS on miniDLNA 1.0.18 though versions after 1.0.22 offer this without having to manually run an SQL update.
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 22/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key hardwar6_wiki:pcache:idhash:122-0!*!*!!en!*!* and timestamp 20130420114706 -->
+</div><div class="printfooter">
+Retrieved from "<a href="http://www.openstora.com/wiki/index.php?title=MiniDLNA_for_Stora/Updating&amp;oldid=1031">http://www.openstora.com/wiki/index.php?title=MiniDLNA_for_Stora/Updating&amp;oldid=1031</a>"</div>
+		<div id='catlinks' class='catlinks catlinks-allhidden'></div>		<!-- end content -->
+				<div class="visualClear"></div>
+	</div>
+</div></div>
+<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+				<li id="ca-nstab-main" class="selected"><a href="/wiki/index.php?title=MiniDLNA_for_Stora/Updating" title="View the content page [c]" accesskey="c">Page</a></li>
+				<li id="ca-talk" class="new"><a href="/wiki/index.php?title=Talk:MiniDLNA_for_Stora/Updating&amp;action=edit&amp;redlink=1" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="/wiki/index.php?title=MiniDLNA_for_Stora/Updating&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="/wiki/index.php?title=MiniDLNA_for_Stora/Updating&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+
+<!-- SSO MOD -->
+<a href="/phpBB3/ucp.php?mode=login" title="Login" accesskey="l">Login</a>
+                 / <a href="/phpBB3/ucp.php?mode=register">Register</a>
+<!-- END SSO MOD -->
+
+<!-- 				<li id="pt-login"><a href="/wiki/index.php?title=Special:UserLogin&amp;returnto=MiniDLNA+for+Stora%2FUpdating&amp;returntoquery=printable%3Dyes" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+-->
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a title="Visit the main page" style="background-image: url(/wiki/images/logo.png);" href="/wiki/index.php?title=Main_Page"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class="generated-sidebar portlet" id="p-Website">
+		<h5>Website</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-HHU-Home"><a href="http://www.hardwarehackersunite.com" rel="nofollow">HHU Home</a></li>
+				<li id="n-HHU-Forum"><a href="http://www.hardwarehackersunite.com/phpBB3" rel="nofollow">HHU Forum</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="generated-sidebar portlet" id="p-Wiki">
+		<h5>Wiki</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Main-Page"><a href="/wiki/index.php?title=Main_Page">Main Page</a></li>
+				<li id="n-Recent-changes"><a href="http://www.openstora.com/wiki/index.php?title=Special:Recentchanges" rel="nofollow">Recent changes</a></li>
+				<li id="n-Help"><a href="/wiki/index.php?title=Help">Help</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/wiki/index.php" id="searchform">
+				<input type='hidden' name="title" value="Special:Search"/>
+				<input type="search" name="search" title="Search OpenStora [f]" accesskey="f" id="searchInput" />
+				<input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchGoButton" class="searchButton" />&#160;
+				<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton" />
+			</form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="/wiki/index.php?title=Special:WhatLinksHere/MiniDLNA_for_Stora/Updating" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="/wiki/index.php?title=Special:RecentChangesLinked/MiniDLNA_for_Stora/Updating" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+				<li id="t-specialpages"><a href="/wiki/index.php?title=Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+				<li id="t-permalink"><a href="/wiki/index.php?title=MiniDLNA_for_Stora/Updating&amp;oldid=1031" title="Permanent link to this revision of the page">Permanent link</a></li>
+			</ul>
+		</div>
+	</div>
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer">
+	<div id="f-poweredbyico">
+		<a href="http://www.mediawiki.org/"><img src="/wiki/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+	</div>
+	<ul id="f-list">
+		<li id="lastmod"> This page was last modified on 29 July 2012, at 06:10.</li>
+		<li id="viewcount">This page has been accessed 9,957 times.</li>
+		<li id="privacy"><a href="/wiki/index.php?title=OpenStora:Privacy_policy" title="OpenStora:Privacy policy">Privacy policy</a></li>
+		<li id="about"><a href="/wiki/index.php?title=OpenStora:About" title="OpenStora:About">About OpenStora</a></li>
+		<li id="disclaimer"><a href="/wiki/index.php?title=OpenStora:General_disclaimer" title="OpenStora:General disclaimer">Disclaimers</a></li>
+	</ul>
+</div>
+</div>
+<script>if(window.mw){
+	mw.loader.load(["mediawiki.user", "mediawiki.util", "mediawiki.page.ready", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax"]);
+}
+</script>
+<script>if(window.mw){
+	mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"monobook","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,
+	"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"en","language":"en","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;mw.user.tokens.set({"editToken":"+\\","watchToken":false});;mw.loader.state({"user.options":"ready","user.tokens":"ready"});
+	
+	/* cache key: hardwar6_wiki:resourceloader:filter:minify-js:4:99acc2c3ab516bb21085c70c2195f3df */
+}
+</script><!-- Served in 0.310 secs. --></body></html>

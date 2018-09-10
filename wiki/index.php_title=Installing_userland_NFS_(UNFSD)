@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" /><title>Installing userland NFS (UNFSD) - OpenStora</title>
+<meta name="generator" content="MediaWiki 1.22.6" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki/opensearch_desc.php" title="OpenStora (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://www.openstora.com/wiki/api.php?action=rsd" />
+<link rel="alternate" type="application/atom+xml" title="OpenStora Atom feed" href="/wiki/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="stylesheet" href="http://www.openstora.com/wiki/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cskins.vector&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(ckb),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: hardwar6_wiki:resourceloader:filter:minify-css:7:a5305c32ce5719fffdb0ebb117d3d93a */</style>
+
+<script src="http://www.openstora.com/wiki/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Installing_userland_NFS_(UNFSD)","wgTitle":"Installing userland NFS (UNFSD)","wgCurRevisionId":1003,"wgRevisionId":1003,"wgArticleId":50,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Installing_userland_NFS_(UNFSD)","wgIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":0,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,
+"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: hardwar6_wiki:resourceloader:filter:minify-js:7:5a69c7e0fa6557851b6dea8a62efaffb */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","skins.vector.js"]);
+}</script>
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/wiki/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Installing_userland_NFS_UNFSD skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Installing userland NFS (UNFSD)</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From OpenStora</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><b>Important: we now have <a href="/wiki/index.php?title=Kernel_mode_NFS" title="Kernel mode NFS">Kernel mode NFS</a> which should be superior to this, recommend you try kernel NFS first!</b>
+</p><p>My first attempt to contribute to this wiki, i hope it's beginners proof&#160;;)
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#How_to_Install_NFS_using_UNFSD_on_the_Stora"><span class="tocnumber">1</span> <span class="toctext">How to Install NFS using UNFSD on the Stora</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Step_1:_Login"><span class="tocnumber">1.1</span> <span class="toctext">Step 1: Login</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Step_2:_Install_UNFSD_and_Portmap"><span class="tocnumber">1.2</span> <span class="toctext">Step 2: Install UNFSD and Portmap</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#step_3:_Configure_UNFSD"><span class="tocnumber">1.3</span> <span class="toctext">step 3: Configure UNFSD</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Step_4:_Fireing_up_UNFSD_and_PORTMAP_for_the_first_time"><span class="tocnumber">1.4</span> <span class="toctext">Step 4: Fireing up UNFSD and PORTMAP for the first time</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Step_5:_Connecting_with_a_client"><span class="tocnumber">1.5</span> <span class="toctext">Step 5: Connecting with a client</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Step_6:_AutoStart_unfsd_and_portmap"><span class="tocnumber">1.6</span> <span class="toctext">Step 6: AutoStart unfsd and portmap</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Comments"><span class="tocnumber">1.7</span> <span class="toctext">Comments</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="How_to_Install_NFS_using_UNFSD_on_the_Stora">How to Install NFS using UNFSD on the Stora</span></h2>
+<p>Requirements:
+</p>
+<ul>
+<li> A Stora NAS of course.
+</li>
+<li> You should have an up-and-running IPKG package manager, if you don't follow these instructions: <a href="/wiki/index.php?title=Installing_a_package_manager" title="Installing a package manager">Installing_a_package_manager</a>.
+</li>
+<li> Know how to use a text-editor like "vi" or "nano" (you need to install it through IPKG if you haven't).
+</li>
+<li> A degree in Computer Science (just kidding).
+</li>
+</ul>
+<h3><span class="mw-headline" id="Step_1:_Login">Step 1: Login</span></h3>
+<p>Login to your Stora using SSH (see this article if you don't know how to do it: <a href="/wiki/index.php?title=Easy_Root_Access" title="Easy Root Access">Easy_Root_Access</a>)
+</p><p>become root:
+// -E ensures that you set the Super user enviroment (just less typing of /opt/bin/....)
+</p>
+<pre>
+-bash-3.2$ sudo -E su 
+</pre>
+<p>just for the linux novices out there: 
+</p>
+<ul>
+<li> bash-3.2<b>$</b> means normal user, chances are slim that you could wreck your system.
+</li>
+<li> bash-3.2<b>#</b> means ROOT/SUPERUSER/one mistake could kill your linux install
+</li>
+</ul>
+<p>so: always work as normal user, for minor actions use sudo -E "the action you would like to do" eg: sudo -E nano /etc/exports
+</p><p>ensure your IPKG is setup correctly:
+</p>
+<pre>
+bash-3.2# ipkg list |grep nfs
+
+you should see something like:
+dstat - 0.7.0-1 - dstat is a versatile replacement for vmstat, iostat, netstat, nfsstat, and ifstat
+nfs-server - 2.2beta47-4 - Minimal NFS server without TCP Wrappers (not recommended, use nfs-utils instead)
+unfs3 - 0.9.18-1 - Version 3 NFS server (not recommended, use nfs-utils instead)
+
+</pre>
+<h3><span class="mw-headline" id="Step_2:_Install_UNFSD_and_Portmap">Step 2: Install UNFSD and Portmap</span></h3>
+<p>now we are going to instal unfs and portmap
+</p>
+<pre>
+bash-3.2# ipkg install unfs3 portmap
+
+it should install unfsd and portmap without issues.
+</pre>
+<h3><span class="mw-headline" id="step_3:_Configure_UNFSD">step 3: Configure UNFSD</span></h3>
+<p>Now it's time to edit/create the exports file. This file tells unfsd what to share, with what rules
+</p>
+<pre>
+touch /etc/exports
+nano /etc/exports
+</pre>
+<p>You should be presented with an empty file:
+</p><p>you should insert the following line, but edit it for your situation:
+</p>
+<pre>
+/home/vincent 172.19.3.0/24(rw,anonuid=501,anongid=503,all_squash)
+</pre>
+<p>the first bit "/home/vincent" is the starting point which is shared.
+172.19.3.0/24 means share to all pc's. 172.19.3.1 till 172.19.3.254 (NOT so safe on a business lan, but for home it's ok)
+(rw,anonuid=501,anongid=503,all_squash) rw means READ_AND_WRITE you could replace it with "ro" READONLY, the 501 and 503 are id's wish correspond to the user UNFSD emulates 
+</p><p>if you like to find yours: 
+</p>
+<pre>
+cat /etc/passwd
+
+the last lines should look like:
+ldap:!!:55:55:LDAP User:/var/lib/ldap:/bin/false
+mailnull:!!:47:47::/var/spool/mqueue:/sbin/nologin
+smmsp:!!:51:51::/var/spool/mqueue:/sbin/nologin
+ComputersBackup:x:500:502::/home/0backups:/sbin/nologin
+vincent:x:501:503::/home/vincent:/bin/bash
+alexandra:x:502:504::/home/alexandra:/bin/bash
+</pre>
+<p>As I (<b>vincent</b>) like to connect to the Stora as user <b>vincent</b> I used my userid 501 and group id 503, 
+Should I like to connect as 'Alexandra' I'd use this line (rw,anonuid=502,anongid=504,all_squash)
+</p>
+<h3><span class="mw-headline" id="Step_4:_Fireing_up_UNFSD_and_PORTMAP_for_the_first_time">Step 4: Fireing up UNFSD and PORTMAP for the first time</span></h3>
+<p>firup PORTMAP:
+</p>
+<pre>
+bash-3.2# portmap
+</pre>
+<p>Second we need to fireup UNFSD:
+</p>
+<pre>
+bash-3.2# unfsd
+
+if you receive no errors it's fine you can proceed to a client system/device to connect to your nfs
+
+if you like to see the options for unfsd:
+bash-3.2# unfsd -h
+UNFS3 unfsd 0.9.18 (C) 2006, Pascal Schmidt &lt;unfs3-server@ewetel.net&gt;
+Usage: unfsd [options]
+        -h          display this short option summary
+        -u          use unprivileged port for services
+        -d          do not detach from terminal
+        -e &lt;file&gt;   file to use instead of /etc/exports
+        -i &lt;file&gt;   write daemon pid to given file
+        -n &lt;port&gt;   port to use for NFS service
+        -m &lt;port&gt;   port to use for MOUNT service
+        -t          TCP only, do not listen on UDP ports
+        -p          do not register with the portmapper
+        -s          single user mode
+        -b          enable brute force file searching
+        -l &lt;addr&gt;   bind to interface with specified address
+        -r          report unreadable executables as readable
+        -T          test exports file and exit
+
+
+if you get this message:
+bash-3.2# unfsd
+bind: Address already in use
+Couldn't bind to tcp port 2049
+
+it's probably already running. Or another nfs service is active. you can (try) to find it using this command:
+bash-3.2# ps aux|grep unfs
+vincent    962  0.1  4.0   6700  5052&#160;?        Ss   Aug25   4:32 unfsd
+root      6904  0.0  0.4   1864   580 pts/0    R+   14:00   0:00 grep unfs
+
+as you can see it's running with PID 962. To kill the process you can use 
+bash-3.2# kill -9 962
+
+then try again
+
+
+</pre>
+<p>after your nfsd is running (to check: ps aux|grep unfsd). You should EXIT Superuser mode:
+</p>
+<pre>
+bash-3.2# exit
+exit
+-bash-3.2$
+
+</pre>
+<p>Please remind it's a GOOD habit to work as regular user on unix/linux systems.
+</p>
+<h3><span class="mw-headline" id="Step_5:_Connecting_with_a_client">Step 5: Connecting with a client</span></h3>
+<p>on a PC/Media player connect to your Stora ip eg 172.19.3.99
+</p>
+<pre>
+bash-3.2# mount 172.19.3.99:/home/vincent /mnt/MY_FIRST_UNFSD_MOUNT
+
+the 172.19.4.99 is ip of the Stora
+the&#160;: is mandatory
+the /home/vincent is EXACTLY the same as the first part in your /etc/exports
+the /mnt/MY_FIRST_UNFSD_MOUNT is a (empty) folder in which you like to mount the share
+
+to release the connection to your Stora you can use:
+bash-3.2# unmount /mnt/MY_FIRST_UNFSD_MOUNT
+
+</pre>
+<h3><span class="mw-headline" id="Step_6:_AutoStart_unfsd_and_portmap">Step 6: AutoStart unfsd and portmap</span></h3>
+<p>To make unfs and pormap work at boot you could use a method described below:
+</p><p>edit /etc/rc.local and add the following lines at the end of it:
+</p><p><b>/opt/etc/init.d/S55portmap</b>
+</p><p><b>/opt/etc/init.d/S56unfsd</b>
+</p>
+<h3><span class="mw-headline" id="Comments">Comments</span></h3>
+<p>Just a quick write up.
+If you encouter errors, feel free to correct them
+</p><p>Good luck and kind regards
+</p><p>Vincent Gijsen
+The Netherlands.
+</p><p>Thanks pippone for the Portmap additions, forgot all about it&#160;;)
+</p><p>ORIGINAL FORUM POST (to discuss problems/errors): <a rel="nofollow" class="external text" href="http://www.hardwarehackersunite.com/forum/topic?id=212">here</a>
+</p><p>I use this NFS as my video storage for my MythTV frontends.  I had to disable the drive spin down as instructed <a rel="nofollow" class="external text" href="http://hardwarehackersunite.com/wiki/index.php?title=Modifying_spin-down_settings">here</a> to prevent the frontends from locking due to the Strora spinning the drives down.
+</p>
+<!-- 
+NewPP limit report
+CPU time usage: 0.030 seconds
+Real time usage: 0.027 seconds
+Preprocessor visited node count: 121/1000000
+Preprocessor generated node count: 236/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key hardwar6_wiki:pcache:idhash:50-0!*!0!!en!*!* and timestamp 20160614141700
+ -->
+</div>								<div class="printfooter">
+				Retrieved from "<a href="http://www.openstora.com/wiki/index.php?title=Installing_userland_NFS_(UNFSD)&amp;oldid=1003">http://www.openstora.com/wiki/index.php?title=Installing_userland_NFS_(UNFSD)&amp;oldid=1003</a>"				</div>
+												<div id='catlinks' class='catlinks catlinks-allhidden'></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-login"><a href="/wiki/index.php?title=Special:UserLogin&amp;returnto=Installing+userland+NFS+%28UNFSD%29" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/index.php?title=Installing_userland_NFS_(UNFSD)"  title="View the content page [c]" accesskey="c">Page</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="/wiki/index.php?title=Talk:Installing_userland_NFS_(UNFSD)&amp;action=edit&amp;redlink=1"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/wiki/index.php?title=Installing_userland_NFS_(UNFSD)" >Read</a></span></li>
+					<li id="ca-viewsource"><span><a href="/wiki/index.php?title=Installing_userland_NFS_(UNFSD)&amp;action=edit"  title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/wiki/index.php?title=Installing_userland_NFS_(UNFSD)&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/wiki/index.php" id="searchform">
+				<div id="simpleSearch">
+						<input name="search" placeholder="Search" title="Search OpenStora [f]" accesskey="f" id="searchInput" />						<button type="submit" name="button" title="Search the pages for this text" id="searchButton"><img src="/wiki/skins/vector/images/search-ltr.png?303" alt="Search" width="12" height="13" /></button>								<input type='hidden' name="title" value="Special:Search"/>
+		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(/wiki/images/logo.png);" href="/wiki/index.php?title=Main_Page"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-Website' aria-labelledby='p-Website-label'>
+	<h3 id='p-Website-label'>Website</h3>
+	<div class="body">
+		<ul>
+			<li id="n-OpenStora-Home"><a href="http://www.openstora.com" rel="nofollow">OpenStora Home</a></li>
+			<li id="n-OpenStora-Forum"><a href="http://www.openstora.com/phpBB3" rel="nofollow">OpenStora Forum</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-Wiki' aria-labelledby='p-Wiki-label'>
+	<h3 id='p-Wiki-label'>Wiki</h3>
+	<div class="body">
+		<ul>
+			<li id="n-Main-Page"><a href="/wiki/index.php?title=Main_Page">Main Page</a></li>
+			<li id="n-Recent-changes"><a href="http://www.openstora.com/wiki/index.php?title=Special:Recentchanges" rel="nofollow">Recent changes</a></li>
+			<li id="n-Help"><a href="/wiki/index.php?title=Help">Help</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/index.php?title=Special:WhatLinksHere/Installing_userland_NFS_(UNFSD)" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/index.php?title=Special:RecentChangesLinked/Installing_userland_NFS_(UNFSD)" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-specialpages"><a href="/wiki/index.php?title=Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-print"><a href="/wiki/index.php?title=Installing_userland_NFS_(UNFSD)&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+			<li id="t-permalink"><a href="/wiki/index.php?title=Installing_userland_NFS_(UNFSD)&amp;oldid=1003" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/wiki/index.php?title=Installing_userland_NFS_(UNFSD)&amp;action=info">Page information</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 7 April 2012, at 19:06.</li>
+											<li id="footer-info-viewcount">This page has been accessed 23,336 times.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="/wiki/index.php?title=OpenStora:Privacy_policy" title="OpenStora:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/index.php?title=OpenStora:About" title="OpenStora:About">About OpenStora</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/index.php?title=OpenStora:General_disclaimer" title="OpenStora:General disclaimer">Disclaimers</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="/wiki/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script>if(window.mw){
+mw.loader.state({"site":"ready"});
+}</script>
+<!-- Served in 0.215 secs. -->
+	</body>
+</html>

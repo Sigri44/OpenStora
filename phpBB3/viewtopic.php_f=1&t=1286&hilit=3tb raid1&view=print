@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-gb" xml:lang="en-gb">
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-language" content="en-gb" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="resource-type" content="document" />
+<meta name="distribution" content="global" />
+<meta name="copyright" content="2000, 2002, 2005, 2007 phpBB Group" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="robots" content="noindex" />
+
+<title>OpenStora Forums &bull; View topic - HOWTO: Using 2TB+ Drives in raid 0</title>
+
+<link href="./styles/absolution/theme/print.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body id="phpbb">
+<div id="wrap">
+	<a id="top" name="top" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>OpenStora Forums</h1>
+		<p>OpenStora Forum<br /><a href="http://www.openstora.com/phpBB3/">http://www.openstora.com/phpBB3/</a></p>
+
+		<h2>HOWTO: Using 2TB+ Drives in raid 0</h2>
+		<p><a href="http://www.openstora.com/phpBB3/viewtopic.php?f=1&amp;t=1286">http://www.openstora.com/phpBB3/viewtopic.php?f=1&amp;t=1286</a></p>
+	</div>
+
+	<div id="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>2</strong></div>
+		
+			<div class="post">
+				<h3>HOWTO: Using 2TB+ Drives in raid 0</h3>
+				<div class="date"><img src="./styles/absolution/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />Posted: <strong>Tue Oct 11, 2011 2:36 pm</strong></div>
+				<div class="author">by <strong>FricoRico</strong></div>
+				<div class="content"><span style="font-size: 50%; line-height: 116%;">Hello everyone,<br /><br />Recently I decided to give my Stora a little upgrade. I want to go from two 1TB drives to two <span class="posthilit">3TB</span> drives, however, the Stora does not natively support this..<br /><br />Is there any tweak, kernel flash or what ever to make this work?<br /><br />Thanks in advance!</span><br /><span style="font-weight: bold">SOLVED!</span><br /><br />For everyone that wants to use <span class="posthilit">3TB</span>+ drives in raid0, I have created this guide to help them through the proces. Thanks to murcery who helped me get on the right track. It is fairly simple and requires no extra knowledge other than knowing how to SSH into the root of the stora.<br /><br />Requirements:<br />- Any <span style="font-weight: bold">SSH client</span><br />- Two <span style="font-weight: bold">2TB or bigger drives</span><br />- Any <span style="font-weight: bold">USB stick</span> inserted in the front of the stora<br /><br />Copy every line step by step:<br /><br />Get root<br /><span style="font-style: italic">sudo -E -s</span><br /><br />Navigate to sbin directory<br /><span style="font-style: italic">cd /sbin</span><br /><br />Partition the first drive with GNU parted (to make a GPT file format so that 2TB+ drives work)<br /><span style="font-style: italic">./parted /dev/sda<br />mklabel gpt<br />yes<br />[Press Enter]<br />unit TB<br />mkpart primary 0.00TB 3.00TB<br />print<br />quit</span><br /><br />Partition the second drive with GNU parted<br /><span style="font-style: italic">./parted /dev/sdb<br />mklabel gpt<br />yes<br />[Press Enter]<br />unit TB<br />mkpart primary 0.00TB 3.00TB<br />print<br />quit</span><br /><br />Make the raid0 array with a blocksize of 128 (the blocksize is defaulted to 64, but 128 might be more desireable)<br /><span style="font-style: italic">./mdadm --create /dev/md0 --level=0 --chunk=128 --raid-devices=2 /dev/sda1 /dev/sdb1<br />y</span><br /><br />Make the USB Stick a swap partition and mount it as swap drive<br /><span style="font-style: italic">./mkswap /dev/sdc<br />./swapon /dev/sdc</span><br /><br />Then we partition the drives to XFS filesystem<br /><span style="font-style: italic">./mkfs.xfs /dev/md0</span><br /><br />Then we are going to text edit the fstab system (this system mounts the drive at startup)<br /><span style="font-style: italic">vi /etc/fstab</span><br /><br />Remove the <span style="font-weight: bold">#</span> in front of<br /><span style="font-style: italic">/dev/md0 /home xfs defaults,bsdgroups,noatime,nodiratime 0 0</span><br /><br />Then as a finishing very important touch we make sure that the raid0 array is remembered at startup<br /><span style="font-style: italic">./mdadm -Q --detail --brief /dev/md0 &gt; /etc/mdadm.conf</span><br /><br />Then reboot the device<br /><span style="font-style: italic">./reboot</span><br /><br />Wait a few minutes, you should see the device boot. The HDD leds will go from green to orange for a few seconds, don't worry they will become green again and you should hear the HDD's working. This is probably the stora finalizing the partition so that it's ready for use.<br /><br /><span style="font-size: 150%; line-height: 116%;">Enjoy!</span></div>
+			</div>
+			<hr />
+		
+			<div class="post">
+				<h3>Re: Big drives, little Stora (<span class="posthilit">3TB</span> drives)</h3>
+				<div class="date"><img src="./styles/absolution/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />Posted: <strong>Thu Oct 13, 2011 5:00 am</strong></div>
+				<div class="author">by <strong>FricoRico</strong></div>
+				<div class="content">I guess no one really knows how to get these working right? Is it safe to say they will work but without using the full <span class="posthilit">3TB</span> of the drive?</div>
+			</div>
+			<hr />
+		
+			<div class="post">
+				<h3>Re: Big drives, little Stora (<span class="posthilit">3TB</span> drives)</h3>
+				<div class="date"><img src="./styles/absolution/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />Posted: <strong>Mon Oct 17, 2011 10:00 am</strong></div>
+				<div class="author">by <strong>FricoRico</strong></div>
+				<div class="content">I'm still investigating into getting these drives to work, in my thoughts it should be possible to partition the drives using SSH.. However I'm not experienced with the limitations that the kernel has or if it's even possible. Whenever I insert the disks they automaticly switch to GPT, so in theory I should be able to get both <span class="posthilit">3TB</span> drives to work.<br /><br />I can create my own raid array, but it keeps forgetting it whenever I reboot. For creating the array I use:<br /><br />mdadm --create /dev/md0 --level=0 --chunk=128 --raid-devices=2 /dev/sda /dev/sdb mkfs.ext3 /dev/md0<br /><br />Then I get a new array, however it doesn't seem to partition it, so I try to use GNU Parted for that:<br /><br />parted /dev/md0<br /><br />However, from that point on I should be giving it a drive label, and a drive size.. Then select format style. I just don't know what the defaults are for the Stora. Can you guys help me out with that?<br /><br />mklabel DISKNAME<br /><br />mkpart primary xfs 0% 100%<br /><br />mkfs.xfs -L /files /dev/md0<br /><br />Nothing happens after a reboot.. Any clues you guys might give me?</div>
+			</div>
+			<hr />
+		
+			<div class="post">
+				<h3>Re: Big drives, little Stora (<span class="posthilit">3TB</span> drives)</h3>
+				<div class="date"><img src="./styles/absolution/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />Posted: <strong>Tue Oct 18, 2011 6:43 pm</strong></div>
+				<div class="author">by <strong>MercuryInc</strong></div>
+				<div class="content">Don't konw if you are still having problems, but here is what I did:<br /><br />Here is what i did to get 2x <span class="posthilit">3TB</span> hard drives working:<br /><br />--- Update to latest firmware<br />--- Remove original disks<br />--- Place both new disks in<br />--- Should have /dev/sda and /dev/sdb now<br /><br />--- Plug in an external usb stick<br />--- Should end up being /dev/sdc1<br /><br />Basicaly I just:<br />1.	Configured partitions for sda<br />2.	Configured partitions for sdb<br />3.	Created Raid<br />4.	Formatted the file system<br />5.	Mounted the disk to home<br /><br />--- login using ssh<br /><br />---  Elevate account<br />sudo -E -s<br /><br />--- Need to be in sbin dir to copy and paste the commands below<br />cd /sbin<br /><br />1.	Configure Partitions for sda<br />	./parted /dev/sda<br />	mklabel gpt<br />	yes<br />	&lt;Enter&gt;<br />	unit TB<br />	mkpart primary 0.00TB 3.00TB<br />	print<br />	quit<br /><br />2.	Configure Partitions for sdb<br />	./parted /dev/sdb<br />	mklabel gpt<br />	yes<br />	&lt;Enter&gt;<br />	unit TB<br />	mkpart primary 0.00TB 3.00TB<br />	print<br />	quit <br /><br />3.	Created Raid	<br />	--- Create raid<br />	./mdadm --create /dev/md0 --level=1 --raid-devices=2 /dev/sda1 /dev/sdb1<br />	<br />	--- Wait for sync (also shows in web interface)<br />	watch cat /proc/mdstat<br />*** Takes Long Time ***<br /><br />4.	Formatted the file system<br />	--- Create swap space on usb stick<br />	./mkswap /dev/sdc1<br />	./swapon /dev/sdc1<br /><br />	--- Create File System<br />	./mkfs.ext3 -b 4096 /dev/md0<br />*** can take long time.  hung up on me once so I rebooted and started again at this step ***<br /><br />5.	Mounted the disk to home<br />	--- auto mount<br />	vi /etc/fstab<br />	--- add this line:<br />	/dev/md0   /home   ext3    defaults,bsdgroups,noatime,nodiratime    0   0<br /><br />--- Reboot<br /><br />If the array doesn't persist you may need to create an /etc/mdadm.conf:<br />mdadm -Q --detail --brief /dev/md0 &gt; /etc/mdadm.conf<br /><br />--- Reboot again</div>
+			</div>
+			<hr />
+		
+			<div class="post">
+				<h3>Re: Big drives, little Stora (<span class="posthilit">3TB</span> drives)</h3>
+				<div class="date"><img src="./styles/absolution/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />Posted: <strong>Wed Oct 19, 2011 3:27 am</strong></div>
+				<div class="author">by <strong>clubt</strong></div>
+				<div class="content">Sweet, what drives (manufacturer etc) did you use to get the 3 TB drives to work?<br /><br />I don't really understand why you need the swap on a USB, can you clarify or maybe you could give me a link to read up on this?<br /><br />Good work anyway! =)<br /><br />Alex</div>
+			</div>
+			<hr />
+		
+			<div class="post">
+				<h3>Re: Big drives, little Stora (<span class="posthilit">3TB</span> drives)</h3>
+				<div class="date"><img src="./styles/absolution/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />Posted: <strong>Wed Oct 19, 2011 1:51 pm</strong></div>
+				<div class="author">by <strong>MercuryInc</strong></div>
+				<div class="content">the swap space was to allow the mkfs to function without throwing an error.  might not be a necisary step.<br /><br />I just purchased some random drives in usb enclosures.  GoFlex Desk from bestbuy.  they were both in the same box but had different hard drives inside.  one was a seagate <span class="posthilit">3tb</span> and the other was hitachie.  no real reason why any drive shouldn't work though.<br /><br />Also, I just realized that I created the file system wrong and just made a 2TB partition.  You'll need to use gpt to get past 2TB<br /><br />to make a full <span class="posthilit">3TB</span> or 4TB partition you'll need to edit steps 1 and 2:<br /><br />1.  Configure Partitions for sda<br />  ./parted /dev/sda<br />  mklabel gpt<br />  yes<br />  &lt;Enter&gt;<br />  unit TB<br />  mkpart primary 0.00TB 3.00TB<br />  print<br />  quit<br /><br />2.  Configure Partitions for sdb<br />  ./parted /dev/sdb<br />  mklabel gpt<br />  yes<br />  &lt;Enter&gt;<br />  unit TB<br />  mkpart primary 0.00TB 3.00TB<br />  print<br />  quit</div>
+			</div>
+			<hr />
+		
+			<div class="post">
+				<h3>Re: Big drives, little Stora (<span class="posthilit">3TB</span> drives)</h3>
+				<div class="date"><img src="./styles/absolution/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />Posted: <strong>Wed Oct 19, 2011 10:58 pm</strong></div>
+				<div class="author">by <strong>darkfire</strong></div>
+				<div class="content"><![if !IE]><div class="bubble"></div><![endif]><blockquote><div><cite>clubt wrote:</cite>Sweet, what drives (manufacturer etc) did you use to get the 3 TB drives to work?<br /><br />I don't really understand why you need the swap on a USB, can you clarify or maybe you could give me a link to read up on this?<br /><br />Good work anyway! =)<br /><br />Alex</div></blockquote><br /><br />The swap is needed cause there is not enough memory onboard to format the <span class="posthilit">3tb</span> partition you will run into a error without it. This is the problem I ran into when i tried to do this. I am proceeding to do this now recording my every step.</div>
+			</div>
+			<hr />
+		
+			<div class="post">
+				<h3>Re: Big drives, little Stora (<span class="posthilit">3TB</span> drives)</h3>
+				<div class="date"><img src="./styles/absolution/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />Posted: <strong>Thu Oct 20, 2011 5:22 am</strong></div>
+				<div class="author">by <strong>clubt</strong></div>
+				<div class="content">Thanks for your answers Darkfire and Mercury Inc!<br /><br />I will probably wait a bit longer before I try this, but it is definitely interesting. Since there are threads in the Netgear forum regarding compatible disks I am still worried that I might buy 3 TB discs that won't work...</div>
+			</div>
+			<hr />
+		
+			<div class="post">
+				<h3>Re: Big drives, little Stora (<span class="posthilit">3TB</span> drives)</h3>
+				<div class="date"><img src="./styles/absolution/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />Posted: <strong>Thu Oct 20, 2011 7:34 am</strong></div>
+				<div class="author">by <strong>darkfire</strong></div>
+				<div class="content">I am using the WD Caviar Greens. Those were the only internals i can find.</div>
+			</div>
+			<hr />
+		
+			<div class="post">
+				<h3>Re: Big drives, little Stora (<span class="posthilit">3TB</span> drives)</h3>
+				<div class="date"><img src="./styles/absolution/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />Posted: <strong>Thu Oct 20, 2011 8:51 am</strong></div>
+				<div class="author">by <strong>MercuryInc</strong></div>
+				<div class="content">As a follow up my stora is online with a <span class="posthilit">3TB</span> partition <span class="posthilit">RAID1</span>.<br /><br />Since I created the array incorrectly the first time I had to manually remove the old array and re-create it.  then i realized that using ext3 with the default block size still only allows 2TB  <img src="./images/smilies/embarrassed.gif" alt=":-[" title="Embarrassed" /> .  so after tons of re-sysncing and re-formatting i had to format like this (i'll edit above)<br /><br />./mkfs.ext3 -b 4096 /dev/md0<br /><br />There was also no /etc/mdadm.conf file (maybe because i screwed around so much) so I had to create one manually to allow the array to persist reboots. I did this in this way:<br />mdadm -Q --detail --brief /dev/md0 &gt; /etc/mdadm.conf<br /><br />you can create the file manualy, but it sucks to try and type in the UUID</div>
+			</div>
+			<hr />
+		
+			<div class="post">
+				<h3>Re: Big drives, little Stora (<span class="posthilit">3TB</span> drives)</h3>
+				<div class="date"><img src="./styles/absolution/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />Posted: <strong>Thu Oct 20, 2011 10:39 am</strong></div>
+				<div class="author">by <strong>darkfire</strong></div>
+				<div class="content">Good thing I hadnt formatted yet. The resync takes like 5 hours.<br /><br />After you add the drives to the fstab DO NOT REBOOT create the mdadm.conf file. Save you from having to restart the raid by fishing out a uuid.<br /><div class="inline-attachment">
+		<dl class="thumbnail">
+			<dt><a href="./download/file.php?id=66&amp;mode=view"><img src="./download/file.php?id=66&amp;t=1" alt="P1050422.JPG" title="P1050422.JPG (120.35 KiB) Viewed 7273 times" /></a></dt>
+			
+		</dl>
+		</div></div>
+			</div>
+			<hr />
+		
+			<div class="post">
+				<h3>Re: Big drives, little Stora (<span class="posthilit">3TB</span> drives)</h3>
+				<div class="date"><img src="./styles/absolution/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />Posted: <strong>Thu Oct 20, 2011 3:48 pm</strong></div>
+				<div class="author">by <strong>FricoRico</strong></div>
+				<div class="content">Thanks a lot for all the help guys, right now I;m working on getting the drives that darkfire has to work..<br /><br />I just recovered my firmware back to stock.. Will see what happens... I will save every line, step by step so I can create a propper guide for people like me<br /><br />EDIT:<br /><br />Ok so I can't get my Stora to work with raid 0, maybe raid 0 doesn't work? Is there a way to get JBOD to work? This is what I do:<br /><br />sudo -E -s<br /><br />sudo passwd root<br /><br />cd /sbin<br /><br />./parted /dev/sda<br />mklabel gpt<br />yes<br />[Press Enter]<br />unit TB<br />mkpart primary 0.00TB 3.00TB<br />print<br />quit<br /><br />./parted /dev/sdb<br />mklabel gpt<br />yes<br />[Press Enter]<br />unit TB<br />mkpart primary 0.00TB 3.00TB<br />print<br />quit<br /><br />./mdadm --create /dev/md0 --level=0 --chunk=128 --raid-devices=2 /dev/sda1 /dev/sdb1<br />y<br /><br />./mkswap /dev/sdc<br />./swapon /dev/sdc<br /><br />./mkfs.ext3 -b 4096 /dev/md0<br /><span style="font-weight: bold">RETURNS ERROR:<br />mkfs.ext3: Could not allocate block in ext2 filesystem while trying to allocate filesystem tables</span><br /><br />vi /etc/fstab<br />/dev/md0 /home ext3 defaults,bsdgroups,noatime,nodiratime 0 0<br /><br />./mdadm -Q --detail --brief /dev/md0 &gt; /etc/mdadm.conf<br /><br />reboot</div>
+			</div>
+			<hr />
+		
+			<div class="post">
+				<h3>Re: HOWTO: Using 2TB+ Drives in raid 0</h3>
+				<div class="date"><img src="./styles/absolution/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />Posted: <strong>Thu Oct 27, 2011 7:12 am</strong></div>
+				<div class="author">by <strong>FricoRico</strong></div>
+				<div class="content">I have solved the issue and this is now officially a guide with feedback</div>
+			</div>
+			<hr />
+		
+			<div class="post">
+				<h3>Re: HOWTO: Using 2TB+ Drives in raid 0</h3>
+				<div class="date"><img src="./styles/absolution/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />Posted: <strong>Thu Jan 12, 2012 7:44 pm</strong></div>
+				<div class="author">by <strong>DizzyThermal</strong></div>
+				<div class="content">Hey FricoRico,<br /><br />I was wondering if it was possible to get a 2TB and <span class="posthilit">3TB</span> drive working in JBOD fashion?<br /><br />I noticed that your guide was to get drives working in RAID..<br /><br />If you could help out, thanks! <img src="./images/smilies/smiley.gif" alt=":)" title="Smiley" /></div>
+			</div>
+			<hr />
+		
+			<div class="post">
+				<h3>Re: HOWTO: Using 2TB+ Drives in raid 0</h3>
+				<div class="date"><img src="./styles/absolution/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />Posted: <strong>Fri Jan 13, 2012 5:06 pm</strong></div>
+				<div class="author">by <strong>yogayogi</strong></div>
+				<div class="content"><![if !IE]><div class="bubble"></div><![endif]><blockquote><div><cite>DizzyThermal wrote:</cite>Hey FricoRico,<br /><br />I was wondering if it was possible to get a 2TB and <span class="posthilit">3TB</span> drive working in JBOD fashion?<br /><br />I noticed that your guide was to get drives working in RAID..<br /><br />If you could help out, thanks! <img src="./images/smilies/smiley.gif" alt=":)" title="Smiley" /></div></blockquote><br /><br /><br />Yes, I'd like that too - to keep the two large drives completely separate &amp; individually addressable.<br />thanks</div>
+			</div>
+			<hr />
+		
+	</div>
+
+<!--
+	We request you retain the full copyright notice below including the link to www.phpbb.com.
+	This not only gives respect to the large amount of time given freely by the developers
+	but also helps build interest, traffic and use of phpBB3. If you (honestly) cannot retain
+	the full copyright we ask you at least leave in place the "Powered by phpBB" line, with
+	"phpBB" linked to www.phpbb.com. If you refuse to include even this then support on our
+	forums may be affected.
+
+	The phpBB Group : 2006
+//-->
+	<div id="page-footer">
+		<div class="page-number">All times are UTC - 7 hours [ <abbr title="Daylight Saving Time">DST</abbr> ]<br />Page <strong>1</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB &copy; 2000, 2002, 2005, 2007 phpBB Group<br />http://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+</html>

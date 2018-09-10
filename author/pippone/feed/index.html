@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>OpenStora &#187; pippone</title>
+	<atom:link href="http://www.openstora.com/author/pippone/feed/" rel="self" type="application/rss+xml" />
+	<link>http://www.openstora.com</link>
+	<description></description>
+	<lastBuildDate>Thu, 09 Feb 2012 03:57:30 +0000</lastBuildDate>
+	<language>en</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.0.4</generator>
+		<item>
+		<title>Thank you guys!</title>
+		<link>http://www.openstora.com/2010/12/thank-you-guys/</link>
+		<comments>http://www.openstora.com/2010/12/thank-you-guys/#comments</comments>
+		<pubDate>Wed, 22 Dec 2010 10:04:00 +0000</pubDate>
+		<dc:creator>pippone</dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">http://www.openstora.com/?p=57</guid>
+		<description><![CDATA[I just wanted to personally thank everybody who donated for my new &#8220;play&#8221; Stora, in a while my family will probably stop complaining why they can&#8217;t access the family photos or videos all of a sudden because I broke something testing some mod Please don&#8217;t stop donating though,all the donations will go to support the <a href='http://www.openstora.com/2010/12/thank-you-guys/'>[...]</a>]]></description>
+			<content:encoded><![CDATA[<p>I just wanted to personally thank everybody who donated for my new &#8220;play&#8221; Stora, in a while my family will probably stop complaining why they can&#8217;t access the family photos or videos all of a sudden because I broke something testing some mod <img src='http://www.openstora.com/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> </p>
+<p>Please don&#8217;t stop donating though,all the donations will go to support the website expenses (hosting, bandwidth, &#8230;).</p>
+<p>I&#8217;d also like to thank HipServ, they contacted me directly to let us know they really support 3rd party developers like this community and offered to send a Stora plus some really interesting developer tools in order to promote our work! I think this is just amazing and HipServ should be an example of how software companies should be. Expect some interesting news very soon!</p>
+<p>Thank you all!</p>
+<p>Gabriele aka pippone</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.openstora.com/2010/12/thank-you-guys/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Easy Netgear Stora root access</title>
+		<link>http://www.openstora.com/2010/11/easy-netgear-stora-root-access/</link>
+		<comments>http://www.openstora.com/2010/11/easy-netgear-stora-root-access/#comments</comments>
+		<pubDate>Fri, 26 Nov 2010 05:09:34 +0000</pubDate>
+		<dc:creator>pippone</dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">http://localhost/?p=26</guid>
+		<description><![CDATA[Finally found the trick to gain root access to the Stora without using the reset + tftp + nfs or a serial port: First you need to get your Stora&#8217;s product key, it&#8217;s located behind the Stora, close to the ethernet port, it&#8217;s in the form &#8220;XXXX-XXXX-XXXX-XXXX&#8221;. Then you just need to SSH to your <a href='http://www.openstora.com/2010/11/easy-netgear-stora-root-access/'>[...]</a>]]></description>
+			<content:encoded><![CDATA[<p>Finally found the trick to gain root access to the Stora without using the reset + tftp + nfs or a serial port:</p>
+<p>First you need to get your Stora&#8217;s product key, it&#8217;s located behind the Stora, close to the ethernet port, it&#8217;s in the form &#8220;XXXX-XXXX-XXXX-XXXX&#8221;.</p>
+<p>Then you just need to SSH to your Stora with a particular user which is just one of the users created through the web interface (the user needs to have the administrator flag selected) concatenated by the string &#8220;_hipserv2_netgear_XXXX-XXXX-XXXX-XXXX&#8221; (where XXXX-XXXX-XXXX-XXXX is your product key, ALL CAPITAL LETTERS!), this time you&#8217;ll get a password prompt instead of the &#8220;connection to x:22 exited: remote closed the connection&#8221;, just enter the user password, which is the one you use to access your Stora through the web interface and you&#8217;ll get user access. Now to get root access you just need to write &#8220;sudo -s&#8221; and enter again the user password, every ADMINISTRATOR user is allowed to use the sudo command. You&#8217;ll probably get a: &#8220;audit_log_user_command(): Connection refused&#8221; but it doesn&#8217;t matter, you&#8217;ll get the root prompt!</p>
+<p>Example: if you created a user named &#8220;stora&#8221;, flagging the &#8220;user is administrator&#8221; during the Stora setup or through the web interface and your Stora&#8217;s product key is &#8220;1234-5678-9999-9999&#8243; you just need to ssh to your Stora and use &#8220;stora_hipserv2_netgear_1234-5678-9999-9999&#8243; as user, either using Putty or your favorite SSH client and enter that user&#8217;s password, then &#8220;sudo -E -s&#8221; and you&#8217;ll get root access, that&#8217;s it!</p>
+<p>There&#8217;s another way to login concatenating the username with the string &#8220;_axsync_&#8221; but it allows you to issue only &#8220;mkdir&#8221; and &#8220;rsync&#8221; commands.</p>
+<p>Explanation:</p>
+<p>Basically Netgear, or more probably Axentra, ships his software with a modified version of SSHD that disallows regular user access, except for &#8220;root&#8221; and &#8220;apache&#8221; users, what it does is basically changing the logging username by substituting the first character with a &#8220;0&#8243; so it doesn&#8217;t match with the list of allowed users inside the /etc/passwd.</p>
+<p>The SSH Deamon leaves a &#8220;backdoor&#8221; open, which basically is: if your username is appended with the above string, this substitution doesn&#8217;t take place, and you can login normally.</p>
+<p>p.s. the &#8220;hipserv2_netgear&#8221; part may be different for some users, although I suppose is the same for everybody, if you already hacked your Stora using other ways I&#8217;d ask you to check the &#8220;/etc/oe-release&#8221; and post here the DistName line and we&#8217;ll try to figure it out.</p>
+<p><strong>What to do after getting root access? Read our <a href="http://www.openstora.com/wiki/">wiki</a> or <a href="http://www.openstora.com/forum/">forum </a>to improve your Stora!</strong></p>
+<p>Enjoy your hacked Stora, now even more!</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.openstora.com/2010/11/easy-netgear-stora-root-access/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>yet another easy way to get root access, through telnetenabled</title>
+		<link>http://www.openstora.com/2010/11/yet-another-easy-way-to-get-root-access-through-telnetenabled/</link>
+		<comments>http://www.openstora.com/2010/11/yet-another-easy-way-to-get-root-access-through-telnetenabled/#comments</comments>
+		<pubDate>Fri, 26 Nov 2010 05:09:04 +0000</pubDate>
+		<dc:creator>pippone</dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">http://localhost/?p=24</guid>
+		<description><![CDATA[There&#8217;s one more easy way to get root access to the Stora, this time by enabling the telnet daemon that is running by default on each device. How to do that: Download the TelnetEnabler file/script, .exe version (here) if you have Windows or python script (here) for all other platform (of course you can use <a href='http://www.openstora.com/2010/11/yet-another-easy-way-to-get-root-access-through-telnetenabled/'>[...]</a>]]></description>
+			<content:encoded><![CDATA[<p>There&#8217;s one more easy way to get root access to the Stora, this time by enabling the telnet daemon that is running by default on each device.<br />
+How to do that:</p>
+<ul>
+<li>Download the TelnetEnabler file/script, .exe version (<a href="http://www.openstora.com/remository/Stora/Tools/TelnetEnable-for-Windows/">here</a>) if you have Windows or python script (<a href="http://www.openstora.com/remository/Stora/Tools/TelnetEnable-for-all-platform-%28python-script%29/">here</a>) for all other platform (of course you can use the python script even on Windows, but that requires Python interpreter).</li>
+<li>Get your Stora ip and mac address (the mac address can be obtained using &#8220;arp -a&#8221; or looking behind the Stora, there&#8217;s a sticker with the MAC address printed.</li>
+<li>Run the .exe or the python script with the following options:</li>
+</ul>
+<p><strong>For the Windows version:</strong> telnetenable.exe STORA_IP STORA_MAC_ADDRESS Gearguy Geardog</p>
+<p><strong>For the python version</strong>: python telnetenable.py STORA_IP STORA_MAC_ADDRESS Gearguy Geardog</p>
+<p>If you did all this correctly, telnet should be enabled on the stora allowing you to just &#8220;telnet STORA_IP&#8221; and get root access.</p>
+<p>From that point on, follow the tutorial on the wiki or on the forum to get the best from your Stora!</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.openstora.com/2010/11/yet-another-easy-way-to-get-root-access-through-telnetenabled/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>Rooting the Seagate GoFlex Home!</title>
+		<link>http://www.openstora.com/2010/11/rooting-the-seagate-goflex-home/</link>
+		<comments>http://www.openstora.com/2010/11/rooting-the-seagate-goflex-home/#comments</comments>
+		<pubDate>Fri, 26 Nov 2010 04:42:22 +0000</pubDate>
+		<dc:creator>pippone</dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">http://localhost/?p=4</guid>
+		<description><![CDATA[thanks to a user &#8220;3354h3hj&#8221; who reported it, it is also possible for Seagate GoFlex Home users to gain root access to their device, this opens up a lot of possibilities to customize it (i.e. adding stuff like transmission server, amule, iSCSI, NFS, and more!) and to know more about the device you have by <a href='http://www.openstora.com/2010/11/rooting-the-seagate-goflex-home/'>[...]</a>]]></description>
+			<content:encoded><![CDATA[<p>thanks to a user &#8220;3354h3hj&#8221; who reported it, it is also possible for Seagate GoFlex Home users to gain root access to their device, this opens up a lot of possibilities to customize it (i.e. adding stuff like transmission server, amule, iSCSI, NFS, and more!) and to know more about the device you have by accessing every aspect of it.</p>
+<p>The procedure to get the root access is the same as the Netgear Stora, using a particular ssh user as explained on this wiki page: <a href="http://www.openstora.com/wiki/index.php?title=Easy_Root_Access" target="_blank">here</a></p>
+<p>there is a note explaining the only different step, which is the different username.</p>
+<p>Enjoy and don&#8217;t forget to post something on the new dedicated forum section!</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.openstora.com/2010/11/rooting-the-seagate-goflex-home/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+	</channel>
+</rss>

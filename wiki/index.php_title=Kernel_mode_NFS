@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" /><title>Kernel mode NFS - OpenStora</title>
+<meta name="generator" content="MediaWiki 1.22.6" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki/opensearch_desc.php" title="OpenStora (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://www.openstora.com/wiki/api.php?action=rsd" />
+<link rel="alternate" type="application/atom+xml" title="OpenStora Atom feed" href="/wiki/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="stylesheet" href="http://www.openstora.com/wiki/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cskins.vector&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(ckb),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: hardwar6_wiki:resourceloader:filter:minify-css:7:a5305c32ce5719fffdb0ebb117d3d93a */</style>
+
+<script src="http://www.openstora.com/wiki/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Kernel_mode_NFS","wgTitle":"Kernel mode NFS","wgCurRevisionId":1107,"wgRevisionId":1107,"wgArticleId":78,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Kernel_mode_NFS","wgIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":0,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,
+"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: hardwar6_wiki:resourceloader:filter:minify-js:7:5a69c7e0fa6557851b6dea8a62efaffb */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","skins.vector.js"]);
+}</script>
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/wiki/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Kernel_mode_NFS skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Kernel mode NFS</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From OpenStora</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><b>This is a (hopefully better) alternative to <a href="/wiki/index.php?title=Installing_userland_NFS_(UNFSD)" title="Installing userland NFS (UNFSD)">Installing userland NFS (UNFSD)</a> on the Stora!</b>
+</p><p><b>Aug 2011 update: thanks to missing script by Michael pleased to confirm file locking appears to be working! (mounts work without the nolock option). The packages have been updated. credit to Michael for discovering the issue</b>
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Preparation"><span class="tocnumber">1</span> <span class="toctext">Preparation</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Setting_up_the_NFS_kernel_modules"><span class="tocnumber">2</span> <span class="toctext">Setting up the NFS kernel modules</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Making_the_NFS_server_start_automatically_when_your_Stora_or_GoFlex_Home_boots"><span class="tocnumber">3</span> <span class="toctext">Making the NFS server start automatically when your Stora or GoFlex Home boots</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Q.26A"><span class="tocnumber">4</span> <span class="toctext">Q&amp;A</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Preparation">Preparation</span></h2>
+<p>Get <a href="/wiki/index.php?title=Easy_Root_Access" title="Easy Root Access">Easy Root Access</a>, install Nano and fix your PATH (see under <a href="/wiki/index.php?title=Installing_a_package_manager" title="Installing a package manager">Installing a package manager</a>) <br />
+Note that all the commands on this page are run as root so begin your SSH sessions with "sudo -E -s" and make sure you have the bash-3.2<b>#</b> prompt.
+</p>
+<ul>
+<li>[<b>For the Stora</b>] Download the NFS package from <a rel="nofollow" class="external text" href="http://www.openstora.com/files/albums/userpics/10221/nfs-utils_STORA_tar.gz">here</a>, rename the file to "nfs-utils_STORA.tar.gz".
+</li>
+<li>Check that your Stora is running the correct kernel for these NFS modules:
+</li>
+</ul>
+<pre>-bash-3.2# uname -a
+Linux axentraserver.xxxx.mystora.com 2.6.22.18-Netgear #16 Sun Jun 13 19:54:46 EDT 2010 armv5tejl armv5tejl armv5tejl GNU/Linux
+</pre>
+<p>At the time of writing this NFS package by Pipponne is built for kernel v2.6.22.18 (tested under Netgear firmware v1.2 and v2.3)
+</p>
+<ul>
+<li>[<b>For the GoFlex Home</b>] Download the NFS package from <a rel="nofollow" class="external text" href="http://www.openstora.com/files/albums/userpics/12676/nfs-utils_GFH_tar.gz">here</a>, rename the file to "nfs-utils_GFH.tar.gz".
+</li>
+<li>Check that your GoFlex Home is running the correct kernel for these NFS modules:
+</li>
+</ul>
+<pre>-bash-3.2# uname -a
+Linux axentraserver.XXXX.seagateshare.com 2.6.22.18 #16 Thu Jun 17 01:37:53 EDT 2010 armv5tejl armv5tejl armv5tejl GNU/Linux
+</pre>
+<p>At the time of writing this, NFS kernel modules are built for kernel v2.6.22.18 (tested under Seagate firmware v2.5.1). The rest of the package was built by Pipponne for the Stora.
+</p>
+<ul>
+<li>[<b>For Stora and GoFlex Home</b>] Drop the NFS package onto a share on your Stora or GoFlex Home and copy it to the root of the filesystem (this is to make sure everything extracts into the correct paths).
+</li>
+</ul>
+<p>e.g. if you drag and drop the package to the FamilyShare on Stora:
+</p>
+<pre>cd /home/0common
+cp nfs-utils_STORA.tar.gz /
+</pre>
+<p>e.g. if you drag and drop the package to the GoFlex Home Public on GoFlex Home:
+</p>
+<pre>cd /home/0common
+cp nfs-utils_GFH.tar.gz /
+</pre>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Setting_up_the_NFS_kernel_modules">Setting up the NFS kernel modules</span></h2>
+<p>With the nfs-utils_STORA.tar.gz package in / the root of your Stora as explained above and still running as root user:
+</p>
+<pre>cd /
+tar xvfz nfs-utils_STORA.tar.gz
+</pre>
+<p>For the GoFlex Home the file is named nfs-utils_GFH.tar.gz so you have to run
+</p>
+<pre>cd /
+tar xvfz nfs-utils_GFH.tar.gz
+</pre>
+<p>You will see a whole list of files extracted.
+</p><p>Refresh and load the new modules:
+</p>
+<pre>depmod -a
+modprobe nfsd
+</pre>
+<p>now check the loaded modules with "lsmod" - you should see nfsd, exportfs, and nfs_acl amoungst the others you already had
+</p><p>create a simple nfs export config file (this is just a test, you will go back and create your real NFS config later!)
+</p>
+<pre>nano /etc/exports
+</pre>
+<p>if you copy paste the following line you will export (share) your FamilyLibrary folder (GoFlex Home Public in the GoFlex Home) so it's available for mounting to all machines on your LAN (assuming your LAN uses the range 192.168.1.x, change as needed):
+</p>
+<pre>/home/0common 192.168.1.0/255.255.255.0(rw,sync,no_root_squash,no_subtree_check)
+</pre>
+<p>save and exit Nano. <b>Note: NFS cannot be used with Paragon NTFS driver. This means that you cannot export GoFlex Home NTFS formatted drive.</b>
+Then start the server like this:
+</p>
+<pre>-bash-3.2# /etc/init.d/portmap start
+Starting portmap:                                          [  OK  ]
+-bash-3.2# /etc/init.d/nfs start
+Starting NFS services:                                     [  OK  ]
+Starting NFS daemon:                                       [  OK  ]
+Starting NFS mountd:                                       [  OK  ]
+</pre>
+<p>Check that your exports are working by typing "exportfs -v" - the line(s) in your /etc/exports should be shown<br />
+At this point you can try mounting the share on your NFS client - any Linux workstation should do, remember to install the nfs-common package if your distro doesn't include it (Ubuntu for example has it in its repos but isn't installed by default).
+</p>
+<h2><span class="mw-headline" id="Making_the_NFS_server_start_automatically_when_your_Stora_or_GoFlex_Home_boots">Making the NFS server start automatically when your Stora or GoFlex Home boots</span></h2>
+<p>As root, type the following lines
+</p>
+<pre>chkconfig --add portmap
+chkconfig --level 235 portmap on
+chkconfig --add nfs
+chkconfig --level 235 nfs on
+</pre>
+<p>Then you need to specify something for RPCNFSDARGS inside /etc/sysconfig/nfs
+</p>
+<pre> nano /etc/sysconfig/nfs
+</pre>
+<p>uncomment (remove the # in front of) the line RPCNFSDARGS="-N 4" (v4 NFS isn't supported anyway we don't think)
+</p><p>Now the service startup should load the module automatically if it isn't already loaded (e.g. at boot).
+Reboot and run
+</p>
+<pre>exportfs -v
+</pre>
+<p>again to test.
+</p>
+<h2><span class="mw-headline" id="Q.26A">Q&amp;A</span></h2>
+<ul>
+<li><b>Which NFS version is this?</b>
+</li>
+</ul>
+<p>NFSv3 is the highest supported, you can force v2 if you prefer through the config file (see above).
+</p>
+<ul>
+<li><b>What's NFS performance like on the Stora? What settings can i change to speed NFS up?</b>
+</li>
+</ul>
+<p>From my (Smiff's) testing NFS is faster (or more efficient) than SMB by a significant margin, from 10% to 30% depending on client. CPU usage on the Stora is similar however (around 50% to 75% for large file transfers).
+I have tried numerous settings whilst setting up home shares on the Stora and the setting I found to have the most significant effect by far was <b>async</b>, which roughly halved the time needed to open a large application e.g. a web browser. Application close times are reduced even more, probably because these apps are writing large numbers of small files when they exit and this is slow over NFS (compared to a local disk). <br />Configure async in your /etc/exports e.g.
+</p>
+<pre>/home/user       192.168.1.0/24(rw,<b>async</b>,no_subtree_check,no_root_squash)
+</pre>
+<p>Note there is a slight risk of data loss e.g. if power is lost to the Stora during writes, however the performance benefit is great so this is probably a good tradeoff.
+</p><p>Note that only a small subset of possible NFS server settings seem to be supported on the Stora (for example nosuid isn't supported?).
+To check which settings the server is actually understanding and using (as opposed to what you've told it to use in /etc/exports), run
+</p>
+<pre>cat /proc/fs/nfs/exports 
+</pre>
+<p>Other relevant settings:<br />
+<b>wdelay</b> you will find is enabled by default; this option has no affect with async (?)
+<br />
+<b>rsize and wsize</b> values, good values to try are 8192, 16384, 32768 (8k,16k,32k) you will need to experiment to see what works best on your network. For my (gigabit) network and my Ubuntu client, 16 and 32 give similar write speeds, both are about 40% faster than 8192.
+<br />
+<b>noatime</b> don't forget your client mount options (probably set in auto.master if using autofs). anything you can do to reduce file system writes is good.
+<br />
+</p><p>Good little article on NFS performance optimisations <a rel="nofollow" class="external free" href="http://www.techrepublic.com/blog/opensource/tuning-nfs-for-better-performance/64">http://www.techrepublic.com/blog/opensource/tuning-nfs-for-better-performance/64</a>
+If anyone has other tips to improve performance please let us know on the forum!
+</p><p><br />
+</p>
+<ul>
+<li><b>Why are there 8 NFSD processes?</b>
+</li>
+</ul>
+<p>If you use top during a file transfer you may see 8 threads - this is normal, 8 is the default for an NFS server. you can change this by editing /etc/sysconfig/nfs but note that you must have at least one thread per client session. You may need to raise this number if you need more simultaneous sessions.
+</p>
+<ul>
+<li><b>I've edited my NFS configuration or exports, do I have to reboot my Stora?</b>
+</li>
+</ul>
+<p>You don't need to restart the whole machine, to just restart the NFS service type
+</p>
+<pre>service nfs restart
+</pre>
+<p>or to quickly update the exports:
+</p>
+<pre>exportfs -r
+</pre>
+<p><br />
+</p>
+<ul>
+<li><b>I need help configuring/setting up NFS!</b>
+</li>
+</ul>
+<p>Further reading: troubleshooting NFS <a rel="nofollow" class="external free" href="http://www.troubleshooters.com/linux/nfs.htm">http://www.troubleshooters.com/linux/nfs.htm</a>
+</p><p><br />
+-- Page written by <a href="/wiki/index.php?title=User:Smiff&amp;action=edit&amp;redlink=1" class="new" title="User:Smiff (page does not exist)">Smiff</a>, nearly all information provided by <a href="/wiki/index.php?title=User:Pippine&amp;action=edit&amp;redlink=1" class="new" title="User:Pippine (page does not exist)">Pippone</a><br />
+Have you followed this page? Did Kernel mode NFS work well/badly/not at all for you? Please tell us <a rel="nofollow" class="external text" href="http://www.openstora.com/forum/viewtopic.php?f=1&amp;t=282">here</a>
+</p><p>--<a href="/wiki/index.php?title=User:J.m.&amp;action=edit&amp;redlink=1" class="new" title="User:J.m. (page does not exist)">J.M.</a> 17:17, 10 March 2011 (UTC) Added GoFlex Home kernel modules and utils (from Pippone). Information <a rel="nofollow" class="external text" href="http://www.openstora.com/forum/viewtopic.php?f=16&amp;t=798">here</a>
+</p>
+<!-- 
+NewPP limit report
+CPU time usage: 0.020 seconds
+Real time usage: 0.023 seconds
+Preprocessor visited node count: 15/1000000
+Preprocessor generated node count: 20/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key hardwar6_wiki:pcache:idhash:78-0!*!0!!en!*!* and timestamp 20171202120007
+ -->
+</div>								<div class="printfooter">
+				Retrieved from "<a href="http://www.openstora.com/wiki/index.php?title=Kernel_mode_NFS&amp;oldid=1107">http://www.openstora.com/wiki/index.php?title=Kernel_mode_NFS&amp;oldid=1107</a>"				</div>
+												<div id='catlinks' class='catlinks catlinks-allhidden'></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-login"><a href="/wiki/index.php?title=Special:UserLogin&amp;returnto=Kernel+mode+NFS" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/index.php?title=Kernel_mode_NFS"  title="View the content page [c]" accesskey="c">Page</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="/wiki/index.php?title=Talk:Kernel_mode_NFS&amp;action=edit&amp;redlink=1"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/wiki/index.php?title=Kernel_mode_NFS" >Read</a></span></li>
+					<li id="ca-viewsource"><span><a href="/wiki/index.php?title=Kernel_mode_NFS&amp;action=edit"  title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/wiki/index.php?title=Kernel_mode_NFS&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/wiki/index.php" id="searchform">
+				<div id="simpleSearch">
+						<input name="search" placeholder="Search" title="Search OpenStora [f]" accesskey="f" id="searchInput" />						<button type="submit" name="button" title="Search the pages for this text" id="searchButton"><img src="/wiki/skins/vector/images/search-ltr.png?303" alt="Search" width="12" height="13" /></button>								<input type='hidden' name="title" value="Special:Search"/>
+		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(/wiki/images/logo.png);" href="/wiki/index.php?title=Main_Page"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-Website' aria-labelledby='p-Website-label'>
+	<h3 id='p-Website-label'>Website</h3>
+	<div class="body">
+		<ul>
+			<li id="n-OpenStora-Home"><a href="http://www.openstora.com" rel="nofollow">OpenStora Home</a></li>
+			<li id="n-OpenStora-Forum"><a href="http://www.openstora.com/phpBB3" rel="nofollow">OpenStora Forum</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-Wiki' aria-labelledby='p-Wiki-label'>
+	<h3 id='p-Wiki-label'>Wiki</h3>
+	<div class="body">
+		<ul>
+			<li id="n-Main-Page"><a href="/wiki/index.php?title=Main_Page">Main Page</a></li>
+			<li id="n-Recent-changes"><a href="http://www.openstora.com/wiki/index.php?title=Special:Recentchanges" rel="nofollow">Recent changes</a></li>
+			<li id="n-Help"><a href="/wiki/index.php?title=Help">Help</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/index.php?title=Special:WhatLinksHere/Kernel_mode_NFS" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/index.php?title=Special:RecentChangesLinked/Kernel_mode_NFS" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-specialpages"><a href="/wiki/index.php?title=Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-print"><a href="/wiki/index.php?title=Kernel_mode_NFS&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+			<li id="t-permalink"><a href="/wiki/index.php?title=Kernel_mode_NFS&amp;oldid=1107" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/wiki/index.php?title=Kernel_mode_NFS&amp;action=info">Page information</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 2 September 2015, at 05:49.</li>
+											<li id="footer-info-viewcount">This page has been accessed 69,698 times.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="/wiki/index.php?title=OpenStora:Privacy_policy" title="OpenStora:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/index.php?title=OpenStora:About" title="OpenStora:About">About OpenStora</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/index.php?title=OpenStora:General_disclaimer" title="OpenStora:General disclaimer">Disclaimers</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="/wiki/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script>if(window.mw){
+mw.loader.state({"site":"ready"});
+}</script>
+<!-- Served in 0.173 secs. -->
+	</body>
+</html>
