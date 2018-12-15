@@ -21,7 +21,7 @@ mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails
 <script>if(window.mw){
 mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","skins.vector.js"]);
 }</script>
-<!--[if lt IE 7]><style type="text/css">body{behavior:url("/wiki/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("https://sigri44.github.io/OpenStora/wiki/skins/vector/csshover.min.htc")}</style><![endif]--></head>
 <body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Main_Page skin-vector action-view vector-animateLayout">
 		<div id="mw-page-base" class="noprint"></div>
 		<div id="mw-head-base" class="noprint"></div>
@@ -108,13 +108,13 @@ You can <a href="index_Adding_an_Internal_USB_Hub.html" title="Adding an Interna
 <li> <b>RAID0/JBOD support, other disk configurations</b>?<br />
 </li>
 </ul>
-<p>By default the Stora will create a RAID1 mirror (even if you only insert 1 drive; it creates a degraded mirror, waits for another drive of equal or greater capacity). JBOD support was added in firmware 2.x. It's also possible via root access to <a rel="nofollow" class="external text" href="http://www.openstora.com/forum/viewtopic.php?f=1&amp;t=181">create a RAID0 array</a>  or just <a rel="nofollow" class="external text" href="http://www.openstora.com/forum/viewtopic.php?f=1&amp;t=399">mount the drives separately</a>. There are some bugs you may need to fix though, e.g. <a href="index_Fixing_spindown_not_working_on_JBOD_setup.html" title="Fixing spindown not working on JBOD setup">Fixing spindown not working on JBOD setup</a>. Be sure to backup all your data in /home before changing drive configuration.
+<p>By default the Stora will create a RAID1 mirror (even if you only insert 1 drive; it creates a degraded mirror, waits for another drive of equal or greater capacity). JBOD support was added in firmware 2.x. It's also possible via root access to <a rel="nofollow" class="external text" href="https://sigri44.github.io/OpenStora/forum/viewtopic.php?f=1&amp;t=181">create a RAID0 array</a>  or just <a rel="nofollow" class="external text" href="https://sigri44.github.io/OpenStora/forum/viewtopic.php?f=1&amp;t=399">mount the drives separately</a>. There are some bugs you may need to fix though, e.g. <a href="index_Fixing_spindown_not_working_on_JBOD_setup.html" title="Fixing spindown not working on JBOD setup">Fixing spindown not working on JBOD setup</a>. Be sure to backup all your data in /home before changing drive configuration.
 </p>
 <ul>
 <li><b>Is it safe to update my firmware after applying hacks from this wiki?</b>
 </li>
 </ul>
-<p>We have confirmed up to version 2.3.3 (hbs-5033.upd) should be safe i.e. nothing appears to be lost/uninstalled/blocked by Netgear/Axentra. Check your current firmware 'VersionName' by typing 'more /etc/oe-release'. Some configuration files will be overwritten if you update so first make a backup of your /etc folder e.g. 'cp -p -r /etc /home/backups/etc'. Log in via the web interface, click check for updates, click download, then click apply. Firmware v2.3 or later is a recommended update as it will give you an important recovery mechanism if you ever damage your Stora system files, discussed here <a rel="nofollow" class="external free" href="http://www.openstora.com/forum/viewtopic.php?f=1&amp;t=221&amp;p=2795#p2795">http://www.openstora.com/forum/viewtopic.php?f=1&amp;t=221&amp;p=2795#p2795</a>
+<p>We have confirmed up to version 2.3.3 (hbs-5033.upd) should be safe i.e. nothing appears to be lost/uninstalled/blocked by Netgear/Axentra. Check your current firmware 'VersionName' by typing 'more /etc/oe-release'. Some configuration files will be overwritten if you update so first make a backup of your /etc folder e.g. 'cp -p -r /etc /home/backups/etc'. Log in via the web interface, click check for updates, click download, then click apply. Firmware v2.3 or later is a recommended update as it will give you an important recovery mechanism if you ever damage your Stora system files, discussed here <a rel="nofollow" class="external free" href="https://sigri44.github.io/OpenStora/forum/viewtopic.php?f=1&amp;t=221&amp;p=2795#p2795">http://www.openstora.com/forum/viewtopic.php?f=1&amp;t=221&amp;p=2795#p2795</a>
 </p>
 <ul>
 <li><b>It seems my Stora won't mount any USB drives attached to it...</b>
