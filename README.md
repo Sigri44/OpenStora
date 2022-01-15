@@ -8,3 +8,5 @@ Website OpenStora Mirror : https://sigri44.github.io/OpenStora/index.html
 Wiki : https://sigri44.github.io/OpenStora/wiki/
 
 *Tips : To use Stora with Time Machine (Mac OS), the login is : computersbackup
+
+User contribution : https://bluefad.github.io/OpenStora/
