@@ -1,0 +1,150 @@
+#!/bin/sh
+
+# Copyright (C) 2006  Joey Hess  <joeyh@debian.org>
+# Copyright (C) 2006, 2007, 2008, 2009  Martin Michlmayr <tbm@cyrius.com>
+
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 2
+# of the License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301,
+# USA.
+ 
+ifile=""
+kfile=""
+
+set -e
+
+error() {
+	echo "$@" >&2
+	exit 1
+}
+
+check_mtd() {
+	if [ ! -e /proc/mtd ]; then
+		error "/proc/mtd doesn't exist"
+	fi
+}
+
+mtdblock() {
+	grep "\"$1\"" /proc/mtd | cut -d: -f 1 | sed 's/mtd/\/dev\/mtdblock/'
+}
+
+check_dev_mtdblock() {
+	if [ ! -b "$1" ]; then
+		error "$1 is not a block device"
+	fi
+}
+
+mtdsize() {
+	size=$(grep "\"$1\"" /proc/mtd | cut -d " " -f 2)
+	printf "%d" 0x$size
+}
+
+check_subarch() {
+	if [ -n "$subarch" ] && [ "$subarch" != "$1" ]; then
+		echo "Kernel $kfile does not match your subarchitecture" >&2
+		echo "$1, therefore not writing it to flash." >&2
+		exit 0
+	fi
+}
+
+check_size() {
+	if [ $2 -gt $3 ]; then
+		error "The $1 doesn't fit in flash."
+	fi
+}
+
+usage="$0 -i <vmlinuz> [-r <initrd> -o <output suffix> -m <machine id>] \
+$0 -s"
+
+while getopts ":i:r:o:m:s" options; do
+  case $options in
+    i ) kfile=$OPTARG;;
+    r ) ifile=$OPTARG;;
+    o ) SUFFIX=$OPTARG;;
+    m ) MACHINE=$OPTARG;;
+    s ) SUPP="x--supported";;
+    * ) echo $usage
+          exit 1;;
+  esac
+done
+
+UIMAGE="uImage"
+UINITRD="uInitrd"
+if [ $SUFFIX != "" ]; then
+	UIMAGE="uImage.$SUFFIX"
+	INITRD="uInitrd.$SUFFIX"
+fi
+
+
+if [ "$MACHINE" != "" ]; then
+	machine=$MACHINE
+	echo $machine mc
+else
+	machine=$(grep "^Hardware" /proc/cpuinfo | sed 's/Hardware\s*:\s*//')
+	echo $machine hard mc
+fi
+
+if [ "$SUPP" = "x--supported" ]; then
+	case "$machine" in
+		"Netgear MS2110")			exit 0 ;;
+	esac
+fi
+
+desc="Debian kernel"
+idesc="Debian ramdisk"
+
+if [ ! -e $kfile ]; then
+	error "Can't find $kfile"
+	exit 1
+	if [ ! -e $ifile  ] && [ $ifile != "" ]; then
+		error "ramdisk specified not existo $ifile"
+		exit 1
+	fi
+fi
+
+case "$machine" in
+	("Netgear MS2110")
+		#check_subarch "kirkwood"
+		tmp="$(tempfile)"
+		printf "Generating kernel u-boot image... " >&2
+		kfilesize=$(wc -c "$kfile" | awk '{print $1}')
+		mkimage -A arm -O linux -T kernel -C none -a 0x00008000 \
+			-e 0x00008000 -n "$desc" -d "$kfile" "$tmp.uboot" >&2 1>/dev/null
+		echo "done." >&2
+		if [ -e /boot/$UIMAGE ]; then
+			echo "Creating backup of /boot/$UIMAGE." >&2
+			mv /boot/$UIMAGE /boot/$UIMAGE.bak
+		fi
+		echo "Creating new /boot/$UIMAGE." >&2
+		mv "$tmp.uboot" /boot/$UIMAGE
+		
+		if [ $ifile != "" ]; then
+			ifilesize=$(wc -c "$ifile" | awk '{print $1}')
+			printf "Generating initrd u-boot image... " >&2
+			mkimage -A arm -O linux -T ramdisk -C gzip -a 0x0 \
+				-e 0x0 -n "$idesc" -d "$ifile" "$tmp.uboot" >&2 1>/dev/null
+			echo "done." >&2
+			if [ -e /boot/$UINITRD ]; then
+				echo "Creating backup of /boot/$UINITRD." >&2
+				mv /boot/$UINITRD /boot/$UINITRD.bak
+			fi
+			echo "Creating new /boot/$UINITRD." >&2
+			mv "$tmp.uboot" /boot/$UINITRD
+		fi
+		rm -f "$tmp"
+	;;
+	*)
+		error "Unsupported platform."
+	;;
+esac
+
